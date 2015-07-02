@@ -8,7 +8,7 @@ use MARC::Field;
 
 use MARC::Lint::CodeData qw(%GeogAreaCodes %ObsoleteGeogAreaCodes %LanguageCodes %ObsoleteLanguageCodes);
 
-our $VERSION = 1.48	;
+our $VERSION = 1.49	;
 
 =head1 NAME
 
@@ -1269,7 +1269,7 @@ b       NR      Source (agency assigning number)
 8       R       Field link and sequence number 
 
 037     R       SOURCE OF ACQUISITION
-ind1    blank   Undefined
+ind1    b23     Source of acquisition sequence
 ind2    blank   Undefined
 a       NR      Stock number 
 b       NR      Source of stock number/acquisition 
@@ -1277,6 +1277,8 @@ c       R       Terms of availability
 f       R       Form of issue 
 g       R       Additional format characteristics 
 n       R       Note 
+3       NR      Materials specified
+5       R       Institution to which field applies
 6       NR      Linkage 
 8       R       Field link and sequence number 
 
@@ -1561,7 +1563,7 @@ c       R       Titles and other words associated with a name
 d       NR      Dates associated with a name 
 e       R       Relator term 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 j       R       Attribution qualifier 
 k       R       Form subheading 
 l       NR      Language of a work 
@@ -1584,7 +1586,7 @@ c       R       Location of meeting
 d       R       Date of meeting or treaty signing 
 e       R       Relator term 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 k       R       Form subheading 
 l       NR      Language of a work 
 n       R       Number of part/section/meeting 
@@ -1604,7 +1606,7 @@ c       R       Location of meeting
 d       NR      Date of meeting 
 e       R       Subordinate unit 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 j       R       Relator term
 k       R       Form subheading 
 l       NR      Language of a work 
@@ -1624,7 +1626,7 @@ ind2    blank   Undefined
 a       NR      Uniform title 
 d       R       Date of treaty signing 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 k       R       Form subheading 
 l       NR      Language of a work 
@@ -1662,7 +1664,7 @@ ind2    0-9    Nonfiling characters
 a       NR      Uniform title 
 d       R       Date of treaty signing 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 k       R       Form subheading 
 l       NR      Language of a work 
@@ -1695,7 +1697,7 @@ ind2    0-9    Nonfiling characters
 a       NR      Uniform title 
 d       R       Date of treaty signing 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 k       R       Form subheading 
 l       NR      Language of a work 
@@ -1730,7 +1732,7 @@ ind2    b012345678    Type of title
 a       NR      Title proper/short title 
 b       NR      Remainder of title 
 f       NR      Date or sequential designation 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 i       NR      Display text 
 n       R       Number of part/section of a work 
@@ -1745,7 +1747,7 @@ ind2    01      Note controller
 a       NR      Title 
 b       NR      Remainder of title 
 f       NR      Date or sequential designation 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 n       R       Number of part/section of a work 
 p       R       Name of part/section of a work 
@@ -2194,6 +2196,21 @@ m       NR      Identification of agency
 6       NR      Linkage 
 8       R       Field link and sequence number 
 
+370     R       ASSOCIATED PLACE
+ind1    blank   Undefined
+ind2    blank   Undefined
+c       R       Associated country
+f       R       Other associated place
+g       R       Place of origin of work
+s       NR      Start period
+t       NR      End period
+u       R       Uniform Resource Identifier
+v       R       Source of information
+0       R       Authority record control number or standard number
+2       NR      Source of term
+6       NR      Linkage
+8       R       Field link and sequence number
+
 377     R       ASSOCIATED LANGUAGE
 ind1    blank   Undefined
 ind2    b7      Undefined
@@ -2229,9 +2246,10 @@ ind2    b01     Undefined
 a       R       Medium of performance
 b       R       Soloist
 d       R       Doubling instrument
+e       R       Number of ensembles (R)
 n       R       Number of performers of the same medium
 p       R       Alternative medium of performance
-s       R       Total number of performers
+s       NR      Total number of performers
 v       R       Note
 0       R       Record control number
 2       NR      Source of term
@@ -2282,6 +2300,16 @@ n       NR      Demographic group code
 3       NR      Materials specified
 6       NR      Linkage
 8       R       Field link and sequence number
+
+388     R       TIME PERIOD OF CREATION
+ind1    b12     Type of time period
+ind2    blank   Undefined
+a       R       Time period of creation term (R)
+0       R       Authority record control number or standard number (R)
+2       NR      Source of term (NR)
+3       NR      Materials specified (NR)
+6       NR      Linkage (NR) 
+8       R       Field link and sequence number (R)
 
 400     R       SERIES STATEMENT/ADDED ENTRY--PERSONAL NAME 
 ind1    013     Type of personal name entry element
@@ -2953,7 +2981,7 @@ c       R       Titles and other words associated with a name
 d       NR      Dates associated with a name 
 e       R       Relator term 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 j       R       Attribution qualifier 
 k       R       Form subheading 
@@ -2987,7 +3015,7 @@ c       R       Location of meeting
 d       R       Date of meeting or treaty signing 
 e       R       Relator term 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 k       R       Form subheading 
 l       NR      Language of a work 
@@ -3018,7 +3046,7 @@ c       R       Location of meeting
 d       NR      Date of meeting 
 e       R       Subordinate unit 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 j       R       Relator term
 k       R       Form subheading 
@@ -3047,7 +3075,7 @@ a       NR      Uniform title
 d       R       Date of treaty signing 
 e       R       Relator term
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 k       R       Form subheading 
 l       NR      Language of a work 
@@ -3070,7 +3098,7 @@ z       R       Geographic subdivision
 8       R       Field link and sequence number 
 
 648     R       SUBJECT ADDED ENTRY--CHRONOLOGICAL TERM
-ind1    b01     Type of date or time period
+ind1    blank   Undefined
 ind2    01234567    Thesaurus
 a       NR      Chronological term 
 v       R       Form subdivision 
@@ -3225,7 +3253,7 @@ c       R       Titles and other words associated with a name
 d       NR      Dates associated with a name 
 e       R       Relator term 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 i       R       Relationship information
 j       R       Attribution qualifier 
@@ -3257,7 +3285,7 @@ c       R       Location of meeting
 d       R       Date of meeting or treaty signing 
 e       R       Relator term 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 i       R       Relationship information
 k       R       Form subheading 
@@ -3286,7 +3314,7 @@ c       R       Location of meeting
 d       NR      Date of meeting 
 e       R       Subordinate unit 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 i       R       Relationship information
 j       R       Relator term
@@ -3321,7 +3349,7 @@ ind2    b2      Type of added entry
 a       NR      Uniform title 
 d       R       Date of treaty signing 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 i       R       Relationship information
 k       R       Form subheading 
@@ -3810,7 +3838,7 @@ c       R       Titles and other words associated with a name
 d       NR      Dates associated with a name 
 e       R       Relator term 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 j       R       Attribution qualifier 
 k       R       Form subheading 
@@ -3844,7 +3872,7 @@ c       R       Location of meeting
 d       R       Date of meeting or treaty signing 
 e       R       Relator term 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 k       R       Form subheading 
 l       NR      Language of a work 
@@ -3875,7 +3903,7 @@ c       R       Location of meeting
 d       NR      Date of meeting 
 e       R       Subordinate unit 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 j       R       Relator term
 k       R       Form subheading 
@@ -3903,7 +3931,7 @@ ind2    0-9     Nonfiling characters
 a       NR      Uniform title 
 d       R       Date of treaty signing 
 f       NR      Date of a work 
-g       NR      Miscellaneous information 
+g       R       Miscellaneous information 
 h       NR      Medium 
 k       R       Form subheading 
 l       NR      Language of a work 
@@ -4051,6 +4079,15 @@ u       NR      Uniform Resource Identifier
 w       R       Bibliographic record control number
 0       R       Authority record control number or standard number
 8       R       Field link and sequence number
+
+884     R       DESCRIPTION CONVERSION INFORMATION
+ind1    blank   Undefined
+ind2    blank   Undefined
+a       NR      Conversion process
+g       NR      Conversion date
+k       NR      Identifier of source metadata
+q       NR      Conversion agency
+u       R       Uniform Resource Identifier
 
 886     R       FOREIGN MARC INFORMATION FIELD
 ind1    012     Type of field

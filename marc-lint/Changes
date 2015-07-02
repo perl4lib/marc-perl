@@ -1,3 +1,9 @@
+1.49    Wed. July 1, 2015
+
+        [THINGS THAT MAY BREAK YOUR CODE]
+		
+        - Updated Lint::DATA section with Update No. 19 (October 2014) through Update No. 20 (April 2015)
+
 1.48    Sun. July 20, 2014
 
 		- Updated Synopsis example to account for repeatable 250 (and added example of non-repeatable field using 040).
