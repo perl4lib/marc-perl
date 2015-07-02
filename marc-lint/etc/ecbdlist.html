@@ -36,7 +36,7 @@ Congress</a> &gt;&gt; <a href="http://www.loc.gov/marc/">MARC</a>
 <hr>
 
 <div class="edition">1999 Edition<br>
-Update No. 1 (October 2001) through Update No. 18 (April 2014)</div>
+Update No. 1 (October 2000) through Update No. 20 (April 2015)</div>
 
 <hr>
 
@@ -2623,8 +2623,10 @@ Data</cite></a>.</p>
 
 037 - SOURCE OF ACQUISITION (R)
    Indicators
-      First - Undefined
-         # - Undefined
+      First - Source of acquisition sequence
+         # - Not applicable/No information provided/Earliest
+         2 - Intervening
+         3 - Current/Latest
       Second - Undefined
          # - Undefined
    Subfield Codes
@@ -2634,6 +2636,8 @@ Data</cite></a>.</p>
       $f - Form of issue (R)
       $g - Additional format characteristics (R)
       $n - Note (R)
+      $3 - Materials specified (NR)
+      $5 - Institution to which field applies (R)
       $6 - Linkage (NR)
       $8 - Field link and sequence number (R)
 
@@ -3293,7 +3297,7 @@ Data</cite></a>.</p>
       $d - Dates associated with a name (NR)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $j - Attribution qualifier (R)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -3302,7 +3306,7 @@ Data</cite></a>.</p>
       $q - Fuller form of name (NR)
       $t - Title of a work (NR)
       $u - Affiliation (NR)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $4 - Relator code (R)
       $6 - Linkage (NR)
       $8 - Field link and sequence number (R)
@@ -3323,7 +3327,7 @@ Data</cite></a>.</p>
       $d - Date of meeting or treaty signing (R)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $k - Form subheading (R)
       $l - Language of a work (NR)
       $n - Number of part/section/meeting (R)
@@ -3351,7 +3355,7 @@ Data</cite></a>.</p>
       $d - Date of meeting (NR)
       $e - Subordinate unit (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $j - Relator term (R)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -3377,7 +3381,7 @@ Data</cite></a>.</p>
       $a - Uniform title (NR)
       $d - Date of treaty signing (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -3388,7 +3392,7 @@ Data</cite></a>.</p>
       $r - Key for music (NR)
       $s - Version (NR)
       $t - Title of a work (NR)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $6 - Linkage (NR)
       $8 - Field link and sequence number (R)
 
@@ -3472,7 +3476,7 @@ Data</cite></a>.</p>
       $a - Uniform title (NR)
       $d - Date of treaty signing (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -3482,7 +3486,7 @@ Data</cite></a>.</p>
       $p - Name of part/section of a work (R)
       $r - Key for music (NR)
       $s - Version (NR)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $6 - Linkage (NR)
       $8 - Field link and sequence number (R)
 
@@ -3530,7 +3534,7 @@ Data</cite></a>.</p>
       $a - Uniform title (NR)
       $d - Date of treaty signing (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -3590,7 +3594,7 @@ Data</cite></a>.</p>
       $d - Designation of section (SE) [OBSOLETE]
       $e - Name of part/section (SE) [OBSOLETE]
       $f - Date or sequential designation (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $i - Display text (NR)
       $n - Number of part/section of a work (R)
@@ -3613,7 +3617,7 @@ Data</cite></a>.</p>
       $d - Designation of section (SE) [OBSOLETE]
       $e - Name of part/section (SE) [OBSOLETE]
       $f - Date or sequential designation (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $n - Number of part/section of a work (R)
       $p - Name of part/section of a work (R)
@@ -4359,6 +4363,25 @@ Data</cite></a>.</p>
       $2 - Source of availability status code (NR)
       $6 - Linkage (NR) 
       $8 - Field link and sequence number (R)
+
+370 - ASSOCIATED PLACE (R)
+   Indicators
+      First - Undefined
+         # - Undefined 
+      Second - Undefined
+         # - Undefined 
+   Subfield Codes
+      $c - Associated country (R)
+      $f - Other associated place (R)
+      $g - Place of origin of work (R)
+      $s - Start period (NR)
+      $t - End period (NR)
+      $u - Uniform Resource Identifier (R)
+      $v - Source of information (R)
+      $0 - Authority record control number or standard number (R)
+      $2 - Source of term (NR)
+      $6 - Linkage (NR) 
+      $8 - Field link and sequence number (R)
 	  
 377 - ASSOCIATED LANGUAGE (R)
    Indicators
@@ -4416,9 +4439,10 @@ Data</cite></a>.</p>
       $a - Medium of performance (R)
       $b - Soloist (R)
       $d - Doubling instrument (R)
+      $e - Number of ensembles (R)
       $n - Number of performers of the same medium (R)
       $p - Alternative medium of performance (R)
-      $s - Total number of performers (R)
+      $s - Total number of performers (NR)
       $v - Note (R)
       $0 - Record control number (R)
       $2 - Source of term (NR)
@@ -4488,6 +4512,22 @@ Data</cite></a>.</p>
       $6 - Linkage (NR) 
       $8 - Field link and sequence number (R)
 
+388 - TIME PERIOD OF CREATION (R)
+   Indicators
+      First - Type of time period
+         # - No information provided
+         1 - Creation of work
+         2 - Creation of aggregate work 
+      Second - Undefined
+         # - Undefined 
+   Subfield Codes
+      $a - Time period of creation term (R)
+      $0 - Authority record control number or standard number (R)
+      $2 - Source of term (NR)
+      $3 - Materials specified (NR)
+      $6 - Linkage (NR) 
+      $8 - Field link and sequence number (R)
+
 
 --Series Statement Fields (4XX)--
 400 - SERIES STATEMENT/ADDED ENTRY--PERSONAL NAME  (R) [US-LOCAL]
@@ -4507,7 +4547,7 @@ Data</cite></a>.</p>
       $d - Dates associated with a name (NR)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $k - Form subheading (R)
       $l - Language of a work (NR)
       $n - Number of part/section of a work (R)
@@ -4537,7 +4577,7 @@ Data</cite></a>.</p>
       $d - Date of meeting or treaty signing (R)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $k - Form subheading (R)
       $l - Language of a work (NR)
       $n - Number of part/section/meeting (R)
@@ -4566,7 +4606,7 @@ Data</cite></a>.</p>
       $d - Date of meeting (NR)
       $e - Subordinate unit (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $k - Form subheading (R)
       $l - Language of a work (NR)
       $n - Number of part/section/meeting (R)
@@ -4610,7 +4650,7 @@ Data</cite></a>.</p>
       $l - Library of Congress call number (NR)
       $v - Volume number/sequential designation  (R)
       $x - International Standard Serial Number (R)
-      $3 - Materials specified
+      $3 - Materials specified (NR)
       $6 - Linkage (NR)
       $8 - Field link and sequence number (R)
 
@@ -5616,7 +5656,7 @@ Data</cite></a>.</p>
       $d - Dates associated with a name (NR)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $j - Attribution qualifier (R)
       $k - Form subheading (R)
@@ -5634,7 +5674,7 @@ Data</cite></a>.</p>
       $x - General subdivision (R)
       $y - Chronological subdivision (R)
       $z - Geographic subdivision (R)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $2 - Source of heading or term (NR)
       $3 - Materials specified (NR)
       $4 - Relator code (R)
@@ -5663,7 +5703,7 @@ Data</cite></a>.</p>
       $d - Date of meeting or treaty signing (R)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -5708,7 +5748,7 @@ Data</cite></a>.</p>
       $d - Date of meeting (NR)
       $e - Subordinate unit (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $j - Relator term (R)
       $k - Form subheading (R)
@@ -5749,7 +5789,7 @@ Data</cite></a>.</p>
       $d - Date of treaty signing (R)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -5764,7 +5804,7 @@ Data</cite></a>.</p>
       $x - General subdivision (R)
       $y - Chronological subdivision (R)
       $z - Geographic subdivision (R)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $2 - Source of heading or term (NR)
       $3 - Materials specified (NR)
       $4 - Relator code (R)
@@ -5773,10 +5813,12 @@ Data</cite></a>.</p>
 
 648 - SUBJECT ADDED ENTRY--CHRONOLOGICAL TERM (R)
    Indicators
-      First - Type of date or time period
-         # - No information provided
-         0 - Date or time period covered or depicted
-         1 - Date or time period of creation or origin
+      First - Undefined
+         # - Undefined
+      First - Type of date or time period [OBSOLETE]
+         # - No information provided [OBSOLETE]
+         0 - Date or time period covered or depicted [OBSOLETE]
+         1 - Date or time period of creation or origin [OBSOLETE]
       Second - Thesaurus
          0 - Library of Congress Subject Headings
          1 - LC subject headings for children's literature
@@ -5792,7 +5834,7 @@ Data</cite></a>.</p>
       $x - General subdivision (R)
       $y - Chronological subdivision (R)
       $z - Geographic subdivision (R)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $2 - Source of heading or term (NR)
       $3 - Materials specified (NR)
       $6 - Linkage (NR)
@@ -5820,11 +5862,12 @@ Data</cite></a>.</p>
       $c - Location of event (NR)
       $d - Active dates (NR)
       $e - Relator term (NR)
+      $g - Miscellaneous information (R)
       $v - Form subdivision (R)
       $x - General subdivision (R)
       $y - Chronological subdivision (R)
       $z - Geographic subdivision (R)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $2 - Source of heading or term (NR)
       $3 - Materials specified (NR)
       $4 - Relator code (R)
@@ -5848,11 +5891,12 @@ Data</cite></a>.</p>
       $a - Geographic name (NR)
       $b - Geographic name following place entry element (R) [OBSOLETE]
       $e - Relator term (R)
+      $g - Miscellaneous information (R)
       $v - Form subdivision (R)
       $x - General subdivision (R)
       $y - Chronological subdivision (R)
       $z - Geographic subdivision (R)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $2 - Source of heading or term (NR)
       $3 - Materials specified (NR)
       $4 - Relator code (R)
@@ -6041,7 +6085,7 @@ Data</cite></a>.</p>
       $d - Dates associated with a name (NR)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $i - Relationship information (R)
       $j - Attribution qualifier (R) 
@@ -6057,7 +6101,7 @@ Data</cite></a>.</p>
       $t - Title of a work (NR)
       $u - Affiliation (NR)
       $x - International Standard Serial Number (NR)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $3 - Materials specified (NR)
       $4 - Relator code (R)
       $5 - Institution to which field applies (NR)
@@ -6082,7 +6126,7 @@ Data</cite></a>.</p>
       $d - Dates associated with a name (NR)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -6114,7 +6158,7 @@ Data</cite></a>.</p>
       $d - Date of meeting or treaty signing (R)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $i - Relationship information (R)
       $k - Form subheading (R)
@@ -6155,7 +6199,7 @@ Data</cite></a>.</p>
       $d - Date of meeting (NR)
       $e - Subordinate unit (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $i - Relationship information (R)
       $j - Relator term (R)
@@ -6190,7 +6234,7 @@ Data</cite></a>.</p>
       $b - Subordinate unit (R)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -6234,7 +6278,7 @@ Data</cite></a>.</p>
       $a - Uniform title (NR)
       $d - Date of treaty signing (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $i - Relationship information (R)
       $k - Form subheading (R)
@@ -6247,7 +6291,7 @@ Data</cite></a>.</p>
       $s - Version (NR)
       $t - Title of a work (NR)
       $x - International Standard Serial Number (NR)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $3 - Materials specified (NR)
       $5 - Institution to which field applies (NR)
       $6 - Linkage (NR)
@@ -6954,7 +6998,7 @@ Data</cite></a>.</p>
       $d - Dates associated with a name (NR)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $j - Attribution qualifier (R)
       $k - Form subheading (R)
@@ -6971,7 +7015,7 @@ Data</cite></a>.</p>
       $v - Volume/sequential designation  (NR)
       $w - Bibliographic record control number (R)
       $x - International Standard Serial Number (NR)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $3 - Materials specified (NR)
       $4 - Relator code (R)
       $5 - Institution to which field applies (R)
@@ -6996,7 +7040,7 @@ Data</cite></a>.</p>
       $d - Date of meeting or treaty signing (R)
       $e - Relator term (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -7035,7 +7079,7 @@ Data</cite></a>.</p>
       $d - Date of meeting (NR)
       $e - Subordinate unit (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $j - Relator term (R)
       $k - Form subheading (R)
@@ -7069,7 +7113,7 @@ Data</cite></a>.</p>
       $a - Uniform title (NR)
       $d - Date of treaty signing (R)
       $f - Date of a work (NR)
-      $g - Miscellaneous information (NR)
+      $g - Miscellaneous information (R)
       $h - Medium (NR)
       $k - Form subheading (R)
       $l - Language of a work (NR)
@@ -7083,7 +7127,7 @@ Data</cite></a>.</p>
       $v - Volume/sequential designation (NR)
       $w - Bibliographic record control number (R)
       $x - International Standard Serial Number (NR)
-      $0 - Authority record control number (R)
+      $0 - Authority record control number or standard number (R)
       $3 - Materials specified (NR)
       $5 - Institution to which field applies (R)
       $6 - Linkage (NR)
@@ -7311,6 +7355,19 @@ Data</cite></a>.</p>
       $0 - Authority record control number or standard number (R)
       $8 - Field link and sequence number (R)
 
+884 - DESCRIPTION CONVERSION INFORMATION (R)
+   Indicators
+      First - Undefined
+         # - Undefined
+      Second - Undefined
+         # - Undefined
+   Subfield Codes
+      $a - Conversion process (NR)
+      $g - Conversion date (NR)
+      $k - Identifier of source metadata (NR)
+      $q - Conversion agency (NR)
+      $u - Uniform Resource Identifier (R)
+
 886 - FOREIGN MARC INFORMATION FIELD (R)
    Indicators
       First - Type of field
@@ -7345,7 +7402,7 @@ Data</cite></a>.</p>
 Congress</a> &gt;&gt; <a href="http://www.loc.gov/marc/">MARC</a>
 &gt;&gt; <strong>Bibliographic Field List</strong></div>
 
-(04/28/2014)</td>
+(04/29/2015)</td>
 <td align="right"><a href="mailto:ndmso@loc.gov">Contact
 Us</a></td>
 </tr>
