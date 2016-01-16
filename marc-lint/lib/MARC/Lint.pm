@@ -8,7 +8,7 @@ use MARC::Field;
 
 use MARC::Lint::CodeData qw(%GeogAreaCodes %ObsoleteGeogAreaCodes %LanguageCodes %ObsoleteLanguageCodes);
 
-our $VERSION = 1.49	;
+our $VERSION = 1.50	;
 
 =head1 NAME
 
@@ -758,7 +758,9 @@ sub _check_article {
         'L-' => 1,
         'La Salle' => 1,
         'Las Vegas' => 1,
+        'Lo cual' => 1,
         'Lo mein' => 1,
+        'Lo que' => 1,
         'Los Alamos' => 1,
         'Los Angeles' => 1,
     );
@@ -1934,6 +1936,7 @@ ind1    blank   Undefined
 ind2    blank   Undefined
 a       R       Content type term
 b       R       Content type code
+0       R       Authority record control number or standard number
 2       NR      Source
 3       NR      Materials specified
 6       NR      Linkage 
@@ -1944,6 +1947,7 @@ ind1    blank   Undefined
 ind2    blank   Undefined
 a       R       Media type term
 b       R       Media type code
+0       R       Authority record control number or standard number
 2       NR      Source
 3       NR      Materials specified
 6       NR      Linkage 
@@ -1954,6 +1958,7 @@ ind1    blank   Undefined
 ind2    blank   Undefined
 a       R       Carrier type term
 b       R       Carrier type code
+0       R       Authority record control number or standard number
 2       NR      Source
 3       NR      Materials specified
 6       NR      Linkage 
@@ -2079,6 +2084,17 @@ f       R       Encoded bitrate
 6       NR      Linkage
 8       R       Field link and sequence number
 
+348     R       FORMAT OF NOTATED MUSIC
+ind1    blank   Undefined
+ind2    blank   Undefined
+a       R       Format of notated music term
+b       R       Format of notated music code
+0       R       Authority record control number or standard number
+2       NR      Source of term
+3       NR      Materials specified
+6       NR      Linkage
+8       R       Field link and sequence number
+	  
 351     R       ORGANIZATION AND ARRANGEMENT OF MATERIALS
 ind1    blank   Undefined
 ind2    blank   Undefined
