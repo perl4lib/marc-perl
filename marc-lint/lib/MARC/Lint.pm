@@ -319,14 +319,14 @@ sub check_020 {
             else {
                 if ((length ($isbnno) == 10)) {
 
-                    if ($Business::ISBN::VERSION gt '2.02_01') {
+                    if (($Business::ISBN::VERSION gt '2.02_01') || ($Business::ISBN::VERSION gt '2.009')) {
                         $self->warn( "020: Subfield a has bad checksum, $data." ) if (Business::ISBN::valid_isbn_checksum($isbnno) != 1); 
-                    } #if Business::ISBN version higher than 2.02_01
+                    } #if Business::ISBN version higher than 2.02_01 or 2.009
                     elsif ($Business::ISBN::VERSION lt '2') {
                         $self->warn( "020: Subfield a has bad checksum, $data." ) if (Business::ISBN::is_valid_checksum($isbnno) != 1); 
                     } #elsif Business::ISBN version lower than 2
                     else {
-                        $self->warn( "Business::ISBN version must be below 2 or above 2.02_02." );
+                        $self->warn( "Business::ISBN version must be below 2 or above 2.02_02 or 2.009." );
                     } #else Business::ISBN version between 2 and 2.02_02
                 } #if 10 digit ISBN has invalid check digit
                 # do validation check for 13 digit isbn
@@ -2094,7 +2094,7 @@ b       R       Format of notated music code
 3       NR      Materials specified
 6       NR      Linkage
 8       R       Field link and sequence number
-	  
+
 351     R       ORGANIZATION AND ARRANGEMENT OF MATERIALS
 ind1    blank   Undefined
 ind2    blank   Undefined

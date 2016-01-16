@@ -4,6 +4,7 @@
 		
         - Updated Lint::DATA section with Update No. 21 (September 2015)
         - Updated _check_article with the exceptions: 'Lo que' and 'Lo cual'
+		- Updated check_020 to account for version numbering changes in Business::ISBN (should work for versions greater than '2.009')
 		
 1.49    Wed. July 1, 2015
 
