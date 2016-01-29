@@ -393,6 +393,8 @@ sub _next {
     local $/ = 'record>';
     my $xml = <$fh>;
 
+    return if $xml =~ m!</([^:]+:){0,1}collection>$!;
+
     ## do we have enough?
     $xml .= <$fh> if $xml !~ m!</([^:]+:){0,1}record>$!;
     ## trim stuff before the start record element 
