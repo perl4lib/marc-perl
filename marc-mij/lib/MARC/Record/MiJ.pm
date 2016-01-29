@@ -249,7 +249,7 @@ sub new_datafield_from_mij_structure {
 
 =head1 Monkeypatching MARC::Record
 
-Add C<new_from_mij_structure($mij_structure) and C<to_mij_structure()> to MARC::Record
+Add C<new_from_mij_structure($mij_structure)> and C<to_mij_structure()> to MARC::Record
 
   my $r = MARC::Record->new_from_mij_structure($mij_structure);
   $mij_structure = $r->to_mij_structure;
