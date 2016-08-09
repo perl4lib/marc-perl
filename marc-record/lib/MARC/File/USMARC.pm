@@ -71,6 +71,9 @@ sub _next {
     # remove illegal garbage that sometimes occurs between records
     $usmarc =~ s/^[ \x00\x0a\x0d\x1a]+//;
 
+    # In case we picked up some of that garbage, remove it from the *end* of the record too
+    $usmarc =~ s/\x1d[ \x00\x0a\x0d\x1a]+$/\x1d/;
+
     return $usmarc;
 }
 
