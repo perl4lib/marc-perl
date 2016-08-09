@@ -64,7 +64,7 @@ sub _next {
             $self->{buffer} = <$fh>;
             # This is an attempt at detecting a leader
             last if ($self->{buffer} =~ /^[ \x00\x0a\x0d\x1a]*[0-9]{5}[acdnposx][acdefgijkmoprtz]...22/);
-            $usmarc = join($usmarc, END_OF_RECORD, $self->{buffer});
+            $usmarc .= $self->{buffer};
         }
     };
 
