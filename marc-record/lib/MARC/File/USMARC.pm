@@ -47,11 +47,26 @@ sub _next {
     my $self = shift;
     my $fh = $self->{fh};
 
-    my $reclen;
-    return if eof($fh);
-
     local $/ = END_OF_RECORD;
-    my $usmarc = <$fh>;
+
+    # Return if we have no more file to read, and there is nothing in the buffer
+    return if eof($fh) and not defined($self->{buffer});
+
+    # Pull from the buffer or the first record in the file
+    my $usmarc = $self->{buffer} || <$fh>;
+
+    # Add to $usmarc until the end of file or we see what looks like a new record
+    while (1) {
+        if (eof($fh)) {
+            delete($self->{buffer});
+            last;
+        } else {
+            $self->{buffer} = <$fh>;
+            # This is an attempt at detecting a leader
+            last if ($self->{buffer} =~ /^[ \x00\x0a\x0d\x1a]*[0-9]{5}[acdnposx][acdefgijkmoprtz]...22/);
+            $usmarc = join($usmarc, END_OF_RECORD, $self->{buffer});
+        }
+    };
 
     # remove illegal garbage that sometimes occurs between records
     $usmarc =~ s/^[ \x00\x0a\x0d\x1a]+//;
