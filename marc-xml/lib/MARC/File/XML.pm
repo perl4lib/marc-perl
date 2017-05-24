@@ -13,7 +13,7 @@ use IO::File;
 use Carp qw( croak );
 use Encode ();
 
-$VERSION = '1.0.4';
+$VERSION = '1.0.5';
 
 our $parser;
 
