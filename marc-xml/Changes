@@ -1,5 +1,10 @@
 Revision history for Perl extension MARC-XML
 
+1.0.4 Tue May 23 21:05:58 EDT 2017
+       - RT#111473: fix warning upon reaching end of XML
+         stream (Johann Rolschewski)
+       - remove extraneous diag from a test script (Florian Schlichting)
+
 1.0.3 Thu Jan 23 05:02:52 UTC 2014
        - fix t/external-entities.t to pass on Strawberry
 
