@@ -4,8 +4,8 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    'NAME'          => 'MARC-XML',
-    'DISTNAME'      => 'MARC-XML',
+    'NAME'          => 'MARC::File::XML',
+    'DISTNAME'      => 'MARC-File-XML',
     'VERSION_FROM'  => 'lib/MARC/File/XML.pm',
     'PMLIBDIRS'     => [ qw( lib/ ) ],
     'AUTHOR'        => [
