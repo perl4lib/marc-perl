@@ -396,7 +396,10 @@ sub _next {
     return if $xml =~ m!</([^:]+:){0,1}collection>$!;
 
     ## do we have enough?
-    $xml .= <$fh> if $xml !~ m!</([^:]+:){0,1}record>$!;
+    if ( $xml !~ m!</([^:]+:){0,1}record>$! ) {
+        my $segment = <$fh>;
+        $xml .= $segment if defined $segment;
+    }
     ## trim stuff before the start record element 
     $xml =~ s/.*?<(([^:]+:){0,1})record.*?>/<$1record>/s;
 
