@@ -8,7 +8,7 @@ use MARC::Field;
 
 use MARC::Lint::CodeData qw(%GeogAreaCodes %ObsoleteGeogAreaCodes %LanguageCodes %ObsoleteLanguageCodes);
 
-our $VERSION = 1.50	;
+our $VERSION = 1.51;
 
 =head1 NAME
 
@@ -2304,7 +2304,7 @@ n       NR      Demographic group code
 6       NR      Linkage
 8       R       Field link and sequence number
 
-386 - CREATOR/CONTRIBUTOR CHARACTERISTICS (R)
+386     R       CREATOR/CONTRIBUTOR CHARACTERISTICS
 ind1    blank   Undefined
 ind2    blank   Undefined
 a       R       Creator/contributor term
