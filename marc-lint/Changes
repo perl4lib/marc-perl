@@ -1,3 +1,10 @@
+1.51    Mon. May 9, 2016, 2016
+
+        [THINGS THAT MAY BREAK YOUR CODE]
+		
+        - Fixed 386 tag in Lint::DATA section
+        - Updated Lint::DATA section with Update No. 21 (September 2015)
+
 1.50    Fri. Jan. 15, 2016
 
         [THINGS THAT MAY BREAK YOUR CODE]
