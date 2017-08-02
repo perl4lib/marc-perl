@@ -396,7 +396,7 @@ sub _next {
     return if $xml =~ m!</([^:]+:){0,1}collection>$!;
 
     ## do we have enough?
-    $xml .= <$fh> if $xml !~ m!</([^:]+:){0,1}record>$!;
+    $xml .= <$fh> if $xml !~ m!</([^:]+:){0,1}record>$! && !eof($fh);
     ## trim stuff before the start record element 
     $xml =~ s/.*?<(([^:]+:){0,1})record.*?>/<$1record>/s;
 
