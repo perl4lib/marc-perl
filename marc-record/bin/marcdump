@@ -49,6 +49,7 @@ if ( $opt_help || !@files || !$rc ) {
     exit 1;
 }
 
+@opt_field = map { _update_field_wildcards( $_ ) } @opt_field;
 my $wants_leader = grep { /LDR/ } @opt_field;
 
 my $class = $opt_lif ? "MARC::File::MicroLIF" : "MARC::File::USMARC";
@@ -184,6 +185,13 @@ sub _hex_line_output {
     printf( "%05d: %-$width.${width}s %s\n", $offset, $hex, $ascii );
 }
 
+sub _update_field_wildcards {
+    my $field = shift;
+    if ($field =~ /^[0-9X]{3}$/) {
+        $field =~ s/X/./g;
+    }
+    return $field;
+}
 
 __END__
 Usage: marcdump [options] file(s)
@@ -195,6 +203,7 @@ Options:
     --field=spec    Specify a field spec to include.  There may be many.
                     Examples:
                         --field=245 --field=1XX
+                        --field=LDR --field=1..
     --[no]quiet     Print status messages
     --[no]stats     Print a statistical summary by file at the end
     --version       Print version information
