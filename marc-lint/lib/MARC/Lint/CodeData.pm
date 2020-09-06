@@ -75,7 +75,7 @@ If it is here, then 041 would be allowed to have three blank spaces as a valid c
 (though other checks would report the error--spaces at the beginning and ending of a subfield
 and multiple spaces in a field where such a thing is not allowed).
 
-Update Subject source codes with codes from additional Source lists:
+Update Subject source codes with codes from additional Source lists (see L<https://www.loc.gov/standards/sourcelist/subject.html>):
     Genre/Form Term and Code Source Codes
     Occupation Term Source Codes
     Function Term Source Codes
