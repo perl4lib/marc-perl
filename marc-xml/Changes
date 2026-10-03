@@ -1,5 +1,20 @@
 Revision history for Perl extension MARC-XML
 
+1.1.0
+       - decode() no longer dies on a <datafield> with no <subfield>
+         children, or one missing its ind1/ind2 attributes entirely.
+         Both are now treated the way MARC::File::USMARC already
+         treats their binary equivalents: the field is dropped (or
+         its indicators default to blank), a warning is recorded via
+         $record->_warn(), and the rest of the record is still
+         returned instead of the whole parse failing.
+
+         This is a behavior change: code that relied on
+         new_from_xml() throwing to detect these two specific cases
+         needs to check $record->warnings() after a successful parse
+         instead. Document-level errors (no <record> element at all)
+         are unaffected and still die as before.
+
 1.0.5 Tue May 23 21:24:18 EDT 2017
        - adjust name of distribution to avoid colliding with
          MARC-XML, as PAUSE now enforces distribution name

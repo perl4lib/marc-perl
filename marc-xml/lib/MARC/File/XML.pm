@@ -13,7 +13,7 @@ use IO::File;
 use Carp qw( croak );
 use Encode ();
 
-$VERSION = '1.0.5';
+$VERSION = '1.1.0';
 
 our $parser;
 
@@ -478,15 +478,26 @@ sub decode {
         } elsif ($elt->localname eq 'datafield') {
             my @sfs = ();
             foreach my $sfelt ($elt->getChildrenByLocalName('subfield')) {
-                push @sfs, $sfelt->getAttribute('code'), 
+                push @sfs, $sfelt->getAttribute('code'),
                            $transcode_to_marc8 ? utf8_to_marc8($sfelt->textContent()) : $sfelt->textContent();
             }
-            push @fields, MARC::Field->new(
-                $elt->getAttribute('tag'),
-                $elt->getAttribute('ind1'),
-                $elt->getAttribute('ind2'),
-                @sfs
-            );
+
+            my $tag = $elt->getAttribute('tag');
+
+            unless (@sfs) {
+                $rec->_warn("no subfield data found $location for tag $tag");
+                next;
+            }
+
+            my $ind1 = $elt->getAttribute('ind1');
+            my $ind2 = $elt->getAttribute('ind2');
+            unless (defined $ind1 && defined $ind2) {
+                $rec->_warn("missing indicator(s) forced to blanks $location for tag $tag");
+                $ind1 = ' ' unless defined $ind1;
+                $ind2 = ' ' unless defined $ind2;
+            }
+
+            push @fields, MARC::Field->new($tag, $ind1, $ind2, @sfs);
         }
     }
     $rec->append_fields(@fields);
