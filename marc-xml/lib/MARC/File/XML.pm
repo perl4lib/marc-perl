@@ -13,7 +13,7 @@ use IO::File;
 use Carp qw( croak );
 use Encode ();
 
-$VERSION = '1.0.5';
+$VERSION = '1.0.6';
 
 our $parser;
 
@@ -414,6 +414,7 @@ sub _next {
 
 sub _parser {
     $parser ||= XML::LibXML->new(
+        expand_entities => 1,
         ext_ent_handler => sub {
             die "External entities are not supported\n";
         }
