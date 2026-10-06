@@ -1,5 +1,6 @@
 package MARC::Record::MiJ;
 use ex::monkeypatched;
+use Carp;
 use JSON;
 use 5.006;
 use strict;
@@ -191,7 +192,12 @@ Given a marc-in-json structure, return a MARC::Record object
 sub new_from_mij_structure {
   my $self = shift;
   my $h = shift;
-  
+
+  Carp::croak("new_from_mij_structure: input must be a hashref")
+      unless ref($h) eq 'HASH';
+  Carp::croak("new_from_mij_structure: input must contain a 'fields' arrayref")
+      unless ref($h->{fields}) eq 'ARRAY';
+
   my $r = new MARC::Record;
   
   $r->leader($h->{leader});
