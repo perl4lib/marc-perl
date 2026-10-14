@@ -581,7 +581,7 @@ when you manually set the encoding.
 sub encoding {
     my ($self,$arg) = @_;
     # we basically report from and modify the leader directly
-    my $leader = $self->leader();
+    my $leader = $self->{_leader};
 
     # when setting
     if ( defined($arg) ) {
