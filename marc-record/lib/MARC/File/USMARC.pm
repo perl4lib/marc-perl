@@ -178,17 +178,21 @@ sub decode {
     # go through all the fields
     my $nfields = length($dir)/DIRECTORY_ENTRY_LEN;
     for ( my $n = 0; $n < $nfields; $n++ ) {
-        my ( $tagno, $len, $offset ) = unpack( "A3 A4 A5", substr($dir, $n*DIRECTORY_ENTRY_LEN, DIRECTORY_ENTRY_LEN) );
+        my $direntry = substr($dir, $n*DIRECTORY_ENTRY_LEN, DIRECTORY_ENTRY_LEN);
+        my ( $tagno, $len, $offset ) = unpack( "A3 A4 A5", $direntry );
 
-        # Check directory validity
-        ($tagno =~ /^[0-9A-Za-z]{3}$/)
-            or $problem->( "Invalid tag in directory $location: \"$tagno\"" );
+        # Check directory validity. We check the overall entry first so
+        # that valid ones require only one regexp match rather than three.
+        if ($direntry !~ /^[0-9A-Za-z]{3}\d{9}$/) {
+            ($tagno =~ /^[0-9A-Za-z]{3}$/)
+                or $problem->( "Invalid tag in directory $location: \"$tagno\"" );
 
-        ($len =~ /^\d{4}$/)
-            or $problem->( "Invalid length in directory $location tag $tagno: \"$len\"" );
+            ($len =~ /^\d{4}$/)
+                or $problem->( "Invalid length in directory $location tag $tagno: \"$len\"" );
 
-        ($offset =~ /^\d{5}$/)
-            or $problem->( "Invalid offset in directory $location tag $tagno: \"$offset\"" );
+            ($offset =~ /^\d{5}$/)
+                or $problem->( "Invalid offset in directory $location tag $tagno: \"$offset\"" );
+        }
 
         ($offset + $len <= $reclen)
             or $problem->( "Directory entry $location runs off the end of the record tag $tagno" );
