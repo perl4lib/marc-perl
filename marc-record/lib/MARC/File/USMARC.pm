@@ -238,6 +238,15 @@ sub decode {
                 $ind2 = substr( $indicators,1, 1 );
             }
 
+            unless ($ind1 =~ /^[0-9A-Za-z ]$/) {
+                $marc->_warn( "Invalid indicator \"$ind1\" forced to blank" );
+                $ind1 = ' ';
+            }
+            unless ($ind2 =~ /^[0-9A-Za-z ]$/) {
+                $marc->_warn( "Invalid indicator \"$ind2\" forced to blank" );
+                $ind2 = ' ';
+            }
+
             # Split the subfield data into subfield name and data pairs
             my @subfield_data;
             for ( @subfields ) {

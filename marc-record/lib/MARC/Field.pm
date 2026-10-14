@@ -71,7 +71,6 @@ Or if you want to add a control field (< 010) that does not have indicators.
 
 sub new {
     my $class = shift;
-    $class = $class;
 
     ## MARC spec indicates that tags can have alphabetical
     ## characters in them! If they do appear we assume that
@@ -116,12 +115,9 @@ sub new {
 
 sub _unsafe_new_control_field {
     my $class = shift;
-    $class = $class;
-
-    my $tagno = shift;
 
     my $self = bless {
-        _tag => $tagno,
+        _tag => shift,
         _warnings => [],
         _is_control_field => 1,
     }, $class;
@@ -132,28 +128,15 @@ sub _unsafe_new_control_field {
 
 sub _unsafe_new_variable_field {
     my $class = shift;
-    $class = $class;
-
-    my $tagno = shift;
 
     my $self = bless {
-        _tag => $tagno,
+        _tag => shift,
         _warnings => [],
         _is_control_field => 0,
     }, $class;
 
-    for my $indcode ( qw( _ind1 _ind2 ) ) {
-        my $indicator = shift;
-        defined($indicator) or croak("Field $tagno must have indicators (use ' ' for empty indicators)");
-        unless ($indicator =~ /^[0-9A-Za-z ]$/) {
-            $self->_warn( "Invalid indicator \"$indicator\" forced to blank" ) unless ($indicator eq "");
-            $indicator = " ";
-        }
-        $self->{$indcode} = $indicator;
-    } # for
-
-    #(@_ >= 2)
-        #or croak( "Field $tagno must have at least one subfield" );
+    $self->{_ind1} = shift;
+    $self->{_ind2} = shift;
 
     # Normally, we go thru add_subfields(), but internally we can cheat
     $self->{_subfields} = [@_];
