@@ -528,12 +528,10 @@ Returns a pretty string for printing in a MARC dump.
 sub as_formatted {
     my $self = shift;
 
-    my @lines = ( "LDR " . ($self->{_leader} || "") );
-    for my $field ( @{$self->{_fields}} ) {
-            push( @lines, $field->as_formatted() );
-    }
-
-    return join( "\n", @lines );
+    return join( "\n",
+        "LDR " . ($self->{_leader} || ""),
+        map { $_->as_formatted() } @{$self->{_fields}}
+    );
 } # as_formatted
 
 
