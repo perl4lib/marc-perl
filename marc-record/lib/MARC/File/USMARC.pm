@@ -190,9 +190,10 @@ sub decode {
         $problem->( "Invalid length in directory for tag $tagno $location" )
             unless ( $len == length($tagdata) );
 
-        # if utf8 the we encode the string as utf8
+        # if the MARC record claims to be UTF-8, convert
+        # from octets to characters
         if ( $encoding eq 'UTF-8' ) {
-            $tagdata = marc_to_utf8( $tagdata );
+            utf8::decode( $tagdata );
         }
 
         if ( substr($tagdata, -1, 1) eq END_OF_FIELD ) {
