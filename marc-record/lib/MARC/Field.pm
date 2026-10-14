@@ -145,7 +145,7 @@ sub _unsafe_new_variable_field {
     for my $indcode ( qw( _ind1 _ind2 ) ) {
         my $indicator = shift;
         defined($indicator) or croak("Field $tagno must have indicators (use ' ' for empty indicators)");
-        unless ($self->is_valid_indicator($indicator)) {
+        unless ($indicator =~ /^[0-9A-Za-z ]$/) {
             $self->_warn( "Invalid indicator \"$indicator\" forced to blank" ) unless ($indicator eq "");
             $indicator = " ";
         }
