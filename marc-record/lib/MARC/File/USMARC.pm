@@ -220,7 +220,7 @@ sub decode {
         }
 
         if ( MARC::Field->is_controlfield_tag($tagno) ) {
-            $marc->append_fields( MARC::Field->new( $tagno, $tagdata ) );
+            $marc->_unsafe_append_fields( MARC::Field->_unsafe_new_control_field( $tagno, $tagdata ) );
         } else {
             my @subfields = split( SUBFIELD_INDICATOR, $tagdata );
             my $indicators = shift @subfields;
@@ -249,11 +249,11 @@ sub decode {
                 next;
             }
 
-            my $field = MARC::Field->new($tagno, $ind1, $ind2, @subfield_data );
+            my $field = MARC::Field->_unsafe_new_variable_field($tagno, $ind1, $ind2, @subfield_data );
             if ( $field->warnings() ) {
                 $problem->( $field->warnings() );
             }
-            $marc->append_fields( $field );
+            $marc->_unsafe_append_fields( $field );
         }
     } # looping through all the fields
 

@@ -274,6 +274,14 @@ sub append_fields {
     return scalar @_;
 }
 
+# for when you know that all parms are MARC::Field objects
+sub _unsafe_append_fields {
+    my $self = shift;
+
+    push(@{ $self->{_fields} }, @_);
+    return scalar @_;
+}
+
 =head2 insert_fields_before( $before_field, @new_fields )
 
 Inserts the field specified by C<$new_field> before the field C<$before_field>.

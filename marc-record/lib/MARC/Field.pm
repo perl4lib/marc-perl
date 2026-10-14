@@ -114,6 +114,52 @@ sub new {
     return $self;
 } # new()
 
+sub _unsafe_new_control_field {
+    my $class = shift;
+    $class = $class;
+
+    my $tagno = shift;
+
+    my $self = bless {
+        _tag => $tagno,
+        _warnings => [],
+        _is_control_field => 1,
+    }, $class;
+    $self->{_data} = shift;
+
+    return $self;
+} # new()
+
+sub _unsafe_new_variable_field {
+    my $class = shift;
+    $class = $class;
+
+    my $tagno = shift;
+
+    my $self = bless {
+        _tag => $tagno,
+        _warnings => [],
+        _is_control_field => 0,
+    }, $class;
+
+    for my $indcode ( qw( _ind1 _ind2 ) ) {
+        my $indicator = shift;
+        defined($indicator) or croak("Field $tagno must have indicators (use ' ' for empty indicators)");
+        unless ($self->is_valid_indicator($indicator)) {
+            $self->_warn( "Invalid indicator \"$indicator\" forced to blank" ) unless ($indicator eq "");
+            $indicator = " ";
+        }
+        $self->{$indcode} = $indicator;
+    } # for
+
+    #(@_ >= 2)
+        #or croak( "Field $tagno must have at least one subfield" );
+
+    # Normally, we go thru add_subfields(), but internally we can cheat
+    $self->{_subfields} = [@_];
+
+    return $self;
+} # new()
 
 =head2 tag()
 
