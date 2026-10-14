@@ -279,7 +279,6 @@ sub _unsafe_append_fields {
     my $self = shift;
 
     push(@{ $self->{_fields} }, @_);
-    return scalar @_;
 }
 
 =head2 insert_fields_before( $before_field, @new_fields )
