@@ -717,7 +717,7 @@ sub as_usmarc {
 
     # Control fields are pretty easy
     if ( $self->{_is_control_field} ) {
-        return $self->data . END_OF_FIELD;
+        return $self->{_data} . END_OF_FIELD;
     } else {
         my @subs;
         my @subdata = @{$self->{_subfields}};
@@ -727,8 +727,8 @@ sub as_usmarc {
 
         return
             join( "",
-                $self->indicator(1),
-                $self->indicator(2),
+                $self->{_ind1},
+                $self->{_ind2},
                 @subs,
                 END_OF_FIELD, );
     }
