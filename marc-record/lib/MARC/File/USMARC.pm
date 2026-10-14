@@ -251,7 +251,7 @@ sub decode {
             my @subfield_data;
             for ( @subfields ) {
                 if ( length > 0 ) {
-                    push( @subfield_data, substr($_,0,1),substr($_,1) );
+                    push( @subfield_data, [ substr($_,0,1), substr($_,1) ] );
                 } else {
                     $problem->( "Entirely empty subfield found in tag $tagno" );
                 }
