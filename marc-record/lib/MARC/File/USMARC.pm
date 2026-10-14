@@ -219,7 +219,7 @@ sub decode {
             next unless $filter_func->( $tagno, $tagdata );
         }
 
-        if ( MARC::Field->is_controlfield_tag($tagno) ) {
+        if ( ( $tagno =~ /^\d{3}$/ && ($tagno < 10) ) || exists $MARC::Field::extra_control_fields_tags{$tagno} ) {
             $marc->_unsafe_append_fields( MARC::Field->_unsafe_new_control_field( $tagno, $tagdata ) );
         } else {
             my @subfields = split( SUBFIELD_INDICATOR, $tagdata );
