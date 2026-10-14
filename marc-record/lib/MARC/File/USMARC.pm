@@ -151,6 +151,9 @@ sub decode {
 
     $marc->leader( substr( $text, 0, LEADER_LEN ) );
 
+    # determine the record's encoding for later use
+    my $encoding = $marc->encoding();
+
     # bytes 12 - 16 of leader give offset to the body of the record
     my $data_start = 0 + bytes::substr( $text, 12, 5 );
 
@@ -187,7 +190,7 @@ sub decode {
         my $tagdata = bytes::substr( $text, $data_start+$offset, $len ); 
 
         # if utf8 the we encode the string as utf8
-        if ( $marc->encoding() eq 'UTF-8' ) {
+        if ( $encoding eq 'UTF-8' ) {
             $tagdata = marc_to_utf8( $tagdata );
         }
 
