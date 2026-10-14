@@ -201,7 +201,7 @@ sub indicator {
     my $self = shift;
     my $indno = shift;
 
-    if ($self->is_control_field) {
+    if ($self->{_is_control_field}) {
         $self->_warn( "Control fields (generally, those with tags below 010) do not have indicators" );
         return;
     }
@@ -233,7 +233,7 @@ sub set_indicator {
     croak('Indicator number must be 1 or 2')
       unless defined $indno && $indno =~ /^[12]$/;
     croak('Cannot set indicator for control field')
-      if $self->is_control_field;
+      if $self->{_is_control_field};
     croak('Indicator value is invalid') unless $self->is_valid_indicator($indval);
 
     $self->{"_ind$indno"} = $indval;
@@ -352,7 +352,7 @@ sub subfield {
     my $code_wanted = shift;
 
     croak( "Control fields (generally, just tags below 010) do not have subfields, use data()" )
-        if $self->is_control_field;
+        if $self->{_is_control_field};
 
     my @data = @{$self->{_subfields}};
     my @found;
@@ -384,7 +384,7 @@ For example, this might be the subfields from a 245 field:
 sub subfields {
     my $self = shift;
 
-    if ($self->is_control_field) {
+    if ($self->{_is_control_field}) {
         $self->_warn( "Control fields (generally, just tags below 010)  do not have subfields" );
         return;
     }
@@ -407,7 +407,7 @@ sub data {
     my $self = shift;
 
     croak( "data() is only for control fields (generally, just tags below 010) , use subfield()" )
-        unless $self->is_control_field;
+        unless $self->{_is_control_field};
 
     $self->{_data} = $_[0] if @_;
 
@@ -428,7 +428,7 @@ sub add_subfields {
     my $self = shift;
 
     croak( "Subfields are only for data fields (generally, just tags >= 010)" )
-        if $self->is_control_field;
+        if $self->{_is_control_field};
 
     push( @{$self->{_subfields}}, @_ );
     return @_/2;
@@ -568,7 +568,7 @@ sub update {
     my $self = shift;
 
     ## tags 000 - 009 don't have indicators or subfields
-    if ( $self->is_control_field ) {
+    if ( $self->{_is_control_field} ) {
         $self->{_data} = shift;
         return(1);
     }
@@ -674,7 +674,7 @@ sub as_string {
     my $delimiter = shift;
     $delimiter = " " unless defined $delimiter;
 
-    if ( $self->is_control_field ) {
+    if ( $self->{_is_control_field} ) {
         return $self->{_data};
     }
 
@@ -704,7 +704,7 @@ sub as_formatted {
 
     my @lines;
 
-    if ( $self->is_control_field ) {
+    if ( $self->{_is_control_field} ) {
         push( @lines, sprintf( "%03s     %s", $self->{_tag}, $self->{_data} ) );
     } else {
         my $hanger = sprintf( "%03s %1.1s%1.1s", $self->{_tag}, $self->{_ind1}, $self->{_ind2} );
@@ -733,7 +733,7 @@ sub as_usmarc {
     my $self = shift;
 
     # Control fields are pretty easy
-    if ( $self->is_control_field ) {
+    if ( $self->{_is_control_field} ) {
         return $self->data . END_OF_FIELD;
     } else {
         my @subs;
