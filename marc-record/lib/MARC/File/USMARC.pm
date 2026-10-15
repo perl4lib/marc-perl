@@ -15,7 +15,6 @@ use integer;
 use Carp qw( croak );
 
 use vars qw( $ERROR );
-use MARC::File::Encode qw( marc_to_utf8 );
 
 use MARC::File;
 use vars qw( @ISA ); @ISA = qw( MARC::File );
@@ -320,7 +319,9 @@ sub _build_tag_directory {
                 push( @fields, $str );
 
                 # Create directory entry
+                use bytes;
                 my $len = bytes::length( $str );
+                no bytes;
 
                 my $direntry = sprintf( "%03s%04d%05d", $field->tag, $len, $dataend );
                 push( @directory, $direntry );
