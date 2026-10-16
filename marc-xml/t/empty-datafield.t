@@ -4,6 +4,8 @@ use Test::More tests => 5;
 use MARC::Record;
 use MARC::File::XML;
 
+$MARC::File::XML::PARSING_LEVEL = 'default';
+
 open my $IN, '<', 't/empty-datafield.xml';
 my $xml = join('', <$IN>);
 close $IN;

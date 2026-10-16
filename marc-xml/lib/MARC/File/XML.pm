@@ -17,6 +17,10 @@ $VERSION = '1.0.6';
 
 our $parser;
 
+# How tolerant decode() is of malformed data; see "PARSING LEVELS".
+our $PARSING_LEVEL = 'strict';
+my %_parsing_levels = map { $_ => 1 } qw( strict default );
+
 sub import {
     my $class = shift;
     %_load_args = @_;
@@ -436,6 +440,10 @@ sub decode {
     my $text;
     my $location = '';
 
+    my $level = $PARSING_LEVEL;
+    croak( "Unknown parsing level '$level' (expected one of: " . join( ', ', sort keys %_parsing_levels ) . ')' )
+        unless defined $level && $_parsing_levels{$level};
+
     if ( ref($self) =~ /^MARC::File/ ) {
         $location = 'in record '.$self->{recnum};
         $text = shift;
@@ -484,17 +492,22 @@ sub decode {
 
             my $tag = $elt->getAttribute('tag');
 
-            unless (@sfs) {
-                $rec->_warn("no subfield data found $location for tag $tag");
-                next;
-            }
-
             my $ind1 = $elt->getAttribute('ind1');
             my $ind2 = $elt->getAttribute('ind2');
-            unless (defined $ind1 && defined $ind2) {
-                $rec->_warn("missing indicator(s) forced to blanks $location for tag $tag");
-                $ind1 = ' ' unless defined $ind1;
-                $ind2 = ' ' unless defined $ind2;
+
+            # At the 'strict' level these are left for MARC::Field->new()
+            # to reject.
+            if ($level eq 'default') {
+                unless (@sfs) {
+                    $rec->_warn("no subfield data found $location for tag $tag");
+                    next;
+                }
+
+                unless (defined $ind1 && defined $ind2) {
+                    $rec->_warn("missing indicator(s) forced to blanks $location for tag $tag");
+                    $ind1 = ' ' unless defined $ind1;
+                    $ind2 = ' ' unless defined $ind2;
+                }
             }
 
             push @fields, MARC::Field->new($tag, $ind1, $ind2, @sfs);
@@ -582,6 +595,32 @@ sub _unimarc_encoding {
         die "Unsupported UNIMARC character encoding [$enc] for XML output for $f; 100\$a -> " . $r->subfield(100 => 'a');
     }
 }
+
+=head1 PARSING LEVELS
+
+How tolerant C<decode()> is of malformed data is controlled by the package
+variable C<$MARC::File::XML::PARSING_LEVEL>:
+
+    local $MARC::File::XML::PARSING_LEVEL = 'default';
+
+=over 4
+
+=item strict
+
+The default. A C<< <datafield> >> with no C<< <subfield> >> children, or with
+a missing C<ind1> or C<ind2> attribute, makes C<decode()> die, as it always
+has.
+
+=item default
+
+Common errors are fixed or ignored, and a warning is added to the record's
+C<warnings()> list. A C<< <datafield> >> with no subfields is dropped, and a
+missing indicator is replaced with a blank. This is how
+L<MARC::File::USMARC> treats the equivalent problems in binary records.
+
+=back
+
+Any other value makes C<decode()> die.
 
 =head1 TODO
 
