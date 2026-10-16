@@ -193,8 +193,11 @@ Options:
     --[no]hex       If --print active, make the output hexadecimal
     --lif           Input files are MicroLIF, not USMARC
     --field=spec    Specify a field spec to include.  There may be many.
+                    A spec is a regular expression matched against the
+                    whole tag, so use "." as a single-character wildcard.
                     Examples:
-                        --field=245 --field=1XX
+                        --field=245 --field=1..
+                        --field=LDR --field=6[0-9][0-9]
     --[no]quiet     Print status messages
     --[no]stats     Print a statistical summary by file at the end
     --version       Print version information
