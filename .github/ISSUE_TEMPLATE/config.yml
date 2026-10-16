@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and discussion (perl4lib mailing list)
+    url: https://perl4lib.perl.org/
+    about: For questions about using the MARC modules, the mailing list is the best place to ask.
+  - name: Report a security vulnerability
+    url: https://github.com/perl4lib/marc-perl/security/advisories/new
+    about: Please report suspected vulnerabilities privately rather than in a public issue.

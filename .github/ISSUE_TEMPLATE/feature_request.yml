@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest an improvement or new capability
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: distribution
+    attributes:
+      label: Distribution
+      options:
+        - marc-record
+        - marc-lint
+        - marc-xml
+        - marc-charset
+        - marc-mij
+        - marc-marcmaker
+        - Not sure / several
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to see?
