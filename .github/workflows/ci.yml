@@ -15,10 +15,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # The two most recent stable releases plus two older ones still
+        # Test the oldest version supported by the modules as well as
+        # the two most recent stable releases plus two older ones still
         # in common use. Bump these as new Perls ship; there's nothing
-        # special about any of these numbers.
-        perl: ['5.34', '5.40', '5.42', '5.44']
+        # special about any of these numbers other than the minimum version.
+        perl: ['5.8.2', '5.34', '5.40', '5.42', '5.44']
         distribution:
           - name: marc-record
             needs: ''
