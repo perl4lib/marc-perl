@@ -38,6 +38,20 @@ To install this module, run the following commands:
     ./Build test
     ./Build install
 
+=head1 SUPPORT AND CONTRIBUTING
+
+Please report bugs and request features through GitHub issues at
+L<https://github.com/perl4lib/marc-perl/issues>, saying which distribution
+they concern. Questions about using the modules are welcome on the perl4lib
+mailing list, L<https://perl4lib.perl.org/>.
+
+Contributions are very welcome; see
+L<CONTRIBUTING.md|https://github.com/perl4lib/marc-perl/blob/master/CONTRIBUTING.md>
+for how to run the tests and submit a pull request. To report a security
+problem, please follow
+L<SECURITY.md|https://github.com/perl4lib/marc-perl/blob/master/SECURITY.md>
+rather than opening a public issue.
+
 =head1 LICENSE AND COPYRIGHT
 
 Copyright (C) 2013 Bill Dueber
