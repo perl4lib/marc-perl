@@ -19,7 +19,7 @@ jobs:
         # the two most recent stable releases plus two older ones still
         # in common use. Bump these as new Perls ship; there's nothing
         # special about any of these numbers other than the minimum version.
-        perl: ['5.8.2', '5.34', '5.40', '5.42', '5.44']
+        perl: ['5.8.4', '5.34', '5.40', '5.42', '5.44']
         distribution:
           - name: marc-record
             needs: ''
