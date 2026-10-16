@@ -12,10 +12,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # A recent stable release and an older one still in common use.
-        # Bump these as new Perls ship; there's nothing special about
-        # either number.
-        perl: ['5.34', '5.40']
+        # The two most recent stable releases plus two older ones still
+        # in common use. Bump these as new Perls ship; there's nothing
+        # special about any of these numbers.
+        perl: ['5.34', '5.40', '5.42', '5.44']
         distribution:
           - name: marc-record
             needs: ''
