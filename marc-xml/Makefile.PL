@@ -13,9 +13,14 @@ WriteMakefile(
                             'Galen Charlton <gmcharlt@gmail.com>',
                        ],
     'LICENSE'       => 'perl',
+    'MIN_PERL_VERSION' => '5.008002',
+    'CONFIGURE_REQUIRES' => {
+                            'ExtUtils::MakeMaker' => '6.64',
+                       },
     'META_MERGE'    => {
         'meta-spec' => { version => 2 },
         resources   => {
+            homepage   => 'https://github.com/perl4lib/marc-perl',
             repository => {
                 type => 'git',
                 url  => 'https://github.com/perl4lib/marc-perl.git',
@@ -31,7 +36,8 @@ WriteMakefile(
                             'MARC::Record'  => 2.0,
                             'MARC::Charset' => 0.98,
                        },
-    'BUILD_REQUIRES'=> {
+    'TEST_REQUIRES' => {
+                            'Test::More' => 0,
                             'Test::Warn' => 0,
                        },
     'EXE_FILES'         => [ qw( bin/marc2xml bin/xml2marc ) ]
