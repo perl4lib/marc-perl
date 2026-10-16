@@ -10,6 +10,8 @@ use strict;
 use warnings;
 use integer;
 
+use Carp qw( croak );
+
 use vars qw( $ERROR );
 use MARC::File::Encode qw( marc_to_utf8 );
 
@@ -22,6 +24,10 @@ use constant SUBFIELD_INDICATOR     => "\x1F";
 use constant END_OF_FIELD           => "\x1E";
 use constant END_OF_RECORD          => "\x1D";
 use constant DIRECTORY_ENTRY_LEN    => 12;
+
+# How tolerant decode() is of malformed data; see "PARSING LEVELS".
+our $PARSING_LEVEL = 'default';
+my %_parsing_levels = map { $_ => 1 } qw( strict default );
 
 =head1 SYNOPSIS
 
@@ -116,20 +122,30 @@ sub decode {
     }
     my $filter_func = shift;
 
+    my $level = $PARSING_LEVEL;
+    croak( "Unknown parsing level '$level' (expected one of: " . join( ', ', sort keys %_parsing_levels ) . ')' )
+        unless defined $level && $_parsing_levels{$level};
+
     # ok this the empty shell we will fill
     my $marc = MARC::Record->new();
 
+    # At the 'default' level a problem is recorded as a warning on the
+    # record; at 'strict' it is fatal.
+    my $problem = $level eq 'strict'
+        ? sub { croak( join( '', @_ ) ) }
+        : sub { $marc->_warn( @_ ) };
+
     # Check for an all-numeric record length
     ($text =~ /^(\d{5})/)
-        or return $marc->_warn( "Record length \"", substr( $text, 0, 5 ), "\" is not numeric $location" );
+        or return $problem->( "Record length \"", substr( $text, 0, 5 ), "\" is not numeric $location" );
 
     my $reclen = $1;
     my $realLength = bytes::length( $text );
-    $marc->_warn( "Invalid record length $location: Leader says $reclen " . 
+    $problem->( "Invalid record length $location: Leader says $reclen " . 
         "bytes but it's actually $realLength" ) unless $reclen == $realLength;
 
     (substr($text, -1, 1) eq END_OF_RECORD)
-        or $marc->_warn( "Invalid record terminator $location" );
+        or $problem->( "Invalid record terminator $location" );
 
     $marc->leader( substr( $text, 0, LEADER_LEN ) );
 
@@ -141,11 +157,11 @@ sub decode {
 
     # character after the directory must be \x1e
     (substr($text, $data_start-1, 1) eq END_OF_FIELD)
-        or $marc->_warn( "No directory found $location" );
+        or $problem->( "No directory found $location" );
 
     # all directory entries 12 bytes long, so length % 12 must be 0
     (length($dir) % DIRECTORY_ENTRY_LEN == 0)
-        or $marc->_warn( "Invalid directory length $location" );
+        or $problem->( "Invalid directory length $location" );
 
 
     # go through all the fields
@@ -155,16 +171,16 @@ sub decode {
 
         # Check directory validity
         ($tagno =~ /^[0-9A-Za-z]{3}$/)
-            or $marc->_warn( "Invalid tag in directory $location: \"$tagno\"" );
+            or $problem->( "Invalid tag in directory $location: \"$tagno\"" );
 
         ($len =~ /^\d{4}$/)
-            or $marc->_warn( "Invalid length in directory $location tag $tagno: \"$len\"" );
+            or $problem->( "Invalid length in directory $location tag $tagno: \"$len\"" );
 
         ($offset =~ /^\d{5}$/)
-            or $marc->_warn( "Invalid offset in directory $location tag $tagno: \"$offset\"" );
+            or $problem->( "Invalid offset in directory $location tag $tagno: \"$offset\"" );
 
         ($offset + $len <= $reclen)
-            or $marc->_warn( "Directory entry $location runs off the end of the record tag $tagno" );
+            or $problem->( "Directory entry $location runs off the end of the record tag $tagno" );
 
         my $tagdata = bytes::substr( $text, $data_start+$offset, $len ); 
 
@@ -173,7 +189,7 @@ sub decode {
             $tagdata = marc_to_utf8( $tagdata );
         }
 
-        $marc->_warn( "Invalid length in directory for tag $tagno $location" )
+        $problem->( "Invalid length in directory for tag $tagno $location" )
             unless ( $len == bytes::length($tagdata) );
 
         if ( substr($tagdata, -1, 1) eq END_OF_FIELD ) {
@@ -181,7 +197,7 @@ sub decode {
             chop $tagdata;
             --$len;
         } else {
-            $marc->_warn( "field does not end in end of field character in tag $tagno $location" );
+            $problem->( "field does not end in end of field character in tag $tagno $location" );
         }
 
         warn "Specs: ", join( "|", $tagno, $len, $offset, $tagdata ), "\n" if $MARC::Record::DEBUG;
@@ -198,7 +214,7 @@ sub decode {
             my ($ind1, $ind2);
 
             if ( length( $indicators ) > 2 or length( $indicators ) == 0 ) {
-                $marc->_warn( "Invalid indicators \"$indicators\" forced to blanks $location for tag $tagno\n" );
+                $problem->( "Invalid indicators \"$indicators\" forced to blanks $location for tag $tagno\n" );
                 ($ind1,$ind2) = (" ", " ");
             } else {
                 $ind1 = substr( $indicators,0, 1 );
@@ -211,18 +227,18 @@ sub decode {
                 if ( length > 0 ) {
                     push( @subfield_data, substr($_,0,1),substr($_,1) );
                 } else {
-                    $marc->_warn( "Entirely empty subfield found in tag $tagno" );
+                    $problem->( "Entirely empty subfield found in tag $tagno" );
                 }
             }
 
             if ( !@subfield_data ) {
-                $marc->_warn( "no subfield data found $location for tag $tagno" );
+                $problem->( "no subfield data found $location for tag $tagno" );
                 next;
             }
 
             my $field = MARC::Field->new($tagno, $ind1, $ind2, @subfield_data );
             if ( $field->warnings() ) {
-                $marc->_warn( $field->warnings() );
+                $problem->( $field->warnings() );
             }
             $marc->append_fields( $field );
         }
@@ -231,6 +247,29 @@ sub decode {
 
     return $marc;
 }
+
+=head1 PARSING LEVELS
+
+How tolerant C<decode()> is of malformed data is controlled by the package
+variable C<$MARC::File::USMARC::PARSING_LEVEL>:
+
+    local $MARC::File::USMARC::PARSING_LEVEL = 'strict';
+
+=over 4
+
+=item default
+
+The default. Common errors, such as invalid indicators or empty fields, are
+fixed or ignored, and a warning is added to the record's C<warnings()> list.
+
+=item strict
+
+Any problem that would otherwise be recorded as a warning makes C<decode()>
+die instead.
+
+=back
+
+Any other value makes C<decode()> die.
 
 =head2 update_leader()
 
