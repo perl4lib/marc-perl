@@ -1,0 +1,6838 @@
+%PDF-1.2
+%‚„œ”
+1 0 obj
+[/CalRGB
+<<
+/WhitePoint [0.9505 1 1.089]
+/Gamma [1.8 1.8 1.8]
+/Matrix [0.4497 0.2446 0.02518 0.3613 0.672 0.1412 0.1845 0.08334 0.9227]
+>>
+]
+endobj
+2 0 obj
+<<
+/CreationDate (D:20050822132026-0500)
+/Producer (pod2pdf)
+/Title (Tutorial.pod)
+>>
+endobj
+5 0 obj
+<<
+/Type /Encoding
+/Differences [ 0 /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam
+/quotedbl /numbersign /dollar /percent /ampersand
+/quoteright /parenleft /parenright /asterisk /plus /comma
+/hyphen /period /slash /zero /one /two /three /four /five
+/six /seven /eight /nine /colon /semicolon /less /equal
+/greater /question /at /A /B /C /D /E /F /G /H /I /J /K /L
+/M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft
+/backslash /bracketright /asciicircum /underscore
+/quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o /p
+/q /r /s /t /u /v /w /x /y /z /braceleft /bar /braceright
+/asciitilde /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /emdash
+/dotlessi /grave /acute /circumflex /tilde /macron /breve
+/dotaccent /dieresis /.notdef /ring /cedilla /.notdef
+/hungarumlaut /ogonek /caron /space /exclamdown /cent
+/sterling /currency /yen /brokenbar /section /dieresis
+/copyright /ordfeminine /guillemotleft /logicalnot /hyphen
+/registered /macron /degree /plusminus /twosuperior
+/threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright
+/onequarter /onehalf /threequarters /questiondown /Agrave
+/Aacute /Acircumflex /Atilde /Adieresis /Aring /AE
+/Ccedilla /Egrave /Eacute /Ecircumflex /Edieresis /Igrave
+/Iacute /Icircumflex /Idieresis /Eth /Ntilde /Ograve
+/Oacute /Ocircumflex /Otilde /Odieresis /multiply /Oslash
+/Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn
+/germandbls /agrave /aacute /acircumflex /atilde /adieresis
+/aring /ae /ccedilla /egrave /eacute /ecircumflex
+/edieresis /igrave /iacute /icircumflex /idieresis /eth
+/ntilde /ograve /oacute /ocircumflex /otilde /odieresis
+/divide /oslash /ugrave /uacute /ucircumflex /udieresis
+/yacute /thorn /ydieresis ]
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F00
+/Encoding 5 0 R
+/BaseFont /Times-Roman
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F01
+/Encoding 5 0 R
+/BaseFont /Times-Bold
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F02
+/Encoding 5 0 R
+/BaseFont /Times-Italic
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F03
+/Encoding 5 0 R
+/BaseFont /Times-BoldItalic
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F10
+/Encoding 5 0 R
+/BaseFont /Courier
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F11
+/Encoding 5 0 R
+/BaseFont /Courier-Bold
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F12
+/Encoding 5 0 R
+/BaseFont /Courier-Oblique
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F13
+/Encoding 5 0 R
+/BaseFont /Courier-BoldOblique
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F20
+/Encoding 5 0 R
+/BaseFont /Helvetica
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F21
+/Encoding 5 0 R
+/BaseFont /Helvetica-Bold
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F22
+/Encoding 5 0 R
+/BaseFont /Helvetica-Oblique
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F23
+/Encoding 5 0 R
+/BaseFont /Helvetica-BoldOblique
+>>
+endobj
+0 g
+18 0 obj
+<<
+/Length 19 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F21 12 Tf
+1 0 0 1 72.0 764.0 Tm
+0.0000 Tw
+(NAME ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 749.6 Tm
+0.0000 Tw
+(MARC::Doc::Tutorial - A documentation-only module for new users of MARC::Record ) Tj
+/F21 12 Tf
+1 0 0 1 72.0 731.6 Tm
+0.0000 Tw
+(SYNOPSIS ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 711.2 Tm
+0.0000 Tw
+( perldoc MARC::Doc::Tutorial ) Tj
+/F21 12 Tf
+1 0 0 1 72.0 693.2 Tm
+0.0000 Tw
+(INTRODUCTION ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 671.6 Tm
+0.0000 Tw
+(What is MARC? ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 659.6 Tm
+0.3094 Tw
+(The MAchine Readable Cataloging format was designed by the Library of Congress in the late 1960s in) Tj
+1 0 0 1 102.0 647.6 Tm
+1.3000 Tw
+(order to allow libraries to convert their card catalogs into a digital format. The advantages of having) Tj
+1 0 0 1 102.0 635.6 Tm
+0.9875 Tw
+(computerized card catalogs were soon realized, and now MARC is being used by all sorts of libraries) Tj
+1 0 0 1 102.0 623.6 Tm
+0.0950 Tw
+(around the world to provide computerized access to their collections. MARC data in transmission format) Tj
+1 0 0 1 102.0 611.6 Tm
+1.4550 Tw
+(is optimized for processing by computers, so it`s not very readable for the normal human. For more) Tj
+1 0 0 1 102.0 599.6 Tm
+0.0000 Tw
+(about the MARC format, visit the Library of Congress at http://www.loc.gov/marc/ ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 581.6 Tm
+0.0000 Tw
+(What is this Tutorial? ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 569.6 Tm
+0.7806 Tw
+(The document you are reading is a beginners guide to using Perl to processing MARC data, written in) Tj
+1 0 0 1 102.0 557.6 Tm
+0.1118 Tw
+(the `cookbook' style. Inside, you will find recipes on how to read, write, update and convert MARC data) Tj
+1 0 0 1 102.0 545.6 Tm
+0.6659 Tw
+(using the MARC::Record CPAN package. As with any cookbook, you should feel free to dip in at any) Tj
+1 0 0 1 102.0 533.6 Tm
+0.8595 Tw
+(section and use the recipe you find interesting. If you are new to Perl, you may want to read from the) Tj
+1 0 0 1 102.0 521.6 Tm
+0.0000 Tw
+(beginning. ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 509.6 Tm
+0.4053 Tw
+(The document you are reading is distributed with the MARC::Record package, however in case you are) Tj
+1 0 0 1 102.0 497.6 Tm
+0 Tw
+(reading it somewhere else, you can find the latest version at CPAN:) Tj
+1 0 0 1 102.0 485.6 Tm
+1.0700 Tw
+(http://www.cpan.org/modules/by-module/MARC/. You`ll notice that some sections aren`t filled in yet,) Tj
+1 0 0 1 102.0 473.6 Tm
+0.8168 Tw
+(which is a result of this document being a work in progress. If you have ideas for new sections please) Tj
+1 0 0 1 102.0 461.6 Tm
+0.0000 Tw
+(make a suggestion to perl4lib: http://www.rice.edu/perl4lib/. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 443.6 Tm
+0.0000 Tw
+(History of MARC on CPAN ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 431.6 Tm
+0.2741 Tw
+(In 1999, a group of developers began working on MARC.pm to provide a Perl module for working with) Tj
+1 0 0 1 102.0 419.6 Tm
+1.8287 Tw
+(MARC data. MARC.pm was quite successful since it grew to include many new options that were) Tj
+1 0 0 1 102.0 407.6 Tm
+0.1950 Tw
+(requested by the Perl/library community.  However, in adding these features the module swiftly outgrew) Tj
+1 0 0 1 102.0 395.6 Tm
+0.7714 Tw
+(its own clothes, and maintenance and addition of new features became extremely difficult. In addition,) Tj
+1 0 0 1 102.0 383.6 Tm
+0.8853 Tw
+(as libraries began using MARC.pm to process large MARC data files \() Tj
+/F00 10 Tf
+0.8853 Tw
+(1000 records\) they noticed that) Tj
+1 0 0 1 102.0 371.6 Tm
+1.9633 Tw
+(memory consumption would skyrocket. Memory consumption became an issue for large batches of) Tj
+1 0 0 1 102.0 359.6 Tm
+1.2773 Tw
+(records because MARC.pm`s object model was based on the `batch' rather than the record... so each) Tj
+1 0 0 1 102.0 347.6 Tm
+1.0783 Tw
+(record in the file would often be read into memory. There were ways of getting around this, but they) Tj
+1 0 0 1 102.0 335.6 Tm
+0.9019 Tw
+(were not obvious. Some effort was made to reconcile the two approaches \(batch and record\), but with) Tj
+1 0 0 1 102.0 323.6 Tm
+0.0000 Tw
+(limited success. ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 311.6 Tm
+0.8915 Tw
+(In mid 2001, Andy Lester released MARC::Record and MARC::Field which provided a much simpler) Tj
+1 0 0 1 102.0 299.6 Tm
+0.7854 Tw
+(and maintainable package for processing MARC data with Perl. As its name suggests, MARC::Record) Tj
+1 0 0 1 102.0 287.6 Tm
+0.8487 Tw
+(treats an individual MARC record as the primary Perl object, rather than having the object represent a) Tj
+1 0 0 1 102.0 275.6 Tm
+0.7024 Tw
+(given set of records. Instead of forking the two projects, the developers agreed to encourage use of the) Tj
+1 0 0 1 102.0 263.6 Tm
+0.0700 Tw
+(MARC::Record framework, and to work on enhancing MARC::Record rather than extending MARC.pm) Tj
+1 0 0 1 102.0 251.6 Tm
+0.1538 Tw
+(further. Soon afterwards, MARC::Batch was added, which allows you to read in a large data file without) Tj
+1 0 0 1 102.0 239.6 Tm
+0.0000 Tw
+(having to worry about memory consumption. ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 227.6 Tm
+1.8840 Tw
+(In Dec., 2004, the MARC::Lint module, an extension to check the validity of MARC records, was) Tj
+1 0 0 1 102.0 215.6 Tm
+0.2725 Tw
+(removed from the MARC::Record distribution, to become a separately distributed package. This tutorial) Tj
+1 0 0 1 102.0 203.6 Tm
+0.0000 Tw
+(contains examples for using MARC::Lint. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 173.6 Tm
+0.0000 Tw
+(Brief Overview of MARC Classes ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 161.6 Tm
+0.4157 Tw
+(The MARC::Record package is made up of several separate packages. This can be somewhat confusing) Tj
+1 0 0 1 102.0 149.6 Tm
+0.0964 Tw
+(to people new to Perl, or Object Oriented Programming. However this framework allows easy extension,) Tj
+1 0 0 1 102.0 137.6 Tm
+0.1644 Tw
+(and is built to support new input/output formats as their need arises. For a good introduction to using the) Tj
+1 0 0 1 102.0 125.6 Tm
+0.0000 Tw
+(object oriented features of Perl, see the perlboot documentation that came with your version of Perl. ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 113.6 Tm
+0.0000 Tw
+(Here are the packages that get installed with MARC::Record: ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 87.2 Tm
+0.0000 Tw
+(MARC::Batch ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 75.2 Tm
+0.0000 Tw
+(A convenience class for accessing MARC data contained in an external file. ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 517.44 37 Tm
+(1) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+19 0 obj
+6448
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F20 14 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 20 0 R
+/Contents 18 0 R
+>>
+endobj
+22 0 obj
+<<
+/Length 23 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F20 10 Tf
+1 0 0 1 102.0 770.0 Tm
+0.0000 Tw
+(MARC::Field ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 758.0 Tm
+0.0000 Tw
+(An object for representing the indicators and subfields of a single MARC field. ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 743.6 Tm
+0.0000 Tw
+(MARC::Record ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 731.6 Tm
+2.6008 Tw
+(This primary class represents a MARC record, being a container for multiple MARC::Field) Tj
+1 0 0 1 126.0 719.6 Tm
+0.0000 Tw
+(objects. ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 705.2 Tm
+0.0000 Tw
+(MARC::Doc::Tutorial ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 693.2 Tm
+0.0000 Tw
+(This document! ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 678.8 Tm
+0.0000 Tw
+(MARC::File ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 666.8 Tm
+0.0000 Tw
+(A superclass for representing files of MARC data. ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 652.4 Tm
+0.0000 Tw
+(MARC::File::MicroLIF ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 640.4 Tm
+0.0000 Tw
+(A subclass of MARC::File for working with data encoded in the MicroLIF format. ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(MARC::File::USMARC ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 614.0 Tm
+0.0000 Tw
+(A subclass of MARC::File for working with data encoded in the USMARC format. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 584.0 Tm
+0.0000 Tw
+(Help Wanted! ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 572.0 Tm
+2.8354 Tw
+(It`s already been mentioned but it`s worth mentioning again: MARC::Doc::Tutorial is a work in) Tj
+1 0 0 1 102.0 560.0 Tm
+2.1593 Tw
+(progress, and you are encouraged to submit any suggestions for additional recipes via the perl4lib) Tj
+1 0 0 1 102.0 548.0 Tm
+3.8045 Tw
+(mailing list at http://www.rice.edu/perl4lib. Also, the development group is always looking for) Tj
+1 0 0 1 102.0 536.0 Tm
+3.7657 Tw
+(additional developers with good ideas; if you are interested you can sign up at SourceForge:) Tj
+1 0 0 1 102.0 524.0 Tm
+0.0000 Tw
+(http://sourceforge.net/projects/marcpm/. ) Tj
+/F21 12 Tf
+1 0 0 1 72.0 494.0 Tm
+0.0000 Tw
+(READING ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 472.4 Tm
+0.0000 Tw
+(Reading a record from a file ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 460.4 Tm
+0.4840 Tw
+(Let`s say you have a USMARC record in `file.dat' and you`d like to read in the record and print out its) Tj
+1 0 0 1 102.0 448.4 Tm
+0.0000 Tw
+(title. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 436.4 Tm
+0.0000 Tw
+(   1   ## Example R1 ) Tj
+1 0 0 1 102.0 424.4 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 412.4 Tm
+0.0000 Tw
+(   3   ## create a MARC::Batch object. ) Tj
+1 0 0 1 102.0 400.4 Tm
+0.0000 Tw
+(   4   use MARC::Batch; ) Tj
+1 0 0 1 102.0 388.4 Tm
+0.0000 Tw
+(   5   my $batch = MARC::Batch\('USMARC', 'file.dat'\); ) Tj
+1 0 0 1 102.0 376.4 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 364.4 Tm
+0.0000 Tw
+(   7   ## get a MARC record from the MARC::Batch object. ) Tj
+1 0 0 1 102.0 352.4 Tm
+0.0000 Tw
+(   8   ## the $record will be a MARC::Record object. ) Tj
+1 0 0 1 102.0 340.4 Tm
+0.0000 Tw
+(   9   my $record = $batch->next\(\); ) Tj
+1 0 0 1 102.0 328.4 Tm
+0.0000 Tw
+(  10 ) Tj
+1 0 0 1 102.0 316.4 Tm
+0.0000 Tw
+(  11   ## print the title contained in the record. ) Tj
+1 0 0 1 102.0 304.4 Tm
+0.0000 Tw
+(  12   print $record->title\(\),"\\n"; ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 280.4 Tm
+0.0000 Tw
+(Using the distribution`s `t/camel.usmarc`, your result should be: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 268.4 Tm
+0.0000 Tw
+(  ActivePerl with ASP and ADO / Tobias Martinsson. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 250.4 Tm
+0.0000 Tw
+(Iterating through a batch file ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 238.4 Tm
+0.6512 Tw
+(Now imagine that `file.dat' actually contains multiple records and we want to print the title for each of) Tj
+1 0 0 1 102.0 226.4 Tm
+0.4845 Tw
+(them. Our program doesn`t have to change very much at all: we just need to add a loop around our call) Tj
+1 0 0 1 102.0 214.4 Tm
+0.0000 Tw
+(to ) Tj
+/F10 10 Tf
+0.0000 Tw
+(next\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+(. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 202.4 Tm
+0.0000 Tw
+(   1   ## Example R2 ) Tj
+1 0 0 1 102.0 190.4 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 178.4 Tm
+0.0000 Tw
+(   3   ## create a MARC::Batch object. ) Tj
+1 0 0 1 102.0 166.4 Tm
+0.0000 Tw
+(   4   use MARC::Batch; ) Tj
+1 0 0 1 102.0 154.4 Tm
+0.0000 Tw
+(   5   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 142.4 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 130.4 Tm
+0.0000 Tw
+(   7   while \(my $record = $batch->next\(\)\) \{ ) Tj
+1 0 0 1 102.0 118.4 Tm
+0.0000 Tw
+(   8 ) Tj
+1 0 0 1 102.0 106.4 Tm
+0.0000 Tw
+(   9     ## print the title contained in the record. ) Tj
+1 0 0 1 102.0 94.4 Tm
+0.0000 Tw
+(  10     print $record->title\(\),"\\n"; ) Tj
+1 0 0 1 102.0 82.4 Tm
+0.0000 Tw
+(  11 ) Tj
+1 0 0 1 102.0 70.4 Tm
+0.0000 Tw
+(  12   \} ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(2) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+23 0 obj
+4754
+endobj
+24 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F20 14 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+25 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 24 0 R
+/Contents 22 0 R
+>>
+endobj
+26 0 obj
+<<
+/Length 27 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F00 10 Tf
+1 0 0 1 102.0 770.0 Tm
+0.4878 Tw
+(The call to the ) Tj
+/F10 10 Tf
+0.4878 Tw
+(next\(\)) Tj
+/F00 10 Tf
+0.4878 Tw
+( method at line 7 returns the next record from the file. ) Tj
+/F10 10 Tf
+0.4878 Tw
+(next\(\)) Tj
+/F00 10 Tf
+0.4878 Tw
+( returns ) Tj
+/F10 10 Tf
+0.4878 Tw
+(undef) Tj
+/F00 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.9705 Tw
+(when there are no more records left in the file, which causes the ) Tj
+/F10 10 Tf
+0.9705 Tw
+(while) Tj
+/F00 10 Tf
+0.9705 Tw
+( loop to end. This is a useful) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(idiom for reading in all the records in a file. Your results with `camel.usmarc' should be: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(  ActivePerl with ASP and ADO / Tobias Martinsson. ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  Programming the Perl DBI / Alligator Descartes and Tim Bunce. ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  . ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(  . ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(  . ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(  Cross-platform Perl / Eric F. Johnson. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 656.0 Tm
+0.0000 Tw
+(Checking for errors ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 644.0 Tm
+0.3148 Tw
+(It is a good idea to get in the habit of checking for errors. MARC/Perl has been designed to help you do) Tj
+1 0 0 1 102.0 632.0 Tm
+1.0488 Tw
+(this. Calls to ) Tj
+/F10 10 Tf
+1.0488 Tw
+(next\(\)) Tj
+/F00 10 Tf
+1.0488 Tw
+( when iterating through a batch file will return ) Tj
+/F10 10 Tf
+1.0488 Tw
+(undef) Tj
+/F00 10 Tf
+1.0488 Tw
+( when there are no more) Tj
+1 0 0 1 102.0 620.0 Tm
+1.9444 Tw
+(records to return... ) Tj
+/F01 10 Tf
+1.9444 Tw
+(AND) Tj
+/F00 10 Tf
+1.9444 Tw
+( when an error was encountered \(see the next recipe to subvert this\). You) Tj
+1 0 0 1 102.0 608.0 Tm
+0.0000 Tw
+(probably want to make sure that you didn`t abruptly stop reading a batch file because of an error. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 596.0 Tm
+0.0000 Tw
+(   1   ## Example R3 ) Tj
+1 0 0 1 102.0 584.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 572.0 Tm
+0.0000 Tw
+(   3   ## create a MARC::Batch object. ) Tj
+1 0 0 1 102.0 560.0 Tm
+0.0000 Tw
+(   4   use MARC::Batch; ) Tj
+1 0 0 1 102.0 548.0 Tm
+0.0000 Tw
+(   5   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 536.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 524.0 Tm
+0.0000 Tw
+(   7   ## get a marc record from the MARC::Batch object. ) Tj
+1 0 0 1 102.0 512.0 Tm
+0.0000 Tw
+(   8   ## $record will be a MARC::Record object. ) Tj
+1 0 0 1 102.0 500.0 Tm
+0.0000 Tw
+(   9   while \( my $record = $batch->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 488.0 Tm
+0.0000 Tw
+(  10       print $record->title\(\),"\\n"; ) Tj
+1 0 0 1 102.0 476.0 Tm
+0.0000 Tw
+(  11   \} ) Tj
+1 0 0 1 102.0 464.0 Tm
+0.0000 Tw
+(  12 ) Tj
+1 0 0 1 102.0 452.0 Tm
+0.0000 Tw
+(  13   ## make sure there weren't any problems. ) Tj
+1 0 0 1 102.0 440.0 Tm
+0.0000 Tw
+(  14   if \( my @warnings = $batch->warnings\(\) \) \{ ) Tj
+1 0 0 1 102.0 428.0 Tm
+0.0000 Tw
+(  15       print "\\nWarnings were detected!\\n", @warnings; ) Tj
+1 0 0 1 102.0 416.0 Tm
+0.0000 Tw
+(  16   \} ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 392.0 Tm
+0.1106 Tw
+(The call to ) Tj
+/F10 10 Tf
+0.1106 Tw
+(warnings\(\)) Tj
+/F00 10 Tf
+0.1106 Tw
+( at line 14 will retrieve any warning messages and store them in ) Tj
+/F10 10 Tf
+0.1106 Tw
+(@warnings) Tj
+/F00 10 Tf
+0.1106 Tw
+(.) Tj
+1 0 0 1 102.0 380.0 Tm
+1.0018 Tw
+(This allows you to detect when ) Tj
+/F10 10 Tf
+1.0018 Tw
+(next\(\)) Tj
+/F00 10 Tf
+1.0018 Tw
+( has aborted prematurely \(before the end of the file has been) Tj
+1 0 0 1 102.0 368.0 Tm
+0.8206 Tw
+(reached\). When a warning is detected, an explanation is sent to ) Tj
+/F10 10 Tf
+0.8206 Tw
+(STDERR) Tj
+/F00 10 Tf
+0.8206 Tw
+(. By introducing an error into) Tj
+1 0 0 1 102.0 356.0 Tm
+0.0000 Tw
+(`camel.usmarc`, we`ll receive the following output to ) Tj
+/F10 10 Tf
+0.0000 Tw
+(STDOUT) Tj
+/F00 10 Tf
+0.0000 Tw
+(: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 344.0 Tm
+0.0000 Tw
+(  Warnings were detected! ) Tj
+1 0 0 1 102.0 332.0 Tm
+0.0000 Tw
+(  Invalid indicators "a0" forced to blanks in record 1 for tag 245 ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 314.0 Tm
+0.0000 Tw
+(Recovering from errors ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 302.0 Tm
+0.1670 Tw
+(You may want to keep reading a batch file even after an error has been encountered. If so, you will want) Tj
+1 0 0 1 102.0 290.0 Tm
+0.7880 Tw
+(to turn strict mode off using the ) Tj
+/F10 10 Tf
+0.7880 Tw
+(strict_off\(\)) Tj
+/F00 10 Tf
+0.7880 Tw
+( method. You can also prevent warnings from being) Tj
+1 0 0 1 102.0 278.0 Tm
+0.2353 Tw
+(printed to ) Tj
+/F10 10 Tf
+0.2353 Tw
+(STDERR) Tj
+/F00 10 Tf
+0.2353 Tw
+( using the ) Tj
+/F10 10 Tf
+0.2353 Tw
+(warnings_off\(\)) Tj
+/F00 10 Tf
+0.2353 Tw
+( method. By default, strict is on as a safety precaution) Tj
+1 0 0 1 102.0 266.0 Tm
+0.2168 Tw
+(to prevent you from using corrupt MARC data.  Once off, you can turn both strict and warnings back on) Tj
+1 0 0 1 102.0 254.0 Tm
+0.0000 Tw
+(again with the ) Tj
+/F10 10 Tf
+0.0000 Tw
+(strict_on\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( and ) Tj
+/F10 10 Tf
+0.0000 Tw
+(warnings_on\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( methods. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 242.0 Tm
+0.0000 Tw
+(   1   ## Example R4 ) Tj
+1 0 0 1 102.0 230.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 218.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 206.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC', 'file.dat'\); ) Tj
+1 0 0 1 102.0 194.0 Tm
+0.0000 Tw
+(   5   $batch->strict_off\(\); ) Tj
+1 0 0 1 102.0 182.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 170.0 Tm
+0.0000 Tw
+(   7   while \( my $record = $batch->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 158.0 Tm
+0.0000 Tw
+(   8      print $record->title\(\),"\\n"; ) Tj
+1 0 0 1 102.0 146.0 Tm
+0.0000 Tw
+(   9   \} ) Tj
+1 0 0 1 102.0 134.0 Tm
+0.0000 Tw
+(  10 ) Tj
+1 0 0 1 102.0 122.0 Tm
+0.0000 Tw
+(  11   ## make sure there weren't any problems. ) Tj
+1 0 0 1 102.0 110.0 Tm
+0.0000 Tw
+(  12   if \( my @warnings = $batch->warnings\(\) \) \{ ) Tj
+1 0 0 1 102.0 98.0 Tm
+0.0000 Tw
+(  13       print "\\nWarnings were detected!\\n", @warnings; ) Tj
+1 0 0 1 102.0 86.0 Tm
+0.0000 Tw
+(  14   \} ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 517.44 37 Tm
+(3) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+27 0 obj
+6228
+endobj
+28 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F01 7 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+29 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 28 0 R
+/Contents 26 0 R
+>>
+endobj
+30 0 obj
+<<
+/Length 31 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F00 10 Tf
+1 0 0 1 102.0 770.0 Tm
+0.0000 Tw
+(Introducing a second error to the `camel.usmarc' file gives the following: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(   ActivePerl with ASP and ADO / Tobias Martinsson. ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(   Programming the Perl DBI / Alligator Descartes and Tim Bunce. ) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(   . ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(   . ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(   . ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(   Cross-platform Perl / Eric F. Johnson. ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(   Warnings were detected! ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(   Invalid indicators "a0" forced to blanks in record 1 for tag 245 ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(   Invalid indicators "a0" forced to blanks in record 5 for tag 245 ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 632.0 Tm
+0.0000 Tw
+(Looking at a field ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 620.0 Tm
+0.6657 Tw
+(Our previous examples use MARC::Record`s ) Tj
+/F10 10 Tf
+0.6657 Tw
+(title\(\)) Tj
+/F00 10 Tf
+0.6657 Tw
+( method to easily access the 245 field, but you) Tj
+1 0 0 1 102.0 608.0 Tm
+2.6275 Tw
+(will probably want programs that access lots of other MARC fields. MARC::Record`s ) Tj
+/F10 10 Tf
+2.6275 Tw
+(field\(\)) Tj
+/F00 10 Tf
+1 0 0 1 102.0 596.0 Tm
+0.3050 Tw
+(method gives you complete access to the data found in any MARC field. The ) Tj
+/F10 10 Tf
+0.3050 Tw
+(field\(\)) Tj
+/F00 10 Tf
+0.3050 Tw
+( method returns) Tj
+1 0 0 1 102.0 584.0 Tm
+2.6813 Tw
+(a MARC::Field object which can be used to access the data, indicators, and even the individual) Tj
+1 0 0 1 102.0 572.0 Tm
+0.0000 Tw
+(subfields. Our next example shows how this is done. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 560.0 Tm
+0.0000 Tw
+(   1   ## Example R5 ) Tj
+1 0 0 1 102.0 548.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 536.0 Tm
+0.0000 Tw
+(   3   ## open a file. ) Tj
+1 0 0 1 102.0 524.0 Tm
+0.0000 Tw
+(   4   use MARC::Batch; ) Tj
+1 0 0 1 102.0 512.0 Tm
+0.0000 Tw
+(   5   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 500.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 488.0 Tm
+0.0000 Tw
+(   7   ## read a record. ) Tj
+1 0 0 1 102.0 476.0 Tm
+0.0000 Tw
+(   8   my $record = $batch->next\(\); ) Tj
+1 0 0 1 102.0 464.0 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 452.0 Tm
+0.0000 Tw
+(  10   ## get the 100 field as a MARC::Field object. ) Tj
+1 0 0 1 102.0 440.0 Tm
+0.0000 Tw
+(  11   my $field = $record->field\('100'\); ) Tj
+1 0 0 1 102.0 428.0 Tm
+0.0000 Tw
+(  12   print "The 100 field contains: ",$field->as_string\(\),"\\n"; ) Tj
+1 0 0 1 102.0 416.0 Tm
+0.0000 Tw
+(  13   print "The 1st indicator is ",$field->indicator\(1\),"\\n"; ) Tj
+1 0 0 1 102.0 404.0 Tm
+0.0000 Tw
+(  14   print "The 2nd indicator is ",$field->indicator\(2\),"\\n"; ) Tj
+1 0 0 1 102.0 392.0 Tm
+0.0000 Tw
+(  15   print "Subfield d contains: ",$field->subfield\('d'\),"\\n"; ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 368.0 Tm
+0.0000 Tw
+(Which results in something like: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 356.0 Tm
+0.0000 Tw
+(  The 100 field contains: Martinsson, Tobias, 1976- ) Tj
+1 0 0 1 102.0 344.0 Tm
+0.0000 Tw
+(  The 1st indicator is 1 ) Tj
+1 0 0 1 102.0 332.0 Tm
+0.0000 Tw
+(  The 2nd indicator is ) Tj
+1 0 0 1 102.0 320.0 Tm
+0.0000 Tw
+(  Subfield d contains: 1976- ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 296.0 Tm
+0.0000 Tw
+(As before, use a ) Tj
+/F10 10 Tf
+0.0000 Tw
+(while) Tj
+/F00 10 Tf
+0.0000 Tw
+( loop to iterate through all the records in a batch. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 278.0 Tm
+0.0000 Tw
+(Looking at repeatable fields ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 266.0 Tm
+1.0071 Tw
+(So how do you retrieve data from repeatable fields? The ) Tj
+/F10 10 Tf
+1.0071 Tw
+(field\(\)) Tj
+/F00 10 Tf
+1.0071 Tw
+( method can help you with this as) Tj
+1 0 0 1 102.0 254.0 Tm
+0.6417 Tw
+(well.  In our previous example`s line 11, the ) Tj
+/F10 10 Tf
+0.6417 Tw
+(field\(\)) Tj
+/F00 10 Tf
+0.6417 Tw
+( method was used in a ) Tj
+/F02 10 Tf
+0.6417 Tw
+(scalar) Tj
+/F00 10 Tf
+0.6417 Tw
+( context, since the) Tj
+1 0 0 1 102.0 242.0 Tm
+0.7112 Tw
+(result was being assigned to the variable ) Tj
+/F10 10 Tf
+0.7112 Tw
+($field) Tj
+/F00 10 Tf
+0.7112 Tw
+(. However in a ) Tj
+/F02 10 Tf
+0.7112 Tw
+(list) Tj
+/F00 10 Tf
+0.7112 Tw
+( context, ) Tj
+/F10 10 Tf
+0.7112 Tw
+(field\(\)) Tj
+/F00 10 Tf
+0.7112 Tw
+( will return all) Tj
+1 0 0 1 102.0 230.0 Tm
+0.0000 Tw
+(the fields in the record of that particular type. For example: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 218.0 Tm
+0.0000 Tw
+(   1   ## Example R6 ) Tj
+1 0 0 1 102.0 206.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 194.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 182.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 170.0 Tm
+0.0000 Tw
+(   5   my $record = $batch->next\(\); ) Tj
+1 0 0 1 102.0 158.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 146.0 Tm
+0.0000 Tw
+(   7   ## get all the 650 fields \(list context\). ) Tj
+1 0 0 1 102.0 134.0 Tm
+0.0000 Tw
+(   8   my @fields = $record->field\('650'\); ) Tj
+1 0 0 1 102.0 122.0 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 110.0 Tm
+0.0000 Tw
+(  10   ## examine each 650 field and print it out. ) Tj
+1 0 0 1 102.0 98.0 Tm
+0.0000 Tw
+(  11   foreach my $field \(@fields\) \{ ) Tj
+1 0 0 1 102.0 86.0 Tm
+0.0000 Tw
+(  12     print $field->as_string\(\),"\\n"; ) Tj
+1 0 0 1 102.0 74.0 Tm
+0.0000 Tw
+(  13   \} ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(4) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+31 0 obj
+5489
+endobj
+32 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F02 8 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+33 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 32 0 R
+/Contents 30 0 R
+>>
+endobj
+34 0 obj
+<<
+/Length 35 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F00 10 Tf
+1 0 0 1 102.0 770.0 Tm
+0.0000 Tw
+(Which prints out the following for the first record of `t/camel.usmarc`: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  Active server pages. ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(  ActiveX. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 728.0 Tm
+0.0000 Tw
+(Looking at a set of related fields ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 716.0 Tm
+0.0000 Tw
+() Tj
+/F10 10 Tf
+0.0000 Tw
+(field\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( also allows you to retrieve similar fields using '.' as a wildcard. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 704.0 Tm
+0.0000 Tw
+(   1   ## Example R7 ) Tj
+1 0 0 1 102.0 692.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 680.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 668.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 656.0 Tm
+0.0000 Tw
+(   5   my $record = $batch->next\(\); ) Tj
+1 0 0 1 102.0 644.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 632.0 Tm
+0.0000 Tw
+(   7   # retrieve all title fields in one shot. ) Tj
+1 0 0 1 102.0 620.0 Tm
+0.0000 Tw
+(   8   foreach my $field \($record->field\('2..'\)\) \{ ) Tj
+1 0 0 1 102.0 608.0 Tm
+0.0000 Tw
+(   9     print $field->tag\(\),' contains ',$field->as_string\(\),"\\n"; ) Tj
+1 0 0 1 102.0 596.0 Tm
+0.0000 Tw
+(  10   \} ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 572.0 Tm
+0.1929 Tw
+(Notice the shorthand in line 8 which compacts lines 7-13 of our previous example. Instead of storing the) Tj
+1 0 0 1 102.0 560.0 Tm
+1.3842 Tw
+(fields in an array, the ) Tj
+/F10 10 Tf
+1.3842 Tw
+(field\(\)) Tj
+/F00 10 Tf
+1.3842 Tw
+( still returns a list in the ) Tj
+/F10 10 Tf
+1.3842 Tw
+(for) Tj
+/F00 10 Tf
+1.3842 Tw
+( loop. Line 9 uses the ) Tj
+/F10 10 Tf
+1.3842 Tw
+(tag\(\)) Tj
+/F00 10 Tf
+1.3842 Tw
+( method) Tj
+1 0 0 1 102.0 548.0 Tm
+0.2600 Tw
+(which returns the tag number for a particular MARC field, which is useful when you aren`t certain what) Tj
+1 0 0 1 102.0 536.0 Tm
+0.0000 Tw
+(tag you are currently dealing with. Sample output from this recipe: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 524.0 Tm
+0.0000 Tw
+(   245 contains ActivePerl with ASP and ADO / Tobias Martinsson. ) Tj
+1 0 0 1 102.0 512.0 Tm
+0.0000 Tw
+(   260 contains New York : John Wiley & Sons, 2000. ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 488.0 Tm
+0.0000 Tw
+(You  can also return all tags for a specific record by using '...' in ) Tj
+/F10 10 Tf
+0.0000 Tw
+(field) Tj
+/F00 10 Tf
+0.0000 Tw
+( \(though, see the next recipe\). ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 470.0 Tm
+0.0000 Tw
+(Looking at all the fields in a record ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 458.0 Tm
+0.1689 Tw
+(The last example in this section illustrates how to retrieve ) Tj
+/F02 10 Tf
+0.1689 Tw
+(all) Tj
+/F00 10 Tf
+0.1689 Tw
+( the fields in a record using the ) Tj
+/F10 10 Tf
+0.1689 Tw
+(fields\(\)) Tj
+/F00 10 Tf
+1 0 0 1 102.0 446.0 Tm
+1.5250 Tw
+(method. This method is similar to passing '...' as a wildcard \(see our previous recipe for alternative) Tj
+1 0 0 1 102.0 434.0 Tm
+0.0000 Tw
+(access\). ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 422.0 Tm
+0.0000 Tw
+(   1   ## Example R8 ) Tj
+1 0 0 1 102.0 410.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 398.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 386.0 Tm
+0.0000 Tw
+(   4   my $file = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 374.0 Tm
+0.0000 Tw
+(   5   my $record = $batch->next\(\); ) Tj
+1 0 0 1 102.0 362.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 350.0 Tm
+0.0000 Tw
+(   7   ## get all of the fields using the fields\(\) method. ) Tj
+1 0 0 1 102.0 338.0 Tm
+0.0000 Tw
+(   8   my @fields = $record->fields\(\); ) Tj
+1 0 0 1 102.0 326.0 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 314.0 Tm
+0.0000 Tw
+(  10   ## print out the tag, the indicators and the field contents. ) Tj
+1 0 0 1 102.0 302.0 Tm
+0.0000 Tw
+(  11   foreach my $field \(@fields\) \{ ) Tj
+1 0 0 1 102.0 290.0 Tm
+0.0000 Tw
+(  12     print ) Tj
+1 0 0 1 102.0 278.0 Tm
+0.0000 Tw
+(  13       $field->tag\(\), " ", ) Tj
+1 0 0 1 102.0 266.0 Tm
+0.0000 Tw
+(  14       defined $field->indicator\(1\) ? $field->indicator\(1\) : "", ) Tj
+1 0 0 1 102.0 254.0 Tm
+0.0000 Tw
+(  15       defined $field->indicator\(2\) ? $field->indicator\(2\) : "", ) Tj
+1 0 0 1 102.0 242.0 Tm
+0.0000 Tw
+(  16       " ", $field->as_string, " \\n"; ) Tj
+1 0 0 1 102.0 230.0 Tm
+0.0000 Tw
+(  17   \} ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 206.0 Tm
+0.0000 Tw
+(The above code would print the following for the first record of `t/camel.usmarc`: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 194.0 Tm
+0.0000 Tw
+(  001  fol05731351 ) Tj
+1 0 0 1 102.0 182.0 Tm
+0.0000 Tw
+(  003  IMchF ) Tj
+1 0 0 1 102.0 170.0 Tm
+0.0000 Tw
+(  . ) Tj
+1 0 0 1 102.0 158.0 Tm
+0.0000 Tw
+(  . ) Tj
+1 0 0 1 102.0 146.0 Tm
+0.0000 Tw
+(  . ) Tj
+1 0 0 1 102.0 134.0 Tm
+0.0000 Tw
+(  300    xxi, 289 p. : ill. ; 23 cm. + 1 computer  laser disc \(4 3/4 in.\) ) Tj
+1 0 0 1 102.0 122.0 Tm
+0.0000 Tw
+(  500    "Wiley Computer Publishing." ) Tj
+1 0 0 1 102.0 110.0 Tm
+0.0000 Tw
+(  650  0 Perl \(Computer program language\) ) Tj
+1 0 0 1 102.0 98.0 Tm
+0.0000 Tw
+(  630 00 Active server pages. ) Tj
+1 0 0 1 102.0 86.0 Tm
+0.0000 Tw
+(  630 00 ActiveX. ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 517.44 37 Tm
+(5) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+35 0 obj
+5212
+endobj
+36 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F02 8 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+37 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 36 0 R
+/Contents 34 0 R
+>>
+endobj
+38 0 obj
+<<
+/Length 39 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F21 12 Tf
+1 0 0 1 72.0 770.0 Tm
+0.0000 Tw
+(CREATING ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 755.6 Tm
+0.7563 Tw
+(The examples in the Section 1 covered how to read in existing USMARC data in a file. Section 2 will) Tj
+1 0 0 1 102.0 743.6 Tm
+0.1361 Tw
+(show you how to create a MARC record from scratch. The techniques in this section would allow you to) Tj
+1 0 0 1 102.0 731.6 Tm
+0.1061 Tw
+(write programs which create MARC records that could then be loaded into an online catalog, or sent to a) Tj
+1 0 0 1 102.0 719.6 Tm
+0.0000 Tw
+(third party. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 701.6 Tm
+0.0000 Tw
+(Creating a record ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 689.6 Tm
+0.2771 Tw
+(To create a new MARC record, you`ll need to first create a MARC::Record object, add a leader \(though) Tj
+1 0 0 1 102.0 677.6 Tm
+1.1531 Tw
+(MARC::Record can create leaders automatically if you don`t specifically define one\), and then create) Tj
+1 0 0 1 102.0 665.6 Tm
+0.0000 Tw
+(and add MARC::Field objects to your MARC::Record object. For example: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 653.6 Tm
+0.0000 Tw
+(   1   ## Example C1 ) Tj
+1 0 0 1 102.0 641.6 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 629.6 Tm
+0.0000 Tw
+(   3   ## create a MARC::Record object. ) Tj
+1 0 0 1 102.0 617.6 Tm
+0.0000 Tw
+(   4   use MARC::Record; ) Tj
+1 0 0 1 102.0 605.6 Tm
+0.0000 Tw
+(   5   my $record = MARC::Record->new\(\); ) Tj
+1 0 0 1 102.0 593.6 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 581.6 Tm
+0.0000 Tw
+(   7   ## add the leader to the record. optional. ) Tj
+1 0 0 1 102.0 569.6 Tm
+0.0000 Tw
+(   8   $record->leader\('00903pam   2200265 a 4500'\); ) Tj
+1 0 0 1 102.0 557.6 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 545.6 Tm
+0.0000 Tw
+(  10   ## create an author field. ) Tj
+1 0 0 1 102.0 533.6 Tm
+0.0000 Tw
+(  11   my $author = MARC::Field->new\( ) Tj
+1 0 0 1 102.0 521.6 Tm
+0.0000 Tw
+(  12     '100',1,'', ) Tj
+1 0 0 1 102.0 509.6 Tm
+0.0000 Tw
+(  13       a => 'Logan, Robert K.', ) Tj
+1 0 0 1 102.0 497.6 Tm
+0.0000 Tw
+(  14       d => '1939-' ) Tj
+1 0 0 1 102.0 485.6 Tm
+0.0000 Tw
+(  15     \); ) Tj
+1 0 0 1 102.0 473.6 Tm
+0.0000 Tw
+(  16   $record->append_fields\($author\); ) Tj
+1 0 0 1 102.0 461.6 Tm
+0.0000 Tw
+(  17 ) Tj
+1 0 0 1 102.0 449.6 Tm
+0.0000 Tw
+(  18   ## create a title field. ) Tj
+1 0 0 1 102.0 437.6 Tm
+0.0000 Tw
+(  19   my $title = MARC::Field->new\( ) Tj
+1 0 0 1 102.0 425.6 Tm
+0.0000 Tw
+(  20     '245','1','4', ) Tj
+1 0 0 1 102.0 413.6 Tm
+0.0000 Tw
+(  21       a => 'The alphabet effect /', ) Tj
+1 0 0 1 102.0 401.6 Tm
+0.0000 Tw
+(  22       c => 'Robert K. Logan.' ) Tj
+1 0 0 1 102.0 389.6 Tm
+0.0000 Tw
+(  23     \); ) Tj
+1 0 0 1 102.0 377.6 Tm
+0.0000 Tw
+(  24   $record->append_fields\($title\); ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 353.6 Tm
+0.0133 Tw
+(The key to creating records from scratch is to use ) Tj
+/F10 10 Tf
+0.0133 Tw
+(append_fields\(\)) Tj
+/F00 10 Tf
+0.0133 Tw
+(, which adds a field to the end of) Tj
+1 0 0 1 102.0 341.6 Tm
+0.8714 Tw
+(the record. Since each field gets added at the end, it`s up to you to order the fields the way you want.) Tj
+1 0 0 1 102.0 329.6 Tm
+0.3075 Tw
+() Tj
+/F10 10 Tf
+0.3075 Tw
+(insert_fields_before\(\)) Tj
+/F00 10 Tf
+0.3075 Tw
+( and ) Tj
+/F10 10 Tf
+0.3075 Tw
+(insert_fields_after\(\)) Tj
+/F00 10 Tf
+0.3075 Tw
+( are similar methods that allow you) Tj
+1 0 0 1 102.0 317.6 Tm
+0.0000 Tw
+(to define where the field gets added. These methods are covered in more detail below. ) Tj
+/F21 12 Tf
+1 0 0 1 72.0 287.6 Tm
+0.0000 Tw
+(WRITING ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 273.2 Tm
+0.0721 Tw
+(Sections 1 and 2 showed how to read and create USMARC data. Once you know how to read and create,) Tj
+1 0 0 1 102.0 261.2 Tm
+0.9900 Tw
+(it becomes important to know how to write the USMARC data to disk in order to save your work. In) Tj
+1 0 0 1 102.0 249.2 Tm
+0.0000 Tw
+(these examples, we will create a new record and save it to a file called `record.dat'. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 231.2 Tm
+0.0000 Tw
+(Writing records to a file ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 213.2 Tm
+0.0000 Tw
+(   1   ## Example W1 ) Tj
+1 0 0 1 102.0 201.2 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 189.2 Tm
+0.0000 Tw
+(   3   ## create a MARC::Record object. ) Tj
+1 0 0 1 102.0 177.2 Tm
+0.0000 Tw
+(   4   use MARC::Record; ) Tj
+1 0 0 1 102.0 165.2 Tm
+0.0000 Tw
+(   5   my $record = MARC::Record->new\(\); ) Tj
+1 0 0 1 102.0 153.2 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 141.2 Tm
+0.0000 Tw
+(   7   ## add the leader to the record. optional. ) Tj
+1 0 0 1 102.0 129.2 Tm
+0.0000 Tw
+(   8   $record->leader\('00903pam   2200265 a 4500'\); ) Tj
+1 0 0 1 102.0 117.2 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 105.2 Tm
+0.0000 Tw
+(  10   ## create an author field. ) Tj
+1 0 0 1 102.0 93.2 Tm
+0.0000 Tw
+(  11   my $author = MARC::Field->new\( ) Tj
+1 0 0 1 102.0 81.2 Tm
+0.0000 Tw
+(  12     '100',1,'', ) Tj
+1 0 0 1 102.0 69.2 Tm
+0.0000 Tw
+(  13       a => 'Logan, Robert K.', ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(6) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+39 0 obj
+5020
+endobj
+40 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+41 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 40 0 R
+/Contents 38 0 R
+>>
+endobj
+42 0 obj
+<<
+/Length 43 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  14       d => '1939-' ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(  15     \); ) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(  16 ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  17   ## create a title field. ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  18   my $title = MARC::Field->new\( ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(  19     '245','1','4', ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(  20       a => 'The alphabet effect /', ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(  21       c => 'Robert K. Logan.' ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(  22     \); ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(  23 ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(  24   $record->append_fields\($author, $title\); ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(  25 ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(  26   ## open a filehandle to write to 'record.dat'. ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(  27   open\(OUTPUT, '> record.dat'\) or die $!; ) Tj
+1 0 0 1 102.0 590.0 Tm
+0.0000 Tw
+(  28   print OUTPUT $record->as_usmarc\(\); ) Tj
+1 0 0 1 102.0 578.0 Tm
+0.0000 Tw
+(  29   close\(OUTPUT\); ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 554.0 Tm
+0.8371 Tw
+(The ) Tj
+/F10 10 Tf
+0.8371 Tw
+(as_usmarc\(\)) Tj
+/F00 10 Tf
+0.8371 Tw
+( method call at line 28 returns a scalar value which is the raw USMARC data for) Tj
+1 0 0 1 102.0 542.0 Tm
+1.4694 Tw
+() Tj
+/F10 10 Tf
+1.4694 Tw
+($record) Tj
+/F00 10 Tf
+1.4694 Tw
+(. The raw data is then promptly printed to the ) Tj
+/F10 10 Tf
+1.4694 Tw
+(OUTPUT) Tj
+/F00 10 Tf
+1.4694 Tw
+( file handle. If you want to output) Tj
+1 0 0 1 102.0 530.0 Tm
+0.5089 Tw
+(multiple records to a file, simply repeat the process at line 28 for the additional records. Also of note is) Tj
+1 0 0 1 102.0 518.0 Tm
+0.0560 Tw
+(the ) Tj
+/F10 10 Tf
+0.0560 Tw
+(append_fields) Tj
+/F00 10 Tf
+0.0560 Tw
+( method: unlike recipe C1 which called the method once for each field added, this) Tj
+1 0 0 1 102.0 506.0 Tm
+0.0000 Tw
+(recipe demonstrates that ) Tj
+/F10 10 Tf
+0.0000 Tw
+(append_fields) Tj
+/F00 10 Tf
+0.0000 Tw
+( can accept multiple arguments. ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 494.0 Tm
+1.8585 Tw
+(Note to the curious: the ) Tj
+/F10 10 Tf
+1.8585 Tw
+(as_usmarc\(\)) Tj
+/F00 10 Tf
+1.8585 Tw
+( method is actually an alias to the MARC::File::USMARC) Tj
+1 0 0 1 102.0 482.0 Tm
+2.2685 Tw
+() Tj
+/F10 10 Tf
+2.2685 Tw
+(encode\(\)) Tj
+/F00 10 Tf
+2.2685 Tw
+( method. Having separate ) Tj
+/F10 10 Tf
+2.2685 Tw
+(encode\(\)) Tj
+/F00 10 Tf
+2.2685 Tw
+( methods is a design feature of the MARC class) Tj
+1 0 0 1 102.0 470.0 Tm
+0.5707 Tw
+(hierarchy, since it allows extensions to be built that translate MARC::Record objects into different data) Tj
+1 0 0 1 102.0 458.0 Tm
+0.0000 Tw
+(formats. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 440.0 Tm
+0.0000 Tw
+(Debugging with ) Tj
+/F11 10 Tf
+0.0000 Tw
+(as_formatted\(\)) Tj
+/F21 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 428.0 Tm
+1.3725 Tw
+(Since raw USMARC data isn`t very easy for humans to read, it is often useful to be able to see the) Tj
+1 0 0 1 102.0 416.0 Tm
+1.3664 Tw
+(contents of your MARC::Record object represented in a `pretty' way for debugging purposes. If you) Tj
+1 0 0 1 102.0 404.0 Tm
+0.0000 Tw
+(have a MARC::Record object you`d like to pretty-print, use the ) Tj
+/F10 10 Tf
+0.0000 Tw
+(as_formatted\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( method. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 392.0 Tm
+0.0000 Tw
+(   1   ## Example W2 ) Tj
+1 0 0 1 102.0 380.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 368.0 Tm
+0.0000 Tw
+(   3   ## create a MARC::Record object. ) Tj
+1 0 0 1 102.0 356.0 Tm
+0.0000 Tw
+(   4   use MARC::Record; ) Tj
+1 0 0 1 102.0 344.0 Tm
+0.0000 Tw
+(   5   my $record = MARC::Record->new\(\); ) Tj
+1 0 0 1 102.0 332.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 320.0 Tm
+0.0000 Tw
+(   7   $record->leader\('00903pam  2200265 a 4500'\); ) Tj
+1 0 0 1 102.0 308.0 Tm
+0.0000 Tw
+(   8 ) Tj
+1 0 0 1 102.0 296.0 Tm
+0.0000 Tw
+(   9   $record->append_fields\( ) Tj
+1 0 0 1 102.0 284.0 Tm
+0.0000 Tw
+(  10    MARC::Field->new\('100','1','', a=>'Logan, Robert K.', d=>'1939-'\), ) Tj
+1 0 0 1 102.0 272.0 Tm
+0.0000 Tw
+(  11    MARC::Field->new\('245','1','4', a=>'The alphabet effect /', c=>'Robert K. Logan.'\) ) Tj
+1 0 0 1 102.0 260.0 Tm
+0.0000 Tw
+(  12   \); ) Tj
+1 0 0 1 102.0 248.0 Tm
+0.0000 Tw
+(  13 ) Tj
+1 0 0 1 102.0 236.0 Tm
+0.0000 Tw
+(  14   ## pretty print the record. ) Tj
+1 0 0 1 102.0 224.0 Tm
+0.0000 Tw
+(  15   print $record->as_formatted\(\), "\\n"; ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 200.0 Tm
+0.0000 Tw
+(This code will pretty print the contents of the newly created record: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 188.0 Tm
+0.0000 Tw
+(  LDR 00903pam  2200265 a 4500 ) Tj
+1 0 0 1 102.0 176.0 Tm
+0.0000 Tw
+(  100 1  _aLogan, Robert K. ) Tj
+1 0 0 1 102.0 164.0 Tm
+0.0000 Tw
+(         _d1939- ) Tj
+1 0 0 1 102.0 152.0 Tm
+0.0000 Tw
+(  245 14 _aThe alphabet effect / ) Tj
+1 0 0 1 102.0 140.0 Tm
+0.0000 Tw
+(         _cRobert K. Logan. ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 116.0 Tm
+0.2447 Tw
+(Notice on lines 9-12 how you can add a list of new fields by creating MARC::Field objects within a call) Tj
+1 0 0 1 102.0 104.0 Tm
+0.8647 Tw
+(to ) Tj
+/F10 10 Tf
+0.8647 Tw
+(append_fields\(\)) Tj
+/F00 10 Tf
+0.8647 Tw
+(. This is yet another shorthand method to those shown in recipes C1 and W1.) Tj
+1 0 0 1 102.0 92.0 Tm
+0.0000 Tw
+(For more pretty-printing capabilities, try ) Tj
+/F10 10 Tf
+0.0000 Tw
+(marcdump\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( in our next recipe. ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 517.44 37 Tm
+(7) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+43 0 obj
+5563
+endobj
+44 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F11 11 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+45 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 44 0 R
+/Contents 42 0 R
+>>
+endobj
+46 0 obj
+<<
+/Length 47 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F21 10 Tf
+1 0 0 1 72.0 770.0 Tm
+0.0000 Tw
+(Debugging with marcdump\(\) ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.4081 Tw
+(If you have written USMARC data to a file \(as in recipe W2\) and you would like to verify that the data) Tj
+1 0 0 1 102.0 746.0 Tm
+2.7760 Tw
+(is stored correctly you can use the ) Tj
+/F10 10 Tf
+2.7760 Tw
+(marcdump) Tj
+/F00 10 Tf
+2.7760 Tw
+( command line utility that was installed with the) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(MARC::Record package: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+( % marcdump record.dat ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+( record.dat ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+( LDR 00122pam  2200049 a 4500 ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+( 100 1  _aLogan, Robert K. ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(        _d1939- ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+( 245 14 _aThe alphabet effect / ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(        _cRobert K. Logan. ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(  Recs  Errs Filename ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+( ----- ----- -------- ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(     1     0 record.dat ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 578.0 Tm
+2.0006 Tw
+(As you can see, this command results in the record being pretty printed to your screen \() Tj
+/F10 10 Tf
+2.0006 Tw
+(STDOUT) Tj
+/F00 10 Tf
+2.0006 Tw
+(\)) Tj
+1 0 0 1 102.0 566.0 Tm
+0.1580 Tw
+(similarly to the ) Tj
+/F10 10 Tf
+0.1580 Tw
+(as_formatted) Tj
+/F00 10 Tf
+0.1580 Tw
+( method from recipe W2. It is useful for verifying your USMARC data) Tj
+1 0 0 1 102.0 554.0 Tm
+0.0000 Tw
+(after it has been stored on disk. More details about debugging are found later in VALIDATING. ) Tj
+/F21 12 Tf
+1 0 0 1 72.0 524.0 Tm
+0.0000 Tw
+(UPDATING ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 509.6 Tm
+0.2480 Tw
+(Now that you know how to read, write and create MARC data, you have the tools you need to update or) Tj
+1 0 0 1 102.0 497.6 Tm
+0.0507 Tw
+(edit exiting MARC data. Updating MARC data is a common task for library catalogers. Sometimes there) Tj
+1 0 0 1 102.0 485.6 Tm
+1.9583 Tw
+(are huge amounts of records that need to be touched up... and while the touch ups are very detail) Tj
+1 0 0 1 102.0 473.6 Tm
+1.5720 Tw
+(oriented, they are also highly repetitive. Luckily, computers are tireless, and not very prone to error) Tj
+1 0 0 1 102.0 461.6 Tm
+0.0000 Tw
+(\(assuming the programmer isn`t\). ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 449.6 Tm
+0.0200 Tw
+(When libraries receive large batches of MARC records for electronic text collections such as NetLibrary,) Tj
+1 0 0 1 102.0 437.6 Tm
+0.7580 Tw
+(Making of America, or microfiche sets like Early American Imprints, the records are often loaded into) Tj
+1 0 0 1 102.0 425.6 Tm
+0.4371 Tw
+(an online system and then the system is used to update the records. Unfortunately, not all these systems) Tj
+1 0 0 1 102.0 413.6 Tm
+0.5394 Tw
+(are created equal, and catalogers have to spend a great deal of time touching up each individual record.) Tj
+1 0 0 1 102.0 401.6 Tm
+0.4917 Tw
+(An alternative would be to process the records prior to import and then, once in the system, the records) Tj
+1 0 0 1 102.0 389.6 Tm
+0.8778 Tw
+(would not need editing. This scenario would save a great deal of time for the cataloger who would be) Tj
+1 0 0 1 102.0 377.6 Tm
+0.0000 Tw
+(liberated to spend their time doing original cataloging... which computers are notably bad at! ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 359.6 Tm
+0.0000 Tw
+(Adding a field ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 347.6 Tm
+1.5100 Tw
+(Imagine a batch of records in `file.dat' that you`d like to add local notes \(590\) to, then saving your) Tj
+1 0 0 1 102.0 335.6 Tm
+0.0000 Tw
+(changes: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 323.6 Tm
+0.0000 Tw
+(   1   ## Example U1 ) Tj
+1 0 0 1 102.0 311.6 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 299.6 Tm
+0.0000 Tw
+(   3   ## create our MARC::Batch object. ) Tj
+1 0 0 1 102.0 287.6 Tm
+0.0000 Tw
+(   4   use MARC::Batch; ) Tj
+1 0 0 1 102.0 275.6 Tm
+0.0000 Tw
+(   5   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 263.6 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 251.6 Tm
+0.0000 Tw
+(   7   ## open a file handle to write to. ) Tj
+1 0 0 1 102.0 239.6 Tm
+0.0000 Tw
+(   8   open\(OUT,'>new.dat'\) or die $!; ) Tj
+1 0 0 1 102.0 227.6 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 215.6 Tm
+0.0000 Tw
+(  10   ## read each record, modify, then print. ) Tj
+1 0 0 1 102.0 203.6 Tm
+0.0000 Tw
+(  11   while \( my $record = $batch->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 191.6 Tm
+0.0000 Tw
+(  12 ) Tj
+1 0 0 1 102.0 179.6 Tm
+0.0000 Tw
+(  13       ## add a 590 field. ) Tj
+1 0 0 1 102.0 167.6 Tm
+0.0000 Tw
+(  14       $record->append_fields\( ) Tj
+1 0 0 1 102.0 155.6 Tm
+0.0000 Tw
+(  15          MARC::Field->new\('590','','',a=>'Access provided by Enron.'\) ) Tj
+1 0 0 1 102.0 143.6 Tm
+0.0000 Tw
+(  16       \); ) Tj
+1 0 0 1 102.0 131.6 Tm
+0.0000 Tw
+(  17 ) Tj
+1 0 0 1 102.0 119.6 Tm
+0.0000 Tw
+(  18       print OUT $record->as_usmarc\(\); ) Tj
+1 0 0 1 102.0 107.6 Tm
+0.0000 Tw
+(  19 ) Tj
+1 0 0 1 102.0 95.6 Tm
+0.0000 Tw
+(  20   \} ) Tj
+1 0 0 1 102.0 83.6 Tm
+0.0000 Tw
+(  21 ) Tj
+1 0 0 1 102.0 71.6 Tm
+0.0000 Tw
+(  22   close\(OUT\); ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(8) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+47 0 obj
+5298
+endobj
+48 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+49 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 48 0 R
+/Contents 46 0 R
+>>
+endobj
+50 0 obj
+<<
+/Length 51 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F21 10 Tf
+1 0 0 1 72.0 770.0 Tm
+0.0000 Tw
+(Preserving field order ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.2433 Tw
+(As its name suggests, ) Tj
+/F10 10 Tf
+0.2433 Tw
+(append_fields\(\)) Tj
+/F00 10 Tf
+0.2433 Tw
+( will add the 590 field in recipe U1 to the end of the record.) Tj
+1 0 0 1 102.0 746.0 Tm
+2.9631 Tw
+(If you want to preserve a particular order, you can use the ) Tj
+/F10 10 Tf
+2.9631 Tw
+(insert_fields_before\(\)) Tj
+/F00 10 Tf
+2.9631 Tw
+( and) Tj
+1 0 0 1 102.0 734.0 Tm
+0.6140 Tw
+() Tj
+/F10 10 Tf
+0.6140 Tw
+(insert_fields_after\(\)) Tj
+/F00 10 Tf
+0.6140 Tw
+( methods. In order to use these, you need to locate the field you want to) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(insert before or after. Here is an example \() Tj
+/F10 10 Tf
+0.0000 Tw
+(insert_fields_after\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( works similarly\): ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(   1   ## Example U2 ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(   5   open\(OUT,'>new.dat'\) or die $!; ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(   7   ## read in each record. ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(   8   while \( my $record = $batch->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(  10       ## find the tag after 590. ) Tj
+1 0 0 1 102.0 590.0 Tm
+0.0000 Tw
+(  11       my $before; ) Tj
+1 0 0 1 102.0 578.0 Tm
+0.0000 Tw
+(  12       foreach \($record->fields\(\)\) \{ ) Tj
+1 0 0 1 102.0 566.0 Tm
+0.0000 Tw
+(  13           $before = $_; ) Tj
+1 0 0 1 102.0 554.0 Tm
+0.0000 Tw
+(  14           last if $_->tag\(\) > 590; ) Tj
+1 0 0 1 102.0 542.0 Tm
+0.0000 Tw
+(  15       \} ) Tj
+1 0 0 1 102.0 530.0 Tm
+0.0000 Tw
+(  16 ) Tj
+1 0 0 1 102.0 518.0 Tm
+0.0000 Tw
+(  17       ## create the 590 field. ) Tj
+1 0 0 1 102.0 506.0 Tm
+0.0000 Tw
+(  18       my $new = MARC::Field->new\('590','','',a=>'Access provided by Enron.'\); ) Tj
+1 0 0 1 102.0 494.0 Tm
+0.0000 Tw
+(  19 ) Tj
+1 0 0 1 102.0 482.0 Tm
+0.0000 Tw
+(  20       ## insert our 590 field after the $before. ) Tj
+1 0 0 1 102.0 470.0 Tm
+0.0000 Tw
+(  21       $record->insert_fields_before\($before,$new\); ) Tj
+1 0 0 1 102.0 458.0 Tm
+0.0000 Tw
+(  22 ) Tj
+1 0 0 1 102.0 446.0 Tm
+0.0000 Tw
+(  23       ## and print out the new record. ) Tj
+1 0 0 1 102.0 434.0 Tm
+0.0000 Tw
+(  24       print OUT $record->as_usmarc\(\); ) Tj
+1 0 0 1 102.0 422.0 Tm
+0.0000 Tw
+(  25 ) Tj
+1 0 0 1 102.0 410.0 Tm
+0.0000 Tw
+(  26   \} ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 392.0 Tm
+0.0000 Tw
+(Deleting a field ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 380.0 Tm
+1.8328 Tw
+(You can also delete fields that you don`t want. But you will probably want to check that the field) Tj
+1 0 0 1 102.0 368.0 Tm
+0.5683 Tw
+(contains what you expect before deleting it. Let`s say Enron has gone out of business and the 590 field) Tj
+1 0 0 1 102.0 356.0 Tm
+0.0000 Tw
+(needs to be deleted: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 344.0 Tm
+0.0000 Tw
+(   1   ## Example U3 ) Tj
+1 0 0 1 102.0 332.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 320.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 308.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC','new.dat'\); ) Tj
+1 0 0 1 102.0 296.0 Tm
+0.0000 Tw
+(   5   open\(OUT,'>newer.dat'\) or die $1; ) Tj
+1 0 0 1 102.0 284.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 272.0 Tm
+0.0000 Tw
+(   7   while \( my $record = $batch->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 260.0 Tm
+0.0000 Tw
+(   8 ) Tj
+1 0 0 1 102.0 248.0 Tm
+0.0000 Tw
+(   9     ## get the 590 record. ) Tj
+1 0 0 1 102.0 236.0 Tm
+0.0000 Tw
+(  10     my $field = $record->field\('590'\); ) Tj
+1 0 0 1 102.0 224.0 Tm
+0.0000 Tw
+(  11 ) Tj
+1 0 0 1 102.0 212.0 Tm
+0.0000 Tw
+(  12     ## if there is a 590 AND it has the word "Enron"... ) Tj
+1 0 0 1 102.0 200.0 Tm
+0.0000 Tw
+(  13     if \($field and $field->as_string\(\) =~ /Enron/i\) \{ ) Tj
+1 0 0 1 102.0 188.0 Tm
+0.0000 Tw
+(  14 ) Tj
+1 0 0 1 102.0 176.0 Tm
+0.0000 Tw
+(  15       ## delete it! ) Tj
+1 0 0 1 102.0 164.0 Tm
+0.0000 Tw
+(  16       $record->delete_field\($field\); ) Tj
+1 0 0 1 102.0 152.0 Tm
+0.0000 Tw
+(  17 ) Tj
+1 0 0 1 102.0 140.0 Tm
+0.0000 Tw
+(  18     \} ) Tj
+1 0 0 1 102.0 128.0 Tm
+0.0000 Tw
+(  19 ) Tj
+1 0 0 1 102.0 116.0 Tm
+0.0000 Tw
+(  20     ## output possibly modified record. ) Tj
+1 0 0 1 102.0 104.0 Tm
+0.0000 Tw
+(  21     print OUT $record->as_usmarc\(\); ) Tj
+1 0 0 1 102.0 92.0 Tm
+0.0000 Tw
+(  22 ) Tj
+1 0 0 1 102.0 80.0 Tm
+0.0000 Tw
+(  23   \} ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 517.44 37 Tm
+(9) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+51 0 obj
+4821
+endobj
+52 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+53 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 52 0 R
+/Contents 50 0 R
+>>
+endobj
+54 0 obj
+<<
+/Length 55 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F00 10 Tf
+1 0 0 1 102.0 770.0 Tm
+0.0189 Tw
+(The 590 field is retrieved on line 10, but notice how we check that we actually received a valid ) Tj
+/F10 10 Tf
+0.0189 Tw
+($field) Tj
+/F00 10 Tf
+0.0189 Tw
+(,) Tj
+1 0 0 1 102.0 758.0 Tm
+0.6118 Tw
+(and that it then contains the word `Enron' before we delete it. You need to pass ) Tj
+/F10 10 Tf
+0.6118 Tw
+(delete_field\(\)) Tj
+/F00 10 Tf
+0.6118 Tw
+( a) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(MARC::Field object that can be retrieved with the ) Tj
+/F10 10 Tf
+0.0000 Tw
+(field\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( method. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 728.0 Tm
+0.0000 Tw
+(Changing existing fields ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 716.0 Tm
+0.5833 Tw
+(Perhaps rather than adding or deleting a field, you need to modify an existing field. This is achieved in) Tj
+1 0 0 1 102.0 704.0 Tm
+0.2911 Tw
+(several steps: first, read in the MARC record you want to update, and then the field you`re interested in.) Tj
+1 0 0 1 102.0 692.0 Tm
+1.8429 Tw
+(From there, call the field`s ) Tj
+/F10 10 Tf
+1.8429 Tw
+(update) Tj
+/F00 10 Tf
+1.8429 Tw
+( or ) Tj
+/F10 10 Tf
+1.8429 Tw
+(replace_with) Tj
+/F00 10 Tf
+1.8429 Tw
+( methods to modify its contents, and then) Tj
+1 0 0 1 102.0 680.0 Tm
+0.6050 Tw
+(resave the record. Below is an example of updating existing 590 field`s containing the word `Enron' to) Tj
+1 0 0 1 102.0 668.0 Tm
+0.0000 Tw
+(indicate that access is now provided through Arthur Andersen: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 656.0 Tm
+0.0000 Tw
+(   1   ## Example U4 ) Tj
+1 0 0 1 102.0 644.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 632.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 620.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC','new.dat'\); ) Tj
+1 0 0 1 102.0 608.0 Tm
+0.0000 Tw
+(   5   open\(OUT,'>newer.dat'\) or die $1; ) Tj
+1 0 0 1 102.0 596.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 584.0 Tm
+0.0000 Tw
+(   7   while \( my $record = $batch->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 572.0 Tm
+0.0000 Tw
+(   8 ) Tj
+1 0 0 1 102.0 560.0 Tm
+0.0000 Tw
+(   9     ## look for a 590 containing "Enron"... ) Tj
+1 0 0 1 102.0 548.0 Tm
+0.0000 Tw
+(  10     my $field = $record->field\('590'\); ) Tj
+1 0 0 1 102.0 536.0 Tm
+0.0000 Tw
+(  11     if \($field and $field->as_string =~ /Enron/i\) \{ ) Tj
+1 0 0 1 102.0 524.0 Tm
+0.0000 Tw
+(  12 ) Tj
+1 0 0 1 102.0 512.0 Tm
+0.0000 Tw
+(  13       ## create a new 590 field. ) Tj
+1 0 0 1 102.0 500.0 Tm
+0.0000 Tw
+(  14       my $new_field = MARC::Field->new\( ) Tj
+1 0 0 1 102.0 488.0 Tm
+0.0000 Tw
+(  15         '590','','', a => 'Access provided by Arthur Andersen.' \); ) Tj
+1 0 0 1 102.0 476.0 Tm
+0.0000 Tw
+(  16 ) Tj
+1 0 0 1 102.0 464.0 Tm
+0.0000 Tw
+(  17       ## replace existing with our new one. ) Tj
+1 0 0 1 102.0 452.0 Tm
+0.0000 Tw
+(  18       $field->replace_with\($new_field\); ) Tj
+1 0 0 1 102.0 440.0 Tm
+0.0000 Tw
+(  19 ) Tj
+1 0 0 1 102.0 428.0 Tm
+0.0000 Tw
+(  20     \} ) Tj
+1 0 0 1 102.0 416.0 Tm
+0.0000 Tw
+(  21 ) Tj
+1 0 0 1 102.0 404.0 Tm
+0.0000 Tw
+(  22     ## output possibly modified record. ) Tj
+1 0 0 1 102.0 392.0 Tm
+0.0000 Tw
+(  23     print OUT $record->as_usmarc\(\); ) Tj
+1 0 0 1 102.0 380.0 Tm
+0.0000 Tw
+(  24 ) Tj
+1 0 0 1 102.0 368.0 Tm
+0.0000 Tw
+(  25   \} ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 344.0 Tm
+0.2836 Tw
+(In this example, we used MARC::Field`s method ) Tj
+/F10 10 Tf
+0.2836 Tw
+(replace_with\(\)) Tj
+/F00 10 Tf
+0.2836 Tw
+( to replace an existing field in the) Tj
+1 0 0 1 102.0 332.0 Tm
+0.5312 Tw
+(record with a new field that we created. To use ) Tj
+/F10 10 Tf
+0.5312 Tw
+(replace_with\(\)) Tj
+/F00 10 Tf
+0.5312 Tw
+(, you need to retrieve the field you) Tj
+1 0 0 1 102.0 320.0 Tm
+1.0447 Tw
+(want to replace from a MARC::Record object \(line 10\), create a new field to replace the existing one) Tj
+1 0 0 1 102.0 308.0 Tm
+0.7207 Tw
+(with \(lines 13-15\), and then call the existing field`s ) Tj
+/F10 10 Tf
+0.7207 Tw
+(replace_with\(\)) Tj
+/F00 10 Tf
+0.7207 Tw
+( method passing the new field) Tj
+1 0 0 1 102.0 296.0 Tm
+0.0000 Tw
+(as an argument \(lines 18\). You must pass ) Tj
+/F10 10 Tf
+0.0000 Tw
+(replace_with\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( a valid MARC::Field object. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 278.0 Tm
+0.0000 Tw
+(Updating subfields and indicators ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 266.0 Tm
+0.8180 Tw
+(If you`d rather not replace an existing field with a new one, you can also edit the contents of the field) Tj
+1 0 0 1 102.0 254.0 Tm
+0.4633 Tw
+(itself using the ) Tj
+/F10 10 Tf
+0.4633 Tw
+(update\(\)) Tj
+/F00 10 Tf
+0.4633 Tw
+( method. Let`s say you`ve got a batch of records and want to make sure that) Tj
+1 0 0 1 102.0 242.0 Tm
+1.1394 Tw
+(the 2nd indicator for the 245 field is properly set for titles that begin with `The' \(where the indicator) Tj
+1 0 0 1 102.0 230.0 Tm
+0.0000 Tw
+(should be `4'\). ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 218.0 Tm
+0.0000 Tw
+(   1   ## Example U5 ) Tj
+1 0 0 1 102.0 206.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 194.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 182.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 170.0 Tm
+0.0000 Tw
+(   5   open\(OUT,'>new.dat'\) or die $!; ) Tj
+1 0 0 1 102.0 158.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 146.0 Tm
+0.0000 Tw
+(   7   while \(my $record = $batch->next\(\)\) \{ ) Tj
+1 0 0 1 102.0 134.0 Tm
+0.0000 Tw
+(   8 ) Tj
+1 0 0 1 102.0 122.0 Tm
+0.0000 Tw
+(   9     ## retrieve the 245 record. ) Tj
+1 0 0 1 102.0 110.0 Tm
+0.0000 Tw
+(  10     my $field_245 = $record->field\('245'\); ) Tj
+1 0 0 1 102.0 98.0 Tm
+0.0000 Tw
+(  11 ) Tj
+1 0 0 1 102.0 86.0 Tm
+0.0000 Tw
+(  12     ## if we got 245 and it starts with 'The'... ) Tj
+1 0 0 1 102.0 74.0 Tm
+0.0000 Tw
+(  13     if \($field_245 and $field_245->as_string\(\) =~ /^The /\) \{ ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(10) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+55 0 obj
+5886
+endobj
+56 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+57 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 56 0 R
+/Contents 54 0 R
+>>
+endobj
+58 0 obj
+<<
+/Length 59 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  14 ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(  15       ## if the 2nd indicator isn't 4, update ) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(  16       if \($field_245->indicator\(2\) != 4\) \{ ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  17         $field_245->update\( ind2 => 4 \); ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  18       \} ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(  19 ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(  20     \} ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(  21 ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(  22     print OUT $record->as_usmarc\(\); ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(  23 ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(  24   \} ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(In a similar fashion, you can update individual or multiple subfields: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(  $field_245->update\( a => 'History of the World :', b => 'part 1' \); ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 578.0 Tm
+0.5106 Tw
+(But beware, you can only update the first occurrence of a subfield using ) Tj
+/F10 10 Tf
+0.5106 Tw
+(update\(\)) Tj
+/F00 10 Tf
+0.5106 Tw
+(. If you need to do) Tj
+1 0 0 1 102.0 566.0 Tm
+1.5994 Tw
+(more finer grained updates, you are advised to build a new field and replace the existing field with) Tj
+1 0 0 1 102.0 554.0 Tm
+0.0000 Tw
+() Tj
+/F10 10 Tf
+0.0000 Tw
+(replace_with\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+(. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 536.0 Tm
+0.0000 Tw
+(Changing a record`s leader ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 524.0 Tm
+2.0200 Tw
+(The above procedure works for fields, but editing the leader requires that you use the ) Tj
+/F10 10 Tf
+2.0200 Tw
+(leader\(\)) Tj
+/F00 10 Tf
+1 0 0 1 102.0 512.0 Tm
+0.0706 Tw
+(method. When called with no arguments, ) Tj
+/F10 10 Tf
+0.0706 Tw
+(leader\(\)) Tj
+/F00 10 Tf
+0.0706 Tw
+( will return the current leader, and when you pass a) Tj
+1 0 0 1 102.0 500.0 Tm
+1.2006 Tw
+(scalar value as an argument, the leader will be set to this value. This example shows how you might) Tj
+1 0 0 1 102.0 488.0 Tm
+0.0000 Tw
+(want to update position 6 of a records leader to reflect a computer file. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 476.0 Tm
+0.0000 Tw
+(   1   ## Example U6 ) Tj
+1 0 0 1 102.0 464.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 452.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 440.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 428.0 Tm
+0.0000 Tw
+(   5   open\(OUT,'>new.dat'\) or die $!; ) Tj
+1 0 0 1 102.0 416.0 Tm
+0.0000 Tw
+(   6   my $record = $batch->next\(\); ) Tj
+1 0 0 1 102.0 404.0 Tm
+0.0000 Tw
+(   7 ) Tj
+1 0 0 1 102.0 392.0 Tm
+0.0000 Tw
+(   8   ## get the current leader. ) Tj
+1 0 0 1 102.0 380.0 Tm
+0.0000 Tw
+(   9   my $leader = $record->leader\(\); ) Tj
+1 0 0 1 102.0 368.0 Tm
+0.0000 Tw
+(  10 ) Tj
+1 0 0 1 102.0 356.0 Tm
+0.0000 Tw
+(  11   ## replace position 6 with 'm' ) Tj
+1 0 0 1 102.0 344.0 Tm
+0.0000 Tw
+(  12   substr\($leader,6,1\) = 'm'; ) Tj
+1 0 0 1 102.0 332.0 Tm
+0.0000 Tw
+(  13 ) Tj
+1 0 0 1 102.0 320.0 Tm
+0.0000 Tw
+(  14   ## update the leader ) Tj
+1 0 0 1 102.0 308.0 Tm
+0.0000 Tw
+(  15   $record->leader\($leader\); ) Tj
+1 0 0 1 102.0 296.0 Tm
+0.0000 Tw
+(  16 ) Tj
+1 0 0 1 102.0 284.0 Tm
+0.0000 Tw
+(  17   ## save the record to a file ) Tj
+1 0 0 1 102.0 272.0 Tm
+0.0000 Tw
+(  18   print OUT $record->as_usmarc\(\); ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 254.0 Tm
+0.0000 Tw
+(Modifying fields without indicators ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 242.0 Tm
+0.1240 Tw
+(MARC::Record and MARC::Field are smart and know that you don`t have field indicators with tags less) Tj
+1 0 0 1 102.0 230.0 Tm
+0.8635 Tw
+(than 010. Here`s an example of updating/adding an 005 field to indicate a new transaction time. For a) Tj
+1 0 0 1 102.0 218.0 Tm
+0.0000 Tw
+(little pizzazz, we use Perl`s ) Tj
+/F10 10 Tf
+0.0000 Tw
+(localtime\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( to generate the data we need for this field. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 206.0 Tm
+0.0000 Tw
+(   1   ## Example U7 ) Tj
+1 0 0 1 102.0 194.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 182.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 170.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 158.0 Tm
+0.0000 Tw
+(   5   open\(OUT,'>new.dat'\) or die $!; ) Tj
+1 0 0 1 102.0 146.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 134.0 Tm
+0.0000 Tw
+(   7   while \(my $record = $batch->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 122.0 Tm
+0.0000 Tw
+(   8 ) Tj
+1 0 0 1 102.0 110.0 Tm
+0.0000 Tw
+(   9     ## see if there is a 005 field. ) Tj
+1 0 0 1 102.0 98.0 Tm
+0.0000 Tw
+(  10     my $field_005 = $record->field\('005'\); ) Tj
+1 0 0 1 102.0 86.0 Tm
+0.0000 Tw
+(  11 ) Tj
+1 0 0 1 102.0 74.0 Tm
+0.0000 Tw
+(  12     ## delete it if we find one. ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 511.88 37 Tm
+(11) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+59 0 obj
+4923
+endobj
+60 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+61 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 60 0 R
+/Contents 58 0 R
+>>
+endobj
+62 0 obj
+<<
+/Length 63 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  13     $record->delete_field\($field_005\) if $field_005; ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(  14 ) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(  15     ## figure out the contents of our new 005 field. ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  16     my \($sec,$min,$hour,$mday,$mon,$year\) = localtime\(\); ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  17     $year += 1900; $mon += 1; # catering to offsets. ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(  18     my $datetime = sprintf\("%4d%02d%02d%02d%02d%02d.0", ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(  19                             $year,$mon,$mday,$hour,$min,$sec\); ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(  20 ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(  21     ## create a new 005 field using our new datetime. ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(  22     $record->append_fields\( MARC::Field->new\('005',$datetime\) \); ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(  23 ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(  24     ## save record to a file. ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(  25     print OUT $record->as_usmarc\(\); ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(  26 ) Tj
+1 0 0 1 102.0 590.0 Tm
+0.0000 Tw
+(  27   \} ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 572.0 Tm
+0.0000 Tw
+(Reordering subfields ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 560.0 Tm
+0.5513 Tw
+(You may find yourself in the situation where you would like to programmatically reorder, and possibly) Tj
+1 0 0 1 102.0 548.0 Tm
+0.6188 Tw
+(modify, subfields in a particular field. For example, imagine that you have a batch of records that have) Tj
+1 0 0 1 102.0 536.0 Tm
+0.8139 Tw
+(856 fields which contain subfields z, u, and possibly 3... in any order! Now imagine that you`d like to) Tj
+1 0 0 1 102.0 524.0 Tm
+1.9067 Tw
+(standardize the subfield z, and reorder them so that subfield 3 precedes subfield z, which precedes) Tj
+1 0 0 1 102.0 512.0 Tm
+0.5384 Tw
+(subfield u. This is tricky but can be done in the following manner: read in a record, extract the existing) Tj
+1 0 0 1 102.0 500.0 Tm
+1.1078 Tw
+(856 field, build a new 856 field based on the existing one, replace the existing field with your newly) Tj
+1 0 0 1 102.0 488.0 Tm
+0.0000 Tw
+(created version. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 476.0 Tm
+0.0000 Tw
+(   1   ## Example U8 ) Tj
+1 0 0 1 102.0 464.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 452.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 440.0 Tm
+0.0000 Tw
+(   4   my $batch = MARC::Batch->new\('USMARC','856.dat'\); ) Tj
+1 0 0 1 102.0 428.0 Tm
+0.0000 Tw
+(   5   open\(OUT,'>856_new.dat'\) or die $!; ) Tj
+1 0 0 1 102.0 416.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 404.0 Tm
+0.0000 Tw
+(   7   while \(my $record = $batch->next\(\)\) \{ ) Tj
+1 0 0 1 102.0 392.0 Tm
+0.0000 Tw
+(   8 ) Tj
+1 0 0 1 102.0 380.0 Tm
+0.0000 Tw
+(   9     my $existing = $record->field\('856'\); ) Tj
+1 0 0 1 102.0 368.0 Tm
+0.0000 Tw
+(  10 ) Tj
+1 0 0 1 102.0 356.0 Tm
+0.0000 Tw
+(  11     ## make sure 856 exists. ) Tj
+1 0 0 1 102.0 344.0 Tm
+0.0000 Tw
+(  12     if \($existing\) \{ ) Tj
+1 0 0 1 102.0 332.0 Tm
+0.0000 Tw
+(  13 ) Tj
+1 0 0 1 102.0 320.0 Tm
+0.0000 Tw
+(  14       ## our ordered subfields. ) Tj
+1 0 0 1 102.0 308.0 Tm
+0.0000 Tw
+(  15       my @subfields = \(\); ) Tj
+1 0 0 1 102.0 296.0 Tm
+0.0000 Tw
+(  16 ) Tj
+1 0 0 1 102.0 284.0 Tm
+0.0000 Tw
+(  17       ## if we have a subfield 3, add it. ) Tj
+1 0 0 1 102.0 272.0 Tm
+0.0000 Tw
+(  18       if \(defined\($existing->subfield\('3'\)\)\) \{ ) Tj
+1 0 0 1 102.0 260.0 Tm
+0.0000 Tw
+(  19         push\(@subfields,'3',$existing->subfield\('3'\)\); ) Tj
+1 0 0 1 102.0 248.0 Tm
+0.0000 Tw
+(  20       \} ) Tj
+1 0 0 1 102.0 236.0 Tm
+0.0000 Tw
+(  21 ) Tj
+1 0 0 1 102.0 224.0 Tm
+0.0000 Tw
+(  22       ## now add subfields z and u. ) Tj
+1 0 0 1 102.0 212.0 Tm
+0.0000 Tw
+(  23       push\(@subfields,'z','Access restricted', ) Tj
+1 0 0 1 102.0 200.0 Tm
+0.0000 Tw
+(  24         'u',$existing->subfield\('u'\)\); ) Tj
+1 0 0 1 102.0 188.0 Tm
+0.0000 Tw
+(  25 ) Tj
+1 0 0 1 102.0 176.0 Tm
+0.0000 Tw
+(  26       ## create a new 856. ) Tj
+1 0 0 1 102.0 164.0 Tm
+0.0000 Tw
+(  27       my $new = MARC::Field->new\( ) Tj
+1 0 0 1 102.0 152.0 Tm
+0.0000 Tw
+(  28          856', $existing->indicator\(1\), ) Tj
+1 0 0 1 102.0 140.0 Tm
+0.0000 Tw
+(  29          $existing->indicator\(2\), @subfields ) Tj
+1 0 0 1 102.0 128.0 Tm
+0.0000 Tw
+(  30       \); ) Tj
+1 0 0 1 102.0 116.0 Tm
+0.0000 Tw
+(  31 ) Tj
+1 0 0 1 102.0 104.0 Tm
+0.0000 Tw
+(  32       ## replace the existing subfield. ) Tj
+1 0 0 1 102.0 92.0 Tm
+0.0000 Tw
+(  33       $existing->replace_with\($new\); ) Tj
+1 0 0 1 102.0 80.0 Tm
+0.0000 Tw
+(  34 ) Tj
+1 0 0 1 102.0 68.0 Tm
+0.0000 Tw
+(  35     \} ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(12) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+63 0 obj
+4850
+endobj
+64 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+65 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 64 0 R
+/Contents 62 0 R
+>>
+endobj
+66 0 obj
+<<
+/Length 67 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  36 ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(  37     ## write out the record ) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(  38     print OUT $record->as_usmarc\(\); ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  39 ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  40   \} ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 692.0 Tm
+0.0000 Tw
+(Updating subject subfield x to subfield v ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 680.0 Tm
+0.5000 Tw
+(As a somewhat more complicated example, you may find yourself wanting to update the last subfield x) Tj
+1 0 0 1 102.0 668.0 Tm
+0 Tw
+(in a 650 field to be a subfield v instead. With the  MARC::Field ) Tj
+/F10 10 Tf
+0 Tw
+(subfields\(\)) Tj
+/F00 10 Tf
+0 Tw
+( and) Tj
+1 0 0 1 102.0 656.0 Tm
+0.0000 Tw
+() Tj
+/F10 10 Tf
+0.0000 Tw
+(replace_with\(\)) Tj
+/F00 10 Tf
+0.0000 Tw
+( methods along with some  fancy footwork this can be done relatively easily. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 644.0 Tm
+0.0000 Tw
+(   1  ## Example U9 ) Tj
+1 0 0 1 102.0 632.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 620.0 Tm
+0.0000 Tw
+(   3  use MARC::Batch; ) Tj
+1 0 0 1 102.0 608.0 Tm
+0.0000 Tw
+(   4 ) Tj
+1 0 0 1 102.0 596.0 Tm
+0.0000 Tw
+(   5  my $file = shift; ) Tj
+1 0 0 1 102.0 584.0 Tm
+0.0000 Tw
+(   6 ) Tj
+1 0 0 1 102.0 572.0 Tm
+0.0000 Tw
+(   7  my $batch = MARC::Batch->new\('USMARC', $file\); ) Tj
+1 0 0 1 102.0 560.0 Tm
+0.0000 Tw
+(   8  while \( my $record = $batch->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 548.0 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 536.0 Tm
+0.0000 Tw
+(  10    # go through all 6XX fields in the record. ) Tj
+1 0 0 1 102.0 524.0 Tm
+0.0000 Tw
+(  11    foreach my $subject \( $record->field\( '6..' \) \) \{ ) Tj
+1 0 0 1 102.0 512.0 Tm
+0.0000 Tw
+(  12 ) Tj
+1 0 0 1 102.0 500.0 Tm
+0.0000 Tw
+(  13      # extract subfields as an array of array refs. ) Tj
+1 0 0 1 102.0 488.0 Tm
+0.0000 Tw
+(  14      my @subfields = $subject->subfields\(\); ) Tj
+1 0 0 1 102.0 476.0 Tm
+0.0000 Tw
+(  15 ) Tj
+1 0 0 1 102.0 464.0 Tm
+0.0000 Tw
+(  16      # setup an array to store our new field. ) Tj
+1 0 0 1 102.0 452.0 Tm
+0.0000 Tw
+(  17      my @newSubfields = \(\); ) Tj
+1 0 0 1 102.0 440.0 Tm
+0.0000 Tw
+(  18 ) Tj
+1 0 0 1 102.0 428.0 Tm
+0.0000 Tw
+(  19      # a flag to indicate that we found an subfield x. ) Tj
+1 0 0 1 102.0 416.0 Tm
+0.0000 Tw
+(  20      my $foundX = 0; ) Tj
+1 0 0 1 102.0 404.0 Tm
+0.0000 Tw
+(  21 ) Tj
+1 0 0 1 102.0 392.0 Tm
+0.0000 Tw
+(  22      # use pop\(\) to read the subfields backwards. ) Tj
+1 0 0 1 102.0 380.0 Tm
+0.0000 Tw
+(  23      while \( my $subfield = pop\( @subfields \) \) \{ ) Tj
+1 0 0 1 102.0 368.0 Tm
+0.0000 Tw
+(  24 ) Tj
+1 0 0 1 102.0 356.0 Tm
+0.0000 Tw
+(  25        # for convenience, pull out the subfield ) Tj
+1 0 0 1 102.0 344.0 Tm
+0.0000 Tw
+(  26        # code and data from  the array ref. ) Tj
+1 0 0 1 102.0 332.0 Tm
+0.0000 Tw
+(  27        my \($code,$data\) = @$subfield; ) Tj
+1 0 0 1 102.0 320.0 Tm
+0.0000 Tw
+(  28 ) Tj
+1 0 0 1 102.0 308.0 Tm
+0.0000 Tw
+(  29        # if the subfield code is 'x' and ) Tj
+1 0 0 1 102.0 296.0 Tm
+0.0000 Tw
+(  30        # we haven't already found one... ) Tj
+1 0 0 1 102.0 284.0 Tm
+0.0000 Tw
+(  31        if \( $code eq 'x' and ! $foundX \) \{ ) Tj
+1 0 0 1 102.0 272.0 Tm
+0.0000 Tw
+(  32 ) Tj
+1 0 0 1 102.0 260.0 Tm
+0.0000 Tw
+(  33          # change to a v. ) Tj
+1 0 0 1 102.0 248.0 Tm
+0.0000 Tw
+(  34          $code = 'v'; ) Tj
+1 0 0 1 102.0 236.0 Tm
+0.0000 Tw
+(  35 ) Tj
+1 0 0 1 102.0 224.0 Tm
+0.0000 Tw
+(  36          # set flag so we know not to ) Tj
+1 0 0 1 102.0 212.0 Tm
+0.0000 Tw
+(  37          # translate any more subfield x. ) Tj
+1 0 0 1 102.0 200.0 Tm
+0.0000 Tw
+(  38          $foundX = 1; ) Tj
+1 0 0 1 102.0 188.0 Tm
+0.0000 Tw
+(  39 ) Tj
+1 0 0 1 102.0 176.0 Tm
+0.0000 Tw
+(  40        \} ) Tj
+1 0 0 1 102.0 164.0 Tm
+0.0000 Tw
+(  41 ) Tj
+1 0 0 1 102.0 152.0 Tm
+0.0000 Tw
+(  42        # add our \(potentially changed\) subfield ) Tj
+1 0 0 1 102.0 140.0 Tm
+0.0000 Tw
+(  43        # data to our new subfield data array. ) Tj
+1 0 0 1 102.0 128.0 Tm
+0.0000 Tw
+(  44        unshift\( @newSubfields, $code, $data \); ) Tj
+1 0 0 1 102.0 116.0 Tm
+0.0000 Tw
+(  45 ) Tj
+1 0 0 1 102.0 104.0 Tm
+0.0000 Tw
+(  46      \} ) Tj
+1 0 0 1 102.0 92.0 Tm
+0.0000 Tw
+(  47 ) Tj
+1 0 0 1 102.0 80.0 Tm
+0.0000 Tw
+(  48      # if we did find a subfield x, then create a new field using our ) Tj
+1 0 0 1 102.0 68.0 Tm
+0.0000 Tw
+(  49      # new subfield data, and replace the old one with the new one. ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 511.88 37 Tm
+(13) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+67 0 obj
+4610
+endobj
+68 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+69 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 68 0 R
+/Contents 66 0 R
+>>
+endobj
+70 0 obj
+<<
+/Length 71 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  50      if \( $foundX \) \{ ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(  51        my $newSubject = MARC::Field->new\( ) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(  52          $subject->tag\(\), ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  53          $subject->indicator\(1\), ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  54          $subject->indicator\(2\), ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(  55          @newSubfields ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(  56        \); ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(  57        $subject->replace_with\( $newSubject \); ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(  58      \} ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(  59 ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(  60    \} ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(  61 ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(  62    # output the potentially changed record as MARC. ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(  63    print $record->as_usmarc\(\); ) Tj
+1 0 0 1 102.0 590.0 Tm
+0.0000 Tw
+(  64 ) Tj
+1 0 0 1 102.0 578.0 Tm
+0.0000 Tw
+(  65  \} ) Tj
+/F21 12 Tf
+1 0 0 1 72.0 560.0 Tm
+0.0000 Tw
+(VALIDATING ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 545.6 Tm
+1.0363 Tw
+(MARC::Lint, available on CPAN and in cvs on SourceForge, has some extra goodies to allow you to) Tj
+1 0 0 1 102.0 533.6 Tm
+0.9886 Tw
+(validate records. MARC::Lint provides an extensive battery of tests, and it also provides a framework) Tj
+1 0 0 1 102.0 521.6 Tm
+0.0000 Tw
+(for adding more. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 503.6 Tm
+0.0000 Tw
+(Using MARC::Lint ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 491.6 Tm
+0.0648 Tw
+(Here is an example of using MARC::Lint to generate a list of errors present in a batch of records in a file) Tj
+1 0 0 1 102.0 479.6 Tm
+0.0000 Tw
+(named `file.dat`: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 467.6 Tm
+0.0000 Tw
+(   1   ## Example V1 ) Tj
+1 0 0 1 102.0 455.6 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 443.6 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 431.6 Tm
+0.0000 Tw
+(   4   use MARC::Lint; ) Tj
+1 0 0 1 102.0 419.6 Tm
+0.0000 Tw
+(   5 ) Tj
+1 0 0 1 102.0 407.6 Tm
+0.0000 Tw
+(   6   my $batch = MARC::Batch->new\('USMARC','file.dat'\); ) Tj
+1 0 0 1 102.0 395.6 Tm
+0.0000 Tw
+(   7   my $linter = MARC::Lint->new\(\); ) Tj
+1 0 0 1 102.0 383.6 Tm
+0.0000 Tw
+(   8   my $counter = 0; ) Tj
+1 0 0 1 102.0 371.6 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 359.6 Tm
+0.0000 Tw
+(  10   while \(my $record = $batch->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 347.6 Tm
+0.0000 Tw
+(  11 ) Tj
+1 0 0 1 102.0 335.6 Tm
+0.0000 Tw
+(  12     $counter++; ) Tj
+1 0 0 1 102.0 323.6 Tm
+0.0000 Tw
+(  13 ) Tj
+1 0 0 1 102.0 311.6 Tm
+0.0000 Tw
+(  14     ## feed the record to our linter object. ) Tj
+1 0 0 1 102.0 299.6 Tm
+0.0000 Tw
+(  15     $linter->check_record\($record\); ) Tj
+1 0 0 1 102.0 287.6 Tm
+0.0000 Tw
+(  16 ) Tj
+1 0 0 1 102.0 275.6 Tm
+0.0000 Tw
+(  17     ## get the warnings... ) Tj
+1 0 0 1 102.0 263.6 Tm
+0.0000 Tw
+(  18     my @warnings = $linter->warnings\(\); ) Tj
+1 0 0 1 102.0 251.6 Tm
+0.0000 Tw
+(  19 ) Tj
+1 0 0 1 102.0 239.6 Tm
+0.0000 Tw
+(  20     ## output any warnings. ) Tj
+1 0 0 1 102.0 227.6 Tm
+0.0000 Tw
+(  21     if \(@warnings\) \{ ) Tj
+1 0 0 1 102.0 215.6 Tm
+0.0000 Tw
+(  22 ) Tj
+1 0 0 1 102.0 203.6 Tm
+0.0000 Tw
+(  23       print "RECORD $counter\\n"; ) Tj
+1 0 0 1 102.0 191.6 Tm
+0.0000 Tw
+(  24       print join\("\\n",@warnings\),"\\n"; ) Tj
+1 0 0 1 102.0 179.6 Tm
+0.0000 Tw
+(  25 ) Tj
+1 0 0 1 102.0 167.6 Tm
+0.0000 Tw
+(  26     \} ) Tj
+1 0 0 1 102.0 155.6 Tm
+0.0000 Tw
+(  27 ) Tj
+1 0 0 1 102.0 143.6 Tm
+0.0000 Tw
+(  28   \} ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 119.6 Tm
+0.9393 Tw
+(MARC::Lint is quite thorough, and will check the following when validating: presence of a 245 field,) Tj
+1 0 0 1 102.0 107.6 Tm
+0.5129 Tw
+(repeatability of fields and subfields, valid use of subfield within particular fields, presence of indicators) Tj
+1 0 0 1 102.0 95.6 Tm
+0.0000 Tw
+(and their values. All checks are based on MARC21 bibliographic format. ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(14) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+71 0 obj
+4153
+endobj
+72 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+73 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 72 0 R
+/Contents 70 0 R
+>>
+endobj
+74 0 obj
+<<
+/Length 75 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F21 10 Tf
+1 0 0 1 72.0 770.0 Tm
+0.0000 Tw
+(Customizing MARC::Lint ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 758.0 Tm
+2.4020 Tw
+(MARC::Lint makes no claim to check ) Tj
+/F01 10 Tf
+2.4020 Tw
+(everything) Tj
+/F00 10 Tf
+2.4020 Tw
+( that might be wrong with a MARC record. In) Tj
+1 0 0 1 102.0 746.0 Tm
+1.4725 Tw
+(practice, individual libraries may have their own idea about what is valid or invalid. For example, a) Tj
+1 0 0 1 102.0 734.0 Tm
+1.9741 Tw
+(library may mandate that all MARC records with an 856 field should have a subfield z that reads) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+("Connect to this resource". ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 710.0 Tm
+2.2560 Tw
+(MARC::Lint does provide a framework for adding rules. It can be done using the object oriented) Tj
+1 0 0 1 102.0 698.0 Tm
+0.5721 Tw
+(programming technique of inheritance. In short, you can create your own subclass of MARC::Lint, and) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(then use it to validate your records. Here`s an example: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(   1   ## Example V2 ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(   3   ## first, create our own subclass of MARC::Lint. ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(   4   ## should be saved in a file called MyLint.pm. ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(   5 ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(   6   package MyLint; ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(   7   use base qw\(MARC::Lint\); ) Tj
+1 0 0 1 102.0 590.0 Tm
+0.0000 Tw
+(   8 ) Tj
+1 0 0 1 102.0 578.0 Tm
+0.0000 Tw
+(   9   ## add a method to check that the 856 ) Tj
+1 0 0 1 102.0 566.0 Tm
+0.0000 Tw
+(  10   ## fields contain a correct subfield z. ) Tj
+1 0 0 1 102.0 554.0 Tm
+0.0000 Tw
+(  11   sub check_856 \{ ) Tj
+1 0 0 1 102.0 542.0 Tm
+0.0000 Tw
+(  12 ) Tj
+1 0 0 1 102.0 530.0 Tm
+0.0000 Tw
+(  13     ## your method is passed the MARC::Lint ) Tj
+1 0 0 1 102.0 518.0 Tm
+0.0000 Tw
+(  14     ## and MARC::Field objects for the record. ) Tj
+1 0 0 1 102.0 506.0 Tm
+0.0000 Tw
+(  15     my \($self,$field\) = @_; ) Tj
+1 0 0 1 102.0 494.0 Tm
+0.0000 Tw
+(  16 ) Tj
+1 0 0 1 102.0 482.0 Tm
+0.0000 Tw
+(  17     if \($field->subfield\('z'\) ne 'Connect to this resource'\) \{ ) Tj
+1 0 0 1 102.0 470.0 Tm
+0.0000 Tw
+(  18 ) Tj
+1 0 0 1 102.0 458.0 Tm
+0.0000 Tw
+(  19       ## add a warning to our lint object. ) Tj
+1 0 0 1 102.0 446.0 Tm
+0.0000 Tw
+(  20       $self->warn\("856 subfield z must read 'Connect to this resource'."\); ) Tj
+1 0 0 1 102.0 434.0 Tm
+0.0000 Tw
+(  21 ) Tj
+1 0 0 1 102.0 422.0 Tm
+0.0000 Tw
+(  22     \} ) Tj
+1 0 0 1 102.0 410.0 Tm
+0.0000 Tw
+(  23 ) Tj
+1 0 0 1 102.0 398.0 Tm
+0.0000 Tw
+(  24   \} ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 374.0 Tm
+0.6062 Tw
+(Then create a separate program that uses your subclass to validate your MARC records. You`ll need to) Tj
+1 0 0 1 102.0 362.0 Tm
+0.2594 Tw
+(make sure your program is able to find your module \(in this case, MyLint.pm\)... this can be achieved by) Tj
+1 0 0 1 102.0 350.0 Tm
+0.0000 Tw
+(putting both MyLint.pm and the following program in the same directory: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 338.0 Tm
+0.0000 Tw
+(   1   ## Example V3 ) Tj
+1 0 0 1 102.0 326.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 314.0 Tm
+0.0000 Tw
+(   3   use MARC::Batch; ) Tj
+1 0 0 1 102.0 302.0 Tm
+0.0000 Tw
+(   4   use MyLint; ) Tj
+1 0 0 1 102.0 290.0 Tm
+0.0000 Tw
+(   5 ) Tj
+1 0 0 1 102.0 278.0 Tm
+0.0000 Tw
+(   6   my $linter = MyLint->new\(\); ) Tj
+1 0 0 1 102.0 266.0 Tm
+0.0000 Tw
+(   7   my $batch = MARC::Batch->new\('USMARC','file.marc'\); ) Tj
+1 0 0 1 102.0 254.0 Tm
+0.0000 Tw
+(   8   my $counter = 0; ) Tj
+1 0 0 1 102.0 242.0 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 230.0 Tm
+0.0000 Tw
+(  10   while \(my $record = $batch->next\(\)\) \{ ) Tj
+1 0 0 1 102.0 218.0 Tm
+0.0000 Tw
+(  11 ) Tj
+1 0 0 1 102.0 206.0 Tm
+0.0000 Tw
+(  12     $counter++; ) Tj
+1 0 0 1 102.0 194.0 Tm
+0.0000 Tw
+(  13 ) Tj
+1 0 0 1 102.0 182.0 Tm
+0.0000 Tw
+(  14     ## check the record ) Tj
+1 0 0 1 102.0 170.0 Tm
+0.0000 Tw
+(  15     $linter->check_record\($record\); ) Tj
+1 0 0 1 102.0 158.0 Tm
+0.0000 Tw
+(  16 ) Tj
+1 0 0 1 102.0 146.0 Tm
+0.0000 Tw
+(  17     ## get the warnings, and print them out ) Tj
+1 0 0 1 102.0 134.0 Tm
+0.0000 Tw
+(  18     my @warnings = $linter->warnings\(\); ) Tj
+1 0 0 1 102.0 122.0 Tm
+0.0000 Tw
+(  19     if \(@warnings\) \{ ) Tj
+1 0 0 1 102.0 110.0 Tm
+0.0000 Tw
+(  20       print "RECORD $counter\\n"; ) Tj
+1 0 0 1 102.0 98.0 Tm
+0.0000 Tw
+(  21       print join\("\\n",@warnings\),"\\n"; ) Tj
+1 0 0 1 102.0 86.0 Tm
+0.0000 Tw
+(  22     \} ) Tj
+1 0 0 1 102.0 74.0 Tm
+0.0000 Tw
+(  23 ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 511.88 37 Tm
+(15) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+75 0 obj
+4771
+endobj
+76 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F01 7 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+77 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 76 0 R
+/Contents 74 0 R
+>>
+endobj
+78 0 obj
+<<
+/Length 79 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  24   \} ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 734.0 Tm
+1.9064 Tw
+(Notice how the call to ) Tj
+/F10 10 Tf
+1.9064 Tw
+(check_record\(\)) Tj
+/F00 10 Tf
+1.9064 Tw
+(  at line 15 automatically calls the ) Tj
+/F10 10 Tf
+1.9064 Tw
+(check_record) Tj
+/F00 10 Tf
+1.9064 Tw
+( in) Tj
+1 0 0 1 102.0 722.0 Tm
+1.2140 Tw
+(MARC::Lint. The property of inheritance is what makes this happen. ) Tj
+/F10 10 Tf
+1.2140 Tw
+($linter) Tj
+/F00 10 Tf
+1.2140 Tw
+( is an instance of the) Tj
+1 0 0 1 102.0 710.0 Tm
+0.1373 Tw
+(MyLint class, and MyLint inherits from the MARC::Lint class, which allows ) Tj
+/F10 10 Tf
+0.1373 Tw
+($linter) Tj
+/F00 10 Tf
+0.1373 Tw
+( to inherit all the) Tj
+1 0 0 1 102.0 698.0 Tm
+1.9277 Tw
+(functionality of a normal MARC::Lint object ) Tj
+/F01 10 Tf
+1.9277 Tw
+(plus) Tj
+/F00 10 Tf
+1.9277 Tw
+( the new functionality found in the ) Tj
+/F10 10 Tf
+1.9277 Tw
+(check_856) Tj
+/F00 10 Tf
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(method. ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 674.0 Tm
+2.7723 Tw
+(Notice also that we don`t have to call ) Tj
+/F10 10 Tf
+2.7723 Tw
+(check_856\(\)) Tj
+/F00 10 Tf
+2.7723 Tw
+( directly. The call to ) Tj
+/F10 10 Tf
+2.7723 Tw
+(check_record\(\)) Tj
+/F00 10 Tf
+1 0 0 1 102.0 662.0 Tm
+0.5450 Tw
+(automatically looks for any ) Tj
+/F10 10 Tf
+0.5450 Tw
+(check_XXX) Tj
+/F00 10 Tf
+0.5450 Tw
+( methods that it can call to verify the record. Pretty neat stuff.) Tj
+1 0 0 1 102.0 650.0 Tm
+0.1989 Tw
+(If you`ve added validation checks that you think could be of use to the general public, please share them) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(on the perl4lib mailing list, or become a developer and add them to the source! ) Tj
+/F21 12 Tf
+1 0 0 1 72.0 620.0 Tm
+0.0000 Tw
+(SWOLLEN APPENDICES ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 605.6 Tm
+0.1782 Tw
+(Brian Eno fans might catch this reference to his autobiography which was comprised of a years worth of) Tj
+1 0 0 1 102.0 593.6 Tm
+1.5013 Tw
+(diary entries plus extra topics at the end, and was entitled "A Year With Swollen Appendices". The) Tj
+1 0 0 1 102.0 581.6 Tm
+0.5821 Tw
+(following section is a grab bag group of appendices. Many of them are not filled in yet; this is because) Tj
+1 0 0 1 102.0 569.6 Tm
+0.3844 Tw
+(they are just ideas... so perhaps the appendices aren`t that swollen yet. Feel free to suggest new ones, or) Tj
+1 0 0 1 102.0 557.6 Tm
+0.0000 Tw
+(to fill these in. ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 539.6 Tm
+0.0000 Tw
+(Comparing Collections ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 521.6 Tm
+0.0000 Tw
+(Authority Records ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 503.6 Tm
+0.0000 Tw
+(URLs ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 485.6 Tm
+0.0000 Tw
+(ISBN/ISSNs ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 467.6 Tm
+0.0000 Tw
+(Call numbers ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 449.6 Tm
+0.0000 Tw
+(Subject headings ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 437.6 Tm
+0.1612 Tw
+(Suppose you have a batch of MARC records and you want to extract all the subject headings, generating) Tj
+1 0 0 1 102.0 425.6 Tm
+0.0000 Tw
+(a report of how many times each subject heading appeared in the batch: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 413.6 Tm
+0.0000 Tw
+(   1   use MARC::File::USMARC; ) Tj
+1 0 0 1 102.0 401.6 Tm
+0.0000 Tw
+(   2   use constant MAX => 20; ) Tj
+1 0 0 1 102.0 389.6 Tm
+0.0000 Tw
+(   3 ) Tj
+1 0 0 1 102.0 377.6 Tm
+0.0000 Tw
+(   4   my %counts; ) Tj
+1 0 0 1 102.0 365.6 Tm
+0.0000 Tw
+(   5 ) Tj
+1 0 0 1 102.0 353.6 Tm
+0.0000 Tw
+(   6   my $filename = shift or die "Must specify filename\\n"; ) Tj
+1 0 0 1 102.0 341.6 Tm
+0.0000 Tw
+(   7   my $file = MARC::File::USMARC->in\( $filename \); ) Tj
+1 0 0 1 102.0 329.6 Tm
+0.0000 Tw
+(   8 ) Tj
+1 0 0 1 102.0 317.6 Tm
+0.0000 Tw
+(   9   while \( my $marc = $file->next\(\) \) \{ ) Tj
+1 0 0 1 102.0 305.6 Tm
+0.0000 Tw
+(  10       for my $field \( $marc->field\("6.."\) \) \{ ) Tj
+1 0 0 1 102.0 293.6 Tm
+0.0000 Tw
+(  11           my $heading = $field->subfield\('a'\); ) Tj
+1 0 0 1 102.0 281.6 Tm
+0.0000 Tw
+(  12 ) Tj
+1 0 0 1 102.0 269.6 Tm
+0.0000 Tw
+(  13           # trailing whitespace / punctuation. ) Tj
+1 0 0 1 102.0 257.6 Tm
+0.0000 Tw
+(  14           $heading =~ s/[.,]?\\s*$//; ) Tj
+1 0 0 1 102.0 245.6 Tm
+0.0000 Tw
+(  15 ) Tj
+1 0 0 1 102.0 233.6 Tm
+0.0000 Tw
+(  16           # Now count it. ) Tj
+1 0 0 1 102.0 221.6 Tm
+0.0000 Tw
+(  17           ++$counts\{$heading\}; ) Tj
+1 0 0 1 102.0 209.6 Tm
+0.0000 Tw
+(  18       \} ) Tj
+1 0 0 1 102.0 197.6 Tm
+0.0000 Tw
+(  19   \} ) Tj
+1 0 0 1 102.0 185.6 Tm
+0.0000 Tw
+(  20   $file->close\(\); ) Tj
+1 0 0 1 102.0 173.6 Tm
+0.0000 Tw
+(  21 ) Tj
+1 0 0 1 102.0 161.6 Tm
+0.0000 Tw
+(  22   # Sort the list of headings based on the count of each. ) Tj
+1 0 0 1 102.0 149.6 Tm
+0.0000 Tw
+(  23   my @headings = reverse sort \{ $counts\{$a\} <=> $counts\{$b\} \} keys %counts; ) Tj
+1 0 0 1 102.0 137.6 Tm
+0.0000 Tw
+(  24 ) Tj
+1 0 0 1 102.0 125.6 Tm
+0.0000 Tw
+(  25   # Take the top N hits... ) Tj
+1 0 0 1 102.0 113.6 Tm
+0.0000 Tw
+(  26   @headings = @headings[0..MAX-1]; ) Tj
+1 0 0 1 102.0 101.6 Tm
+0.0000 Tw
+(  27 ) Tj
+1 0 0 1 102.0 89.6 Tm
+0.0000 Tw
+(  28   # And print out the results. ) Tj
+1 0 0 1 102.0 77.6 Tm
+0.0000 Tw
+(  29   for my $heading \( @headings \) \{ ) Tj
+1 0 0 1 102.0 65.6 Tm
+0.0000 Tw
+(  30       printf\( "%5d %s\\n", $counts\{$heading\}, $heading \); ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(16) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+79 0 obj
+5394
+endobj
+80 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F01 7 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+81 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 80 0 R
+/Contents 78 0 R
+>>
+endobj
+82 0 obj
+<<
+/Length 83 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  31   \} ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(Which will generate results like this: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  600 United States ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  140 World War, 1939-1945 ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(   78 Great Britain ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(   63 Afro-Americans ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(   61 Indians of North America ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(   58 American poetry ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(   55 France ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(   53 West \(U.S.\) ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(   53 Science fiction ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(   53 American literature ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(   50 Shakespeare, William ) Tj
+1 0 0 1 102.0 590.0 Tm
+0.0000 Tw
+(   48 Soviet Union ) Tj
+1 0 0 1 102.0 578.0 Tm
+0.0000 Tw
+(   46 Mystery and detective stories ) Tj
+1 0 0 1 102.0 566.0 Tm
+0.0000 Tw
+(   45 Presidents ) Tj
+1 0 0 1 102.0 554.0 Tm
+0.0000 Tw
+(   43 China ) Tj
+1 0 0 1 102.0 542.0 Tm
+0.0000 Tw
+(   40 Frontier and pioneer life ) Tj
+1 0 0 1 102.0 530.0 Tm
+0.0000 Tw
+(   38 English poetry ) Tj
+1 0 0 1 102.0 518.0 Tm
+0.0000 Tw
+(   37 Authors, American ) Tj
+1 0 0 1 102.0 506.0 Tm
+0.0000 Tw
+(   37 English language ) Tj
+1 0 0 1 102.0 494.0 Tm
+0.0000 Tw
+(   35 Japan ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 476.0 Tm
+0.0000 Tw
+(HTML ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 458.0 Tm
+0.0000 Tw
+(XML ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 440.0 Tm
+0.0000 Tw
+(Excel ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 422.0 Tm
+0.0000 Tw
+(Z39.50 ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 410.0 Tm
+1.3473 Tw
+(Chris Biemesderfer was kind enough to contribute a short example of how to use MARC::Record in) Tj
+1 0 0 1 102.0 398.0 Tm
+0.3882 Tw
+(tandem with Net::Z3950.  Net::Z3950 is a CPAN module which provides an easy to use interface to the) Tj
+1 0 0 1 102.0 386.0 Tm
+0.2164 Tw
+(Z39.50 protocol so that you can write programs that retrieve records from bibliographic database around) Tj
+1 0 0 1 102.0 374.0 Tm
+0.0000 Tw
+(the world. ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 362.0 Tm
+0.0000 Tw
+(Chris' program is a command line utility which you run like so: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 350.0 Tm
+0.0000 Tw
+(  ./zm.pl 0596000278 ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 326.0 Tm
+0.7431 Tw
+(where 0596000278 is an ISBN \(for the 3rd edition of the Camel incidentally\). The program will query) Tj
+1 0 0 1 102.0 314.0 Tm
+0.7982 Tw
+(the Library of Congress Z39.50 server for the ISBN, and dump out the retrieved MARC record on the) Tj
+1 0 0 1 102.0 302.0 Tm
+0.8606 Tw
+(screen. The program is designed to lookup multiple ISBNs if you separate them with a space.  This is) Tj
+1 0 0 1 102.0 290.0 Tm
+0.0000 Tw
+(just an example showing what is possible. ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 278.0 Tm
+0.0000 Tw
+(   1   #!/usr/bin/perl -w ) Tj
+1 0 0 1 102.0 266.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 254.0 Tm
+0.0000 Tw
+(   3   # GET-MARC-ISBN -- Get MARC records by ISBN from a Z39.50 server ) Tj
+1 0 0 1 102.0 242.0 Tm
+0.0000 Tw
+(   4 ) Tj
+1 0 0 1 102.0 230.0 Tm
+0.0000 Tw
+(   5   use strict; ) Tj
+1 0 0 1 102.0 218.0 Tm
+0.0000 Tw
+(   6   use Carp; ) Tj
+1 0 0 1 102.0 206.0 Tm
+0.0000 Tw
+(   7   use Net::Z3950; ) Tj
+1 0 0 1 102.0 194.0 Tm
+0.0000 Tw
+(   8   use MARC::Record; ) Tj
+1 0 0 1 102.0 182.0 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 170.0 Tm
+0.0000 Tw
+(  10   exit if \($#ARGV < 0\); ) Tj
+1 0 0 1 102.0 158.0 Tm
+0.0000 Tw
+(  11 ) Tj
+1 0 0 1 102.0 146.0 Tm
+0.0000 Tw
+(  12   # We handle multiple ISBNs in the same query by assembling a ) Tj
+1 0 0 1 102.0 134.0 Tm
+0.0000 Tw
+(  13   # \(potentially very large\) search string with Prefix Query Notation ) Tj
+1 0 0 1 102.0 122.0 Tm
+0.0000 Tw
+(  14   # that ORs the ISBN-bearing attributes. ) Tj
+1 0 0 1 102.0 110.0 Tm
+0.0000 Tw
+(  15   # ) Tj
+1 0 0 1 102.0 98.0 Tm
+0.0000 Tw
+(  16   # For purposes of automation, we want to request batches of many MARC ) Tj
+1 0 0 1 102.0 86.0 Tm
+0.0000 Tw
+(  17   # records.  I am not a Z39.50 weenie, though, and I don't know ) Tj
+1 0 0 1 102.0 74.0 Tm
+0.0000 Tw
+(  18   # offhand if there is a limit on how big a PQN query can be... ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 511.88 37 Tm
+(17) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+83 0 obj
+4368
+endobj
+84 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+85 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 84 0 R
+/Contents 82 0 R
+>>
+endobj
+86 0 obj
+<<
+/Length 87 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  19 ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(  20   my $zq = "\\@attr 1=7 ". pop\(\); ) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(  21   while \(@ARGV\) \{ $zq = '@or @attr 1=7 '. pop\(\) ." $zq" \} ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  22 ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  23   ## HERE IS THE CODE FOR Z3950 REC RETRIEVAL ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(  24   # Set up connection management structures, connect ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(  25   # to the server, and submit the Z39.50 query. ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(  26 ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(  27   my $mgr = Net::Z3950::Manager->new\( databaseName => 'voyager' \); ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(  28   $mgr->option\( elementSetName => "f" \); ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(  29   $mgr->option\( preferredRecordSyntax => Net::Z3950::RecordSyntax::USMARC \); ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(  30 ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(  31   my $conn = $mgr->connect\('z3950.loc.gov', '7090'\); ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(  32   croak "Unable to connect to server" if !defined\($conn\); ) Tj
+1 0 0 1 102.0 590.0 Tm
+0.0000 Tw
+(  33 ) Tj
+1 0 0 1 102.0 578.0 Tm
+0.0000 Tw
+(  34   my $rs = $conn->search\($zq\); ) Tj
+1 0 0 1 102.0 566.0 Tm
+0.0000 Tw
+(  35 ) Tj
+1 0 0 1 102.0 554.0 Tm
+0.0000 Tw
+(  36   my $numrec = $rs->size\(\); ) Tj
+1 0 0 1 102.0 542.0 Tm
+0.0000 Tw
+(  37   print STDERR "$numrec record\(s\) found\\n"; ) Tj
+1 0 0 1 102.0 530.0 Tm
+0.0000 Tw
+(  38 ) Tj
+1 0 0 1 102.0 518.0 Tm
+0.0000 Tw
+(  39   for \(my $ii = 1; $ii <= $numrec; $ii++\) \{ ) Tj
+1 0 0 1 102.0 506.0 Tm
+0.0000 Tw
+(  40 ) Tj
+1 0 0 1 102.0 494.0 Tm
+0.0000 Tw
+(  41       # Extract MARC records from Z3950 ) Tj
+1 0 0 1 102.0 482.0 Tm
+0.0000 Tw
+(  42       # result set, and load MARC::Record. ) Tj
+1 0 0 1 102.0 470.0 Tm
+0.0000 Tw
+(  43       my $zrec = $rs->record\($ii\); ) Tj
+1 0 0 1 102.0 458.0 Tm
+0.0000 Tw
+(  44       my $mrec = MARC::Record->new_from_usmarc\($zrec->rawdata\(\)\); ) Tj
+1 0 0 1 102.0 446.0 Tm
+0.0000 Tw
+(  45       print $mrec->as_formatted, "\\n\\n"; ) Tj
+1 0 0 1 102.0 434.0 Tm
+0.0000 Tw
+(  46 ) Tj
+1 0 0 1 102.0 422.0 Tm
+0.0000 Tw
+(  47   \} ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 404.0 Tm
+0.0000 Tw
+(Databases ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 392.0 Tm
+0.3522 Tw
+(Here`s a script that will do a Z39.50 query \(using Chris Biemesderfer`s zm.pl as a model\), get a MARC) Tj
+1 0 0 1 102.0 380.0 Tm
+0.0000 Tw
+(record back, and store it as a binary blob in a MySQL table of this structure: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 368.0 Tm
+0.0000 Tw
+( +---------------+---------------+------+-----+---------+----------------+ ) Tj
+1 0 0 1 102.0 356.0 Tm
+0.0000 Tw
+( | Field         | Type          | Null | Key | Default | Extra          | ) Tj
+1 0 0 1 102.0 344.0 Tm
+0.0000 Tw
+( +---------------+---------------+------+-----+---------+----------------+ ) Tj
+1 0 0 1 102.0 332.0 Tm
+0.0000 Tw
+( | TitleID       | int\(7\)        |      | PRI | NULL    | auto_increment | ) Tj
+1 0 0 1 102.0 320.0 Tm
+0.0000 Tw
+( | RecLastMod    | timestamp\(14\) | YES  |     | NULL    |                | ) Tj
+1 0 0 1 102.0 308.0 Tm
+0.0000 Tw
+( | ISSN          | text          | YES  |     | NULL    |                | ) Tj
+1 0 0 1 102.0 296.0 Tm
+0.0000 Tw
+( | RawMARCRecord | blob          | YES  |     | NULL    |                | ) Tj
+1 0 0 1 102.0 284.0 Tm
+0.0000 Tw
+( +---------------+---------------+------+-----+---------+----------------+ ) Tj
+1 0 0 1 102.0 260.0 Tm
+0.0000 Tw
+(   1 #!/usr/bin/perl -w ) Tj
+1 0 0 1 102.0 248.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 236.0 Tm
+0.0000 Tw
+(   3 # Script that reads in a file of ISSNs, queries a Z39.50 server, ) Tj
+1 0 0 1 102.0 224.0 Tm
+0.0000 Tw
+(   4 # and stores resulting records in a database. Limitations: Only ) Tj
+1 0 0 1 102.0 212.0 Tm
+0.0000 Tw
+(   5 # stores 1 records per ISSN. ) Tj
+1 0 0 1 102.0 200.0 Tm
+0.0000 Tw
+(   6 # Last updated 2004-09-08 Mark Jordan, mjordan@sfu.ca ) Tj
+1 0 0 1 102.0 188.0 Tm
+0.0000 Tw
+(   7 ) Tj
+1 0 0 1 102.0 176.0 Tm
+0.0000 Tw
+(   8 use strict; ) Tj
+1 0 0 1 102.0 164.0 Tm
+0.0000 Tw
+(   9 use Carp; ) Tj
+1 0 0 1 102.0 152.0 Tm
+0.0000 Tw
+(  10 use Net::Z3950; ) Tj
+1 0 0 1 102.0 140.0 Tm
+0.0000 Tw
+(  11 use MARC::Record; ) Tj
+1 0 0 1 102.0 128.0 Tm
+0.0000 Tw
+(  12 use DBI; ) Tj
+1 0 0 1 102.0 116.0 Tm
+0.0000 Tw
+(  13 ) Tj
+1 0 0 1 102.0 104.0 Tm
+0.0000 Tw
+(  14 # DB connection settings ) Tj
+1 0 0 1 102.0 92.0 Tm
+0.0000 Tw
+(  15 my $host = "somehost"; ) Tj
+1 0 0 1 102.0 80.0 Tm
+0.0000 Tw
+(  16 my $user = "someuser"; ) Tj
+1 0 0 1 102.0 68.0 Tm
+0.0000 Tw
+(  17 my $password = "somepass"; ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(18) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+87 0 obj
+4869
+endobj
+88 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+89 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 88 0 R
+/Contents 86 0 R
+>>
+endobj
+90 0 obj
+<<
+/Length 91 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(pod2pdf) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(  18 my $database = "somedb"; ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(  19 ) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(  20 # Input file \(one ISSS/line\) ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  21 my $InputFile = $ARGV[0]; ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  22 ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(  23 # Prepare list of ISSNs to search ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(  24 my @ISSNs; ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(  25 open \(INPUT, "< $InputFile"\) or die "Can't find input file\\n"; ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(  26 while \(<INPUT>\) \{ chomp $_; push \(@ISSNs, $_\); \} ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(  27 close INPUT; ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(  28 ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(  29 ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(  30 # Set up connection management structures, connect to the server, ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(  31 # and submit the Z39.50 query. ) Tj
+1 0 0 1 102.0 590.0 Tm
+0.0000 Tw
+(  32 my $mgr = Net::Z3950::Manager->new\( databaseName => 'voyager' \); ) Tj
+1 0 0 1 102.0 578.0 Tm
+0.0000 Tw
+(  33 $mgr->option\( elementSetName => "f" \); ) Tj
+1 0 0 1 102.0 566.0 Tm
+0.0000 Tw
+(  34 $mgr->option\( preferredRecordSyntax => Net::Z3950::RecordSyntax::USMARC \); ) Tj
+1 0 0 1 102.0 554.0 Tm
+0.0000 Tw
+(  35 my $conn = $mgr->connect\('z3950.loc.gov', '7090'\); ) Tj
+1 0 0 1 102.0 542.0 Tm
+0.0000 Tw
+(  36 croak "Unable to connect to server" if !defined\($conn\); ) Tj
+1 0 0 1 102.0 530.0 Tm
+0.0000 Tw
+(  37 ) Tj
+1 0 0 1 102.0 518.0 Tm
+0.0000 Tw
+(  38 ) Tj
+1 0 0 1 102.0 506.0 Tm
+0.0000 Tw
+(  39 my $handle = DBI->connect\("DBI:mysql:$database:$host","$user","$password"\) ) Tj
+1 0 0 1 102.0 494.0 Tm
+0.0000 Tw
+(  40         or die $DBI::errstr; ) Tj
+1 0 0 1 102.0 482.0 Tm
+0.0000 Tw
+(  41 ) Tj
+1 0 0 1 102.0 470.0 Tm
+0.0000 Tw
+(  42 foreach my $ISSN \(@ISSNs\) \{ ) Tj
+1 0 0 1 102.0 458.0 Tm
+0.0000 Tw
+(  43         my $zq = "\\@attr 1=8 ". $ISSN; ) Tj
+1 0 0 1 102.0 446.0 Tm
+0.0000 Tw
+(  44         my $rs = $conn->search\($zq\); ) Tj
+1 0 0 1 102.0 434.0 Tm
+0.0000 Tw
+(  45         my $numrec = $rs->size\(\); ) Tj
+1 0 0 1 102.0 422.0 Tm
+0.0000 Tw
+(  46         if \($numrec == 0\) \{ ) Tj
+1 0 0 1 102.0 410.0 Tm
+0.0000 Tw
+(  47             print "Record for ISSN $ISSN not found, moving to next ISSN...\\n"; ) Tj
+1 0 0 1 102.0 398.0 Tm
+0.0000 Tw
+(  48             next; ) Tj
+1 0 0 1 102.0 386.0 Tm
+0.0000 Tw
+(  49         \} else \{ ) Tj
+1 0 0 1 102.0 374.0 Tm
+0.0000 Tw
+(  50            # Extract MARC record from the result set, and invoke MARC::Record ) Tj
+1 0 0 1 102.0 362.0 Tm
+0.0000 Tw
+(  51            my $zrec = $rs->record\(1\); ) Tj
+1 0 0 1 102.0 350.0 Tm
+0.0000 Tw
+(  52            my $mrec = MARC::Record->new_from_usmarc\($zrec->rawdata\(\)\); ) Tj
+1 0 0 1 102.0 338.0 Tm
+0.0000 Tw
+(  53            my $rawdata = $zrec->rawdata\(\); ) Tj
+1 0 0 1 102.0 326.0 Tm
+0.0000 Tw
+(  54            $rawdata = $handle->quote \($rawdata\); ) Tj
+1 0 0 1 102.0 314.0 Tm
+0.0000 Tw
+(  55            # Add to db ) Tj
+1 0 0 1 102.0 302.0 Tm
+0.0000 Tw
+(  56            my $SQL = "insert into Titles values \(NULL,NULL,'$ISSN',$rawdata\)"; ) Tj
+1 0 0 1 102.0 290.0 Tm
+0.0000 Tw
+(  57            my $cursor = $handle->prepare\($SQL\); ) Tj
+1 0 0 1 102.0 278.0 Tm
+0.0000 Tw
+(  58            $cursor->execute; ) Tj
+1 0 0 1 102.0 266.0 Tm
+0.0000 Tw
+(  59            print "Record for ISSN $ISSN added to database...\\n"; ) Tj
+1 0 0 1 102.0 254.0 Tm
+0.0000 Tw
+(  60            $cursor->finish; ) Tj
+1 0 0 1 102.0 242.0 Tm
+0.0000 Tw
+(  61         \} ) Tj
+1 0 0 1 102.0 230.0 Tm
+0.0000 Tw
+(  62 \} ) Tj
+1 0 0 1 102.0 218.0 Tm
+0.0000 Tw
+(  63 $handle->disconnect; ) Tj
+1 0 0 1 102.0 206.0 Tm
+0.0000 Tw
+(  64 ) Tj
+1 0 0 1 102.0 194.0 Tm
+0.0000 Tw
+(  65 __END__ ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 170.0 Tm
+1.3400 Tw
+(If you want to pull records out of the same database and do something with them, here`s a template) Tj
+1 0 0 1 102.0 158.0 Tm
+0.0000 Tw
+(script: ) Tj
+/F10 10 Tf
+1 0 0 1 102.0 146.0 Tm
+0.0000 Tw
+(   1 #!/usr/bin/perl -w ) Tj
+1 0 0 1 102.0 134.0 Tm
+0.0000 Tw
+(   2 ) Tj
+1 0 0 1 102.0 122.0 Tm
+0.0000 Tw
+(   3 # Script that gets MARC records \(in blobs\) from a database. ) Tj
+1 0 0 1 102.0 110.0 Tm
+0.0000 Tw
+(   4 # Last updated 2004-09-08 Mark Jordan, mjordan@sfu.ca ) Tj
+1 0 0 1 102.0 98.0 Tm
+0.0000 Tw
+(   5 ) Tj
+1 0 0 1 102.0 86.0 Tm
+0.0000 Tw
+(   6 use strict; ) Tj
+1 0 0 1 102.0 74.0 Tm
+0.0000 Tw
+(   7 use MARC::Record; ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 511.88 37 Tm
+(19) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+91 0 obj
+4700
+endobj
+92 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+93 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 92 0 R
+/Contents 90 0 R
+>>
+endobj
+94 0 obj
+<<
+/Length 95 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 483.56 797 Tm
+(pod2pdf) Tj
+/F10 10 Tf
+1 0 0 1 102.0 758.0 Tm
+0.0000 Tw
+(   8 use DBI; ) Tj
+1 0 0 1 102.0 746.0 Tm
+0.0000 Tw
+(   9 ) Tj
+1 0 0 1 102.0 734.0 Tm
+0.0000 Tw
+(  10 # DB connection settings ) Tj
+1 0 0 1 102.0 722.0 Tm
+0.0000 Tw
+(  11 my $mysql_host = "somehost"; ) Tj
+1 0 0 1 102.0 710.0 Tm
+0.0000 Tw
+(  12 my $mysql_user = "someuser"; ) Tj
+1 0 0 1 102.0 698.0 Tm
+0.0000 Tw
+(  13 my $mysql_password = "somepass*"; ) Tj
+1 0 0 1 102.0 686.0 Tm
+0.0000 Tw
+(  14 my $mysql_database = "somedb"; ) Tj
+1 0 0 1 102.0 674.0 Tm
+0.0000 Tw
+(  15 ) Tj
+1 0 0 1 102.0 662.0 Tm
+0.0000 Tw
+(  16 ) Tj
+1 0 0 1 102.0 650.0 Tm
+0.0000 Tw
+(  17 my $handle = DBI->connect\("DBI:mysql:$mysql_database:$mysql_host", ) Tj
+1 0 0 1 102.0 638.0 Tm
+0.0000 Tw
+(  18         "$mysql_user","$mysql_password"\) or die $DBI::errstr; ) Tj
+1 0 0 1 102.0 626.0 Tm
+0.0000 Tw
+(  19 ) Tj
+1 0 0 1 102.0 614.0 Tm
+0.0000 Tw
+(  20 my $SQL = "select * from Titles"; ) Tj
+1 0 0 1 102.0 602.0 Tm
+0.0000 Tw
+(  21 my $cursor = $handle->prepare\($SQL\); ) Tj
+1 0 0 1 102.0 590.0 Tm
+0.0000 Tw
+(  22 $cursor->execute; ) Tj
+1 0 0 1 102.0 578.0 Tm
+0.0000 Tw
+(  23 ) Tj
+1 0 0 1 102.0 566.0 Tm
+0.0000 Tw
+(  24 while \(my @Records = $cursor->fetchrow_array\) \{ ) Tj
+1 0 0 1 102.0 554.0 Tm
+0.0000 Tw
+(  25         my $RawMARC = $Records[3]; ) Tj
+1 0 0 1 102.0 542.0 Tm
+0.0000 Tw
+(  26         my $mrec = MARC::Record->new_from_usmarc\($RawMARC\); ) Tj
+1 0 0 1 102.0 530.0 Tm
+0.0000 Tw
+(  27         # Print out the title ) Tj
+1 0 0 1 102.0 518.0 Tm
+0.0000 Tw
+(  28         print $mrec->title , "\\n"; ) Tj
+1 0 0 1 102.0 506.0 Tm
+0.0000 Tw
+(  29 \} ) Tj
+1 0 0 1 102.0 494.0 Tm
+0.0000 Tw
+(  30 ) Tj
+1 0 0 1 102.0 482.0 Tm
+0.0000 Tw
+(  31 $cursor->finish; ) Tj
+1 0 0 1 102.0 470.0 Tm
+0.0000 Tw
+(  32 $handle->disconnect; ) Tj
+1 0 0 1 102.0 458.0 Tm
+0.0000 Tw
+(  33 ) Tj
+1 0 0 1 102.0 446.0 Tm
+0.0000 Tw
+(  34 __END__ ) Tj
+/F21 10 Tf
+1 0 0 1 72.0 428.0 Tm
+0.0000 Tw
+(Procite/Endnote ) Tj
+/F21 12 Tf
+1 0 0 1 72.0 410.0 Tm
+0.0000 Tw
+(CONTRIBUTORS ) Tj
+/F00 10 Tf
+1 0 0 1 102.0 395.6 Tm
+0.0000 Tw
+(Many thanks to all the contributors who have made this document possible. ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 369.2 Tm
+0.0000 Tw
+() Tj
+ET
+q
+102 370.2 4 4 re
+f
+Q
+BT
+1 0 0 1 110 369.2 Tm
+/F20 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 369.2 Tm
+0.0000 Tw
+(Bryan Baldus <eijabb@cpan.org> ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 354.8 Tm
+0.0000 Tw
+() Tj
+ET
+q
+102 355.8 4 4 re
+f
+Q
+BT
+1 0 0 1 110 354.8 Tm
+/F20 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 354.8 Tm
+0.0000 Tw
+(Chris Biemesderfer <chris@seagoat.com> ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 340.4 Tm
+0.0000 Tw
+() Tj
+ET
+q
+102 341.4 4 4 re
+f
+Q
+BT
+1 0 0 1 110 340.4 Tm
+/F20 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 340.4 Tm
+0.0000 Tw
+(Morbus Iff <morbus@disobey.com> ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 326.0 Tm
+0.0000 Tw
+() Tj
+ET
+q
+102 327 4 4 re
+f
+Q
+BT
+1 0 0 1 110 326 Tm
+/F20 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 326.0 Tm
+0.0000 Tw
+(Mark Jordan <mjordan@sfu.ca> ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 311.6 Tm
+0.0000 Tw
+() Tj
+ET
+q
+102 312.6 4 4 re
+f
+Q
+BT
+1 0 0 1 110 311.6 Tm
+/F20 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 311.6 Tm
+0.0000 Tw
+(Andy Lester <andy@petdance.com> ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 297.2 Tm
+0.0000 Tw
+() Tj
+ET
+q
+102 298.2 4 4 re
+f
+Q
+BT
+1 0 0 1 110 297.2 Tm
+/F20 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 297.2 Tm
+0.0000 Tw
+(Christopher Morgan <morgan@acm.org> ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 282.8 Tm
+0.0000 Tw
+() Tj
+ET
+q
+102 283.8 4 4 re
+f
+Q
+BT
+1 0 0 1 110 282.8 Tm
+/F20 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 282.8 Tm
+0.0000 Tw
+(Shashi Pinheiro <SPinheiro@utsa.edu> ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 268.4 Tm
+0.0000 Tw
+() Tj
+ET
+q
+102 269.4 4 4 re
+f
+Q
+BT
+1 0 0 1 110 268.4 Tm
+/F20 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 268.4 Tm
+0.0000 Tw
+(Jackie Shieh <jshieh@umich.edu> ) Tj
+/F20 10 Tf
+1 0 0 1 102.0 254.0 Tm
+0.0000 Tw
+() Tj
+ET
+q
+102 255 4 4 re
+f
+Q
+BT
+1 0 0 1 110 254 Tm
+/F20 10 Tf
+0.0000 Tw
+( ) Tj
+/F00 10 Tf
+1 0 0 1 126.0 254.0 Tm
+0.0000 Tw
+(Ed Summers <ehs@pobox.com> ) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(20) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+95 0 obj
+4219
+endobj
+96 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F00 6 0 R
+/F10 10 0 R
+/F20 14 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+97 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 96 0 R
+/Contents 94 0 R
+>>
+endobj
+98 0 obj
+<<
+/Length 99 0 R
+>>
+stream
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+/F20 24 Tf
+1 0 0 1 202.784 770 Tm
+(Table of Contents) Tj
+1 0 0 1 234.14 741.2 Tm
+(Tutorial.pod) Tj
+/F20 10 Tf
+ET
+q
+0.95 g
+72 680.6 451 12 re
+f
+Q
+BT
+1 0 0 1 102 683.6 Tm
+(NAME) Tj
+1 0 0 1 487.44 683.6 Tm
+(1) Tj
+ET
+q
+1 g
+72 668.6 451 12 re
+f
+Q
+BT
+1 0 0 1 102 671.6 Tm
+(SYNOPSIS) Tj
+1 0 0 1 487.44 671.6 Tm
+(1) Tj
+ET
+q
+0.95 g
+72 656.6 451 12 re
+f
+Q
+BT
+1 0 0 1 102 659.6 Tm
+(INTRODUCTION) Tj
+1 0 0 1 487.44 659.6 Tm
+(1) Tj
+ET
+q
+1 g
+72 644.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 647.6 Tm
+(What is MARC?) Tj
+1 0 0 1 487.44 647.6 Tm
+(1) Tj
+ET
+q
+0.95 g
+72 632.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 635.6 Tm
+(What is this Tutorial?) Tj
+1 0 0 1 487.44 635.6 Tm
+(1) Tj
+ET
+q
+1 g
+72 620.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 623.6 Tm
+(History of MARC on CPAN) Tj
+1 0 0 1 487.44 623.6 Tm
+(1) Tj
+ET
+q
+0.95 g
+72 608.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 611.6 Tm
+(Brief Overview of MARC Classes) Tj
+1 0 0 1 487.44 611.6 Tm
+(1) Tj
+ET
+q
+1 g
+72 596.6 451 12 re
+f
+Q
+BT
+1 0 0 1 162 599.6 Tm
+(MARC::Batch) Tj
+1 0 0 1 487.44 599.6 Tm
+(1) Tj
+ET
+q
+0.95 g
+72 584.6 451 12 re
+f
+Q
+BT
+1 0 0 1 162 587.6 Tm
+(MARC::Field) Tj
+1 0 0 1 487.44 587.6 Tm
+(2) Tj
+ET
+q
+1 g
+72 572.6 451 12 re
+f
+Q
+BT
+1 0 0 1 162 575.6 Tm
+(MARC::Record) Tj
+1 0 0 1 487.44 575.6 Tm
+(2) Tj
+ET
+q
+0.95 g
+72 560.6 451 12 re
+f
+Q
+BT
+1 0 0 1 162 563.6 Tm
+(MARC::Doc::Tutorial) Tj
+1 0 0 1 487.44 563.6 Tm
+(2) Tj
+ET
+q
+1 g
+72 548.6 451 12 re
+f
+Q
+BT
+1 0 0 1 162 551.6 Tm
+(MARC::File) Tj
+1 0 0 1 487.44 551.6 Tm
+(2) Tj
+ET
+q
+0.95 g
+72 536.6 451 12 re
+f
+Q
+BT
+1 0 0 1 162 539.6 Tm
+(MARC::File::MicroLIF) Tj
+1 0 0 1 487.44 539.6 Tm
+(2) Tj
+ET
+q
+1 g
+72 524.6 451 12 re
+f
+Q
+BT
+1 0 0 1 162 527.6 Tm
+(MARC::File::USMARC) Tj
+1 0 0 1 487.44 527.6 Tm
+(2) Tj
+ET
+q
+0.95 g
+72 512.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 515.6 Tm
+(Help Wanted!) Tj
+1 0 0 1 487.44 515.6 Tm
+(2) Tj
+ET
+q
+1 g
+72 500.6 451 12 re
+f
+Q
+BT
+1 0 0 1 102 503.6 Tm
+(READING) Tj
+1 0 0 1 487.44 503.6 Tm
+(2) Tj
+ET
+q
+0.95 g
+72 488.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 491.6 Tm
+(Reading a record from a file) Tj
+1 0 0 1 487.44 491.6 Tm
+(2) Tj
+ET
+q
+1 g
+72 476.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 479.6 Tm
+(Iterating through a batch file) Tj
+1 0 0 1 487.44 479.6 Tm
+(2) Tj
+ET
+q
+0.95 g
+72 464.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 467.6 Tm
+(Checking for errors) Tj
+1 0 0 1 487.44 467.6 Tm
+(3) Tj
+ET
+q
+1 g
+72 452.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 455.6 Tm
+(Recovering from errors) Tj
+1 0 0 1 487.44 455.6 Tm
+(3) Tj
+ET
+q
+0.95 g
+72 440.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 443.6 Tm
+(Looking at a field) Tj
+1 0 0 1 487.44 443.6 Tm
+(4) Tj
+ET
+q
+1 g
+72 428.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 431.6 Tm
+(Looking at repeatable fields) Tj
+1 0 0 1 487.44 431.6 Tm
+(4) Tj
+ET
+q
+0.95 g
+72 416.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 419.6 Tm
+(Looking at a set of related fields) Tj
+1 0 0 1 487.44 419.6 Tm
+(5) Tj
+ET
+q
+1 g
+72 404.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 407.6 Tm
+(Looking at all the fields in a record) Tj
+1 0 0 1 487.44 407.6 Tm
+(5) Tj
+ET
+q
+0.95 g
+72 392.6 451 12 re
+f
+Q
+BT
+1 0 0 1 102 395.6 Tm
+(CREATING) Tj
+1 0 0 1 487.44 395.6 Tm
+(6) Tj
+ET
+q
+1 g
+72 380.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 383.6 Tm
+(Creating a record) Tj
+1 0 0 1 487.44 383.6 Tm
+(6) Tj
+ET
+q
+0.95 g
+72 368.6 451 12 re
+f
+Q
+BT
+1 0 0 1 102 371.6 Tm
+(WRITING) Tj
+1 0 0 1 487.44 371.6 Tm
+(6) Tj
+ET
+q
+1 g
+72 356.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 359.6 Tm
+(Writing records to a file) Tj
+1 0 0 1 487.44 359.6 Tm
+(6) Tj
+ET
+q
+0.95 g
+72 344.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 347.6 Tm
+(Debugging with as_formatted\(\)) Tj
+1 0 0 1 487.44 347.6 Tm
+(7) Tj
+ET
+q
+1 g
+72 332.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 335.6 Tm
+(Debugging with marcdump\(\)) Tj
+1 0 0 1 487.44 335.6 Tm
+(8) Tj
+ET
+q
+0.95 g
+72 320.6 451 12 re
+f
+Q
+BT
+1 0 0 1 102 323.6 Tm
+(UPDATING) Tj
+1 0 0 1 487.44 323.6 Tm
+(8) Tj
+ET
+q
+1 g
+72 308.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 311.6 Tm
+(Adding a field) Tj
+1 0 0 1 487.44 311.6 Tm
+(8) Tj
+ET
+q
+0.95 g
+72 296.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 299.6 Tm
+(Preserving field order) Tj
+1 0 0 1 487.44 299.6 Tm
+(9) Tj
+ET
+q
+1 g
+72 284.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 287.6 Tm
+(Deleting a field) Tj
+1 0 0 1 487.44 287.6 Tm
+(9) Tj
+ET
+q
+0.95 g
+72 272.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 275.6 Tm
+(Changing existing fields) Tj
+1 0 0 1 481.88 275.6 Tm
+(10) Tj
+ET
+q
+1 g
+72 260.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 263.6 Tm
+(Updating subfields and indicators) Tj
+1 0 0 1 481.88 263.6 Tm
+(10) Tj
+ET
+q
+0.95 g
+72 248.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 251.6 Tm
+(Changing a record`s leader) Tj
+1 0 0 1 481.88 251.6 Tm
+(11) Tj
+ET
+q
+1 g
+72 236.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 239.6 Tm
+(Modifying fields without indicators) Tj
+1 0 0 1 481.88 239.6 Tm
+(11) Tj
+ET
+q
+0.95 g
+72 224.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 227.6 Tm
+(Reordering subfields) Tj
+1 0 0 1 481.88 227.6 Tm
+(12) Tj
+ET
+q
+1 g
+72 212.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 215.6 Tm
+(Updating subject subfield x to subfield v) Tj
+1 0 0 1 481.88 215.6 Tm
+(13) Tj
+ET
+q
+0.95 g
+72 200.6 451 12 re
+f
+Q
+BT
+1 0 0 1 102 203.6 Tm
+(VALIDATING) Tj
+1 0 0 1 481.88 203.6 Tm
+(14) Tj
+ET
+q
+1 g
+72 188.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 191.6 Tm
+(Using MARC::Lint) Tj
+1 0 0 1 481.88 191.6 Tm
+(14) Tj
+ET
+q
+0.95 g
+72 176.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 179.6 Tm
+(Customizing MARC::Lint) Tj
+1 0 0 1 481.88 179.6 Tm
+(15) Tj
+ET
+q
+1 g
+72 164.6 451 12 re
+f
+Q
+BT
+1 0 0 1 102 167.6 Tm
+(SWOLLEN APPENDICES) Tj
+1 0 0 1 481.88 167.6 Tm
+(16) Tj
+ET
+q
+0.95 g
+72 152.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 155.6 Tm
+(Comparing Collections) Tj
+1 0 0 1 481.88 155.6 Tm
+(16) Tj
+ET
+q
+1 g
+72 140.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 143.6 Tm
+(Authority Records) Tj
+1 0 0 1 481.88 143.6 Tm
+(16) Tj
+ET
+q
+0.95 g
+72 128.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 131.6 Tm
+(URLs) Tj
+1 0 0 1 481.88 131.6 Tm
+(16) Tj
+ET
+q
+1 g
+72 116.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 119.6 Tm
+(ISBN/ISSNs) Tj
+1 0 0 1 481.88 119.6 Tm
+(16) Tj
+ET
+q
+0.95 g
+72 104.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 107.6 Tm
+(Call numbers) Tj
+1 0 0 1 481.88 107.6 Tm
+(16) Tj
+ET
+q
+1 g
+72 92.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 95.6 Tm
+(Subject headings) Tj
+1 0 0 1 481.88 95.6 Tm
+(16) Tj
+ET
+q
+0.95 g
+72 80.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 83.6 Tm
+(HTML) Tj
+1 0 0 1 481.88 83.6 Tm
+(17) Tj
+ET
+q
+1 g
+72 68.6 451 12 re
+f
+Q
+BT
+1 0 0 1 132 71.6 Tm
+(XML) Tj
+1 0 0 1 481.88 71.6 Tm
+(17) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 520.22 37 Tm
+(i) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+99 0 obj
+6135
+endobj
+100 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F20 14 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+101 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 100 0 R
+/Contents 98 0 R
+>>
+endobj
+102 0 obj
+<<
+/Length 103 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Tutorial.pod) Tj
+1 0 0 1 438.55 797 Tm
+(Table of Contents) Tj
+/F20 10 Tf
+ET
+q
+0.95 g
+72 767 451 12 re
+f
+Q
+BT
+1 0 0 1 132 770 Tm
+(Excel) Tj
+1 0 0 1 481.88 770 Tm
+(17) Tj
+ET
+q
+1 g
+72 755 451 12 re
+f
+Q
+BT
+1 0 0 1 132 758 Tm
+(Z39.50) Tj
+1 0 0 1 481.88 758 Tm
+(17) Tj
+ET
+q
+0.95 g
+72 743 451 12 re
+f
+Q
+BT
+1 0 0 1 132 746 Tm
+(Databases) Tj
+1 0 0 1 481.88 746 Tm
+(18) Tj
+ET
+q
+1 g
+72 731 451 12 re
+f
+Q
+BT
+1 0 0 1 132 734 Tm
+(Procite/Endnote) Tj
+1 0 0 1 481.88 734 Tm
+(20) Tj
+ET
+q
+0.95 g
+72 719 451 12 re
+f
+Q
+BT
+1 0 0 1 102 722 Tm
+(CONTRIBUTORS) Tj
+1 0 0 1 481.88 722 Tm
+(20) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(ii) Tj
+1 0 0 1 449.64 37 Tm
+(22 August 2005) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+103 0 obj
+755
+endobj
+104 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F20 14 0 R
+/F21 15 0 R
+>>
+>>
+endobj
+105 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 104 0 R
+/Contents 102 0 R
+>>
+endobj
+106 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 109 0 R
+/Contents 107 0 R
+>>
+endobj
+107 0 obj
+<<
+/Length 108 0 R
+>>
+stream
+q
+1 0 0 rg
+180 626 8 130 re
+F
+Q
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+210 626 m
+523 626 l
+s
+BT
+/F21 30 Tf
+1 0 0 1 210 706 Tm
+0 -30 TD
+(POD Translation) Tj
+T* (by ) Tj
+0 0 0.8 rg
+/F22 30 Tf
+(pod2pdf) Tj
+/F21 9 Tf
+T* (ajf@afco.demon.co.uk) Tj
+/F03 48 Tf
+0 g
+1 0 0 1 174.14 371 Tm
+(Tutorial.pod) Tj
+ET
+endstream
+endobj
+108 0 obj
+294
+endobj
+109 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F03 9 0 R
+/F21 15 0 R
+/F22 16 0 R
+>>
+>>
+endobj
+110 0 obj
+<<
+/Length 111 0 R
+>>
+stream
+72 792 m
+523 792 l
+S
+BT
+0 G
+1 i 0 J 0 j 0.1 w 10 M []0 d
+/F21 10 Tf
+1 0 0 1 72 797 Tm
+(Title Page) Tj
+1 0 0 1 465.22 797 Tm
+(Tutorial.pod) Tj
+/F21 10 Tf
+1 0 0 1 72 37 Tm
+(22 August 2005) Tj
+1 0 0 1 488.54 37 Tm
+(Fly leaf) Tj
+ET
+72 50 m
+523 50 l
+S
+endstream
+endobj
+111 0 obj
+247
+endobj
+112 0 obj
+<<
+/ProcSet [/PDF /Text]
+/ColorSpace <</DefaultRGB 1 0 R>>
+/Font
+<<
+/F21 15 0 R
+>>
+>>
+endobj
+113 0 obj
+<<
+/Type /Page
+/Parent 4 0 R
+/Resources 112 0 R
+/Contents 110 0 R
+>>
+endobj
+115 0 obj
+<<
+/Parent 114 0 R
+/Dest [101 0 R /Fit]
+/First 116 0 R
+/Last 172 0 R
+/Count 57 
+/Title (Table of Contents)
+>>
+endobj
+116 0 obj
+<<
+/Parent 115 0 R
+/Dest [21 0 R /FitH 778.4]
+/Next 117 0 R
+/Title (NAME)
+>>
+endobj
+117 0 obj
+<<
+/Parent 115 0 R
+/Dest [21 0 R /FitH 746]
+/Previous 116 0 R
+/Next 118 0 R
+/Title (SYNOPSIS)
+>>
+endobj
+118 0 obj
+<<
+/Parent 115 0 R
+/Dest [21 0 R /FitH 707.6]
+/Previous 117 0 R
+/Next 131 0 R
+/First 119 0 R
+/Last 130 0 R
+/Count 12 
+/Title (INTRODUCTION)
+>>
+endobj
+119 0 obj
+<<
+/Parent 118 0 R
+/Dest [21 0 R /FitH 683.6]
+/Next 120 0 R
+/Title (What is MARC?)
+>>
+endobj
+120 0 obj
+<<
+/Parent 118 0 R
+/Dest [21 0 R /FitH 593.6]
+/Previous 119 0 R
+/Next 121 0 R
+/Title (What is this Tutorial?)
+>>
+endobj
+121 0 obj
+<<
+/Parent 118 0 R
+/Dest [21 0 R /FitH 455.6]
+/Previous 120 0 R
+/Next 122 0 R
+/Title (History of MARC on CPAN)
+>>
+endobj
+122 0 obj
+<<
+/Parent 118 0 R
+/Dest [21 0 R /FitH 185.6]
+/Previous 121 0 R
+/Next 130 0 R
+/First 123 0 R
+/Last 129 0 R
+/Count 7 
+/Title (Brief Overview of MARC Classes)
+>>
+endobj
+123 0 obj
+<<
+/Parent 122 0 R
+/Dest [21 0 R /FitH 99.2]
+/Next 124 0 R
+/Title (MARC::Batch)
+>>
+endobj
+124 0 obj
+<<
+/Parent 122 0 R
+/Dest [25 0 R /FitH 782]
+/Previous 123 0 R
+/Next 125 0 R
+/Title (MARC::Field)
+>>
+endobj
+125 0 obj
+<<
+/Parent 122 0 R
+/Dest [25 0 R /FitH 755.6]
+/Previous 124 0 R
+/Next 126 0 R
+/Title (MARC::Record)
+>>
+endobj
+126 0 obj
+<<
+/Parent 122 0 R
+/Dest [25 0 R /FitH 717.2]
+/Previous 125 0 R
+/Next 127 0 R
+/Title (MARC::Doc::Tutorial)
+>>
+endobj
+127 0 obj
+<<
+/Parent 122 0 R
+/Dest [25 0 R /FitH 690.8]
+/Previous 126 0 R
+/Next 128 0 R
+/Title (MARC::File)
+>>
+endobj
+128 0 obj
+<<
+/Parent 122 0 R
+/Dest [25 0 R /FitH 664.4]
+/Previous 127 0 R
+/Next 129 0 R
+/Title (MARC::File::MicroLIF)
+>>
+endobj
+129 0 obj
+<<
+/Parent 122 0 R
+/Dest [25 0 R /FitH 638]
+/Previous 128 0 R
+/Title (MARC::File::USMARC)
+>>
+endobj
+130 0 obj
+<<
+/Parent 118 0 R
+/Dest [25 0 R /FitH 596]
+/Previous 122 0 R
+/Title (Help Wanted!)
+>>
+endobj
+131 0 obj
+<<
+/Parent 115 0 R
+/Dest [25 0 R /FitH 508.4]
+/Previous 118 0 R
+/Next 140 0 R
+/First 132 0 R
+/Last 139 0 R
+/Count 8 
+/Title (READING)
+>>
+endobj
+132 0 obj
+<<
+/Parent 131 0 R
+/Dest [25 0 R /FitH 484.4]
+/Next 133 0 R
+/Title (Reading a record from a file)
+>>
+endobj
+133 0 obj
+<<
+/Parent 131 0 R
+/Dest [25 0 R /FitH 262.4]
+/Previous 132 0 R
+/Next 134 0 R
+/Title (Iterating through a batch file)
+>>
+endobj
+134 0 obj
+<<
+/Parent 131 0 R
+/Dest [29 0 R /FitH 668]
+/Previous 133 0 R
+/Next 135 0 R
+/Title (Checking for errors)
+>>
+endobj
+135 0 obj
+<<
+/Parent 131 0 R
+/Dest [29 0 R /FitH 326]
+/Previous 134 0 R
+/Next 136 0 R
+/Title (Recovering from errors)
+>>
+endobj
+136 0 obj
+<<
+/Parent 131 0 R
+/Dest [33 0 R /FitH 644]
+/Previous 135 0 R
+/Next 137 0 R
+/Title (Looking at a field)
+>>
+endobj
+137 0 obj
+<<
+/Parent 131 0 R
+/Dest [33 0 R /FitH 290]
+/Previous 136 0 R
+/Next 138 0 R
+/Title (Looking at repeatable fields)
+>>
+endobj
+138 0 obj
+<<
+/Parent 131 0 R
+/Dest [37 0 R /FitH 740]
+/Previous 137 0 R
+/Next 139 0 R
+/Title (Looking at a set of related fields)
+>>
+endobj
+139 0 obj
+<<
+/Parent 131 0 R
+/Dest [37 0 R /FitH 482]
+/Previous 138 0 R
+/Title (Looking at all the fields in a record)
+>>
+endobj
+140 0 obj
+<<
+/Parent 115 0 R
+/Dest [41 0 R /FitH 784.4]
+/Previous 131 0 R
+/Next 142 0 R
+/First 141 0 R
+/Last 141 0 R
+/Count 1 
+/Title (CREATING)
+>>
+endobj
+141 0 obj
+<<
+/Parent 140 0 R
+/Dest [41 0 R /FitH 713.6]
+/Title (Creating a record)
+>>
+endobj
+142 0 obj
+<<
+/Parent 115 0 R
+/Dest [41 0 R /FitH 302]
+/Previous 140 0 R
+/Next 146 0 R
+/First 143 0 R
+/Last 145 0 R
+/Count 3 
+/Title (WRITING)
+>>
+endobj
+143 0 obj
+<<
+/Parent 142 0 R
+/Dest [41 0 R /FitH 243.2]
+/Next 144 0 R
+/Title (Writing records to a file)
+>>
+endobj
+144 0 obj
+<<
+/Parent 142 0 R
+/Dest [45 0 R /FitH 452]
+/Previous 143 0 R
+/Next 145 0 R
+/Title (Debugging with as_formatted\(\))
+>>
+endobj
+145 0 obj
+<<
+/Parent 142 0 R
+/Dest [49 0 R /FitH 782]
+/Previous 144 0 R
+/Title (Debugging with marcdump\(\))
+>>
+endobj
+146 0 obj
+<<
+/Parent 115 0 R
+/Dest [49 0 R /FitH 538.4]
+/Previous 142 0 R
+/Next 156 0 R
+/First 147 0 R
+/Last 155 0 R
+/Count 9 
+/Title (UPDATING)
+>>
+endobj
+147 0 obj
+<<
+/Parent 146 0 R
+/Dest [49 0 R /FitH 371.6]
+/Next 148 0 R
+/Title (Adding a field)
+>>
+endobj
+148 0 obj
+<<
+/Parent 146 0 R
+/Dest [53 0 R /FitH 782]
+/Previous 147 0 R
+/Next 149 0 R
+/Title (Preserving field order)
+>>
+endobj
+149 0 obj
+<<
+/Parent 146 0 R
+/Dest [53 0 R /FitH 404]
+/Previous 148 0 R
+/Next 150 0 R
+/Title (Deleting a field)
+>>
+endobj
+150 0 obj
+<<
+/Parent 146 0 R
+/Dest [57 0 R /FitH 740]
+/Previous 149 0 R
+/Next 151 0 R
+/Title (Changing existing fields)
+>>
+endobj
+151 0 obj
+<<
+/Parent 146 0 R
+/Dest [57 0 R /FitH 290]
+/Previous 150 0 R
+/Next 152 0 R
+/Title (Updating subfields and indicators)
+>>
+endobj
+152 0 obj
+<<
+/Parent 146 0 R
+/Dest [61 0 R /FitH 548]
+/Previous 151 0 R
+/Next 153 0 R
+/Title (Changing a record`s leader)
+>>
+endobj
+153 0 obj
+<<
+/Parent 146 0 R
+/Dest [61 0 R /FitH 266]
+/Previous 152 0 R
+/Next 154 0 R
+/Title (Modifying fields without indicators)
+>>
+endobj
+154 0 obj
+<<
+/Parent 146 0 R
+/Dest [65 0 R /FitH 584]
+/Previous 153 0 R
+/Next 155 0 R
+/Title (Reordering subfields)
+>>
+endobj
+155 0 obj
+<<
+/Parent 146 0 R
+/Dest [69 0 R /FitH 704]
+/Previous 154 0 R
+/Title (Updating subject subfield x to subfield v)
+>>
+endobj
+156 0 obj
+<<
+/Parent 115 0 R
+/Dest [73 0 R /FitH 574.4]
+/Previous 146 0 R
+/Next 159 0 R
+/First 157 0 R
+/Last 158 0 R
+/Count 2 
+/Title (VALIDATING)
+>>
+endobj
+157 0 obj
+<<
+/Parent 156 0 R
+/Dest [73 0 R /FitH 515.6]
+/Next 158 0 R
+/Title (Using MARC::Lint)
+>>
+endobj
+158 0 obj
+<<
+/Parent 156 0 R
+/Dest [77 0 R /FitH 782]
+/Previous 157 0 R
+/Title (Customizing MARC::Lint)
+>>
+endobj
+159 0 obj
+<<
+/Parent 115 0 R
+/Dest [81 0 R /FitH 634.4]
+/Previous 156 0 R
+/Next 172 0 R
+/First 160 0 R
+/Last 171 0 R
+/Count 12 
+/Title (SWOLLEN APPENDICES)
+>>
+endobj
+160 0 obj
+<<
+/Parent 159 0 R
+/Dest [81 0 R /FitH 551.6]
+/Next 161 0 R
+/Title (Comparing Collections)
+>>
+endobj
+161 0 obj
+<<
+/Parent 159 0 R
+/Dest [81 0 R /FitH 533.6]
+/Previous 160 0 R
+/Next 162 0 R
+/Title (Authority Records)
+>>
+endobj
+162 0 obj
+<<
+/Parent 159 0 R
+/Dest [81 0 R /FitH 515.6]
+/Previous 161 0 R
+/Next 163 0 R
+/Title (URLs)
+>>
+endobj
+163 0 obj
+<<
+/Parent 159 0 R
+/Dest [81 0 R /FitH 497.6]
+/Previous 162 0 R
+/Next 164 0 R
+/Title (ISBN/ISSNs)
+>>
+endobj
+164 0 obj
+<<
+/Parent 159 0 R
+/Dest [81 0 R /FitH 479.6]
+/Previous 163 0 R
+/Next 165 0 R
+/Title (Call numbers)
+>>
+endobj
+165 0 obj
+<<
+/Parent 159 0 R
+/Dest [81 0 R /FitH 461.6]
+/Previous 164 0 R
+/Next 166 0 R
+/Title (Subject headings)
+>>
+endobj
+166 0 obj
+<<
+/Parent 159 0 R
+/Dest [85 0 R /FitH 488]
+/Previous 165 0 R
+/Next 167 0 R
+/Title (HTML)
+>>
+endobj
+167 0 obj
+<<
+/Parent 159 0 R
+/Dest [85 0 R /FitH 470]
+/Previous 166 0 R
+/Next 168 0 R
+/Title (XML)
+>>
+endobj
+168 0 obj
+<<
+/Parent 159 0 R
+/Dest [85 0 R /FitH 452]
+/Previous 167 0 R
+/Next 169 0 R
+/Title (Excel)
+>>
+endobj
+169 0 obj
+<<
+/Parent 159 0 R
+/Dest [85 0 R /FitH 434]
+/Previous 168 0 R
+/Next 170 0 R
+/Title (Z39.50)
+>>
+endobj
+170 0 obj
+<<
+/Parent 159 0 R
+/Dest [89 0 R /FitH 416]
+/Previous 169 0 R
+/Next 171 0 R
+/Title (Databases)
+>>
+endobj
+171 0 obj
+<<
+/Parent 159 0 R
+/Dest [97 0 R /FitH 440]
+/Previous 170 0 R
+/Title (Procite/Endnote)
+>>
+endobj
+172 0 obj
+<<
+/Parent 115 0 R
+/Dest [97 0 R /FitH 424.4]
+/Previous 159 0 R
+/Title (CONTRIBUTORS)
+>>
+endobj
+114 0 obj
+<<
+/Type /Outlines
+/Count 58
+/First 115 0 R
+/Last 172 0 R
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 4 0 R
+/PageMode /UseOutlines
+/Outlines 114 0 R
+>>
+endobj
+4 0 obj
+<<
+/Type /Pages
+/Kids [ 106 0 R 113 0 R 101 0 R 105 0 R 21 0 R 25 0 R 29 0 R 33 0 R 37 0 R 41 0 R 45 0 R 49 0 R 53 0 R 57 0 R 61 0 R 65 0 R 69 0 R 73 0 R 77 0 R 81 0 R 85 0 R 89 0 R 93 0 R 97 0 R ]
+/Count 24
+/MediaBox [0 0 595 842]
+>>
+endobj
+xref
+0 173
+0000000000 65535 f 
+0000000015 00000 n 
+0000000171 00000 n 
+0000126813 00000 n 
+0000126903 00000 n 
+0000000272 00000 n 
+0000002372 00000 n 
+0000002471 00000 n 
+0000002569 00000 n 
+0000002669 00000 n 
+0000002773 00000 n 
+0000002869 00000 n 
+0000002970 00000 n 
+0000003074 00000 n 
+0000003182 00000 n 
+0000003280 00000 n 
+0000003383 00000 n 
+0000003489 00000 n 
+0000003603 00000 n 
+0000010105 00000 n 
+0000010126 00000 n 
+0000010263 00000 n 
+0000010346 00000 n 
+0000015154 00000 n 
+0000015175 00000 n 
+0000015312 00000 n 
+0000015395 00000 n 
+0000021677 00000 n 
+0000021698 00000 n 
+0000021834 00000 n 
+0000021917 00000 n 
+0000027460 00000 n 
+0000027481 00000 n 
+0000027617 00000 n 
+0000027700 00000 n 
+0000032966 00000 n 
+0000032987 00000 n 
+0000033123 00000 n 
+0000033206 00000 n 
+0000038280 00000 n 
+0000038301 00000 n 
+0000038426 00000 n 
+0000038509 00000 n 
+0000044126 00000 n 
+0000044147 00000 n 
+0000044284 00000 n 
+0000044367 00000 n 
+0000049719 00000 n 
+0000049740 00000 n 
+0000049865 00000 n 
+0000049948 00000 n 
+0000054823 00000 n 
+0000054844 00000 n 
+0000054969 00000 n 
+0000055052 00000 n 
+0000060992 00000 n 
+0000061013 00000 n 
+0000061138 00000 n 
+0000061221 00000 n 
+0000066198 00000 n 
+0000066219 00000 n 
+0000066344 00000 n 
+0000066427 00000 n 
+0000071331 00000 n 
+0000071352 00000 n 
+0000071477 00000 n 
+0000071560 00000 n 
+0000076224 00000 n 
+0000076245 00000 n 
+0000076370 00000 n 
+0000076453 00000 n 
+0000080660 00000 n 
+0000080681 00000 n 
+0000080806 00000 n 
+0000080889 00000 n 
+0000085714 00000 n 
+0000085735 00000 n 
+0000085871 00000 n 
+0000085954 00000 n 
+0000091402 00000 n 
+0000091423 00000 n 
+0000091559 00000 n 
+0000091642 00000 n 
+0000096064 00000 n 
+0000096085 00000 n 
+0000096210 00000 n 
+0000096293 00000 n 
+0000101216 00000 n 
+0000101237 00000 n 
+0000101362 00000 n 
+0000101445 00000 n 
+0000106199 00000 n 
+0000106220 00000 n 
+0000106345 00000 n 
+0000106428 00000 n 
+0000110701 00000 n 
+0000110722 00000 n 
+0000110859 00000 n 
+0000110942 00000 n 
+0000117131 00000 n 
+0000117152 00000 n 
+0000117267 00000 n 
+0000117352 00000 n 
+0000118163 00000 n 
+0000118184 00000 n 
+0000118299 00000 n 
+0000118385 00000 n 
+0000118471 00000 n 
+0000118821 00000 n 
+0000118842 00000 n 
+0000118968 00000 n 
+0000119271 00000 n 
+0000119292 00000 n 
+0000119395 00000 n 
+0000126735 00000 n 
+0000119481 00000 n 
+0000119608 00000 n 
+0000119702 00000 n 
+0000119816 00000 n 
+0000119976 00000 n 
+0000120079 00000 n 
+0000120209 00000 n 
+0000120340 00000 n 
+0000120517 00000 n 
+0000120617 00000 n 
+0000120734 00000 n 
+0000120854 00000 n 
+0000120981 00000 n 
+0000121099 00000 n 
+0000121227 00000 n 
+0000121337 00000 n 
+0000121441 00000 n 
+0000121595 00000 n 
+0000121713 00000 n 
+0000121851 00000 n 
+0000121976 00000 n 
+0000122104 00000 n 
+0000122228 00000 n 
+0000122362 00000 n 
+0000122502 00000 n 
+0000122631 00000 n 
+0000122786 00000 n 
+0000122879 00000 n 
+0000123031 00000 n 
+0000123146 00000 n 
+0000123283 00000 n 
+0000123402 00000 n 
+0000123557 00000 n 
+0000123661 00000 n 
+0000123789 00000 n 
+0000123911 00000 n 
+0000124041 00000 n 
+0000124180 00000 n 
+0000124312 00000 n 
+0000124453 00000 n 
+0000124579 00000 n 
+0000124712 00000 n 
+0000124869 00000 n 
+0000124975 00000 n 
+0000125089 00000 n 
+0000125255 00000 n 
+0000125366 00000 n 
+0000125491 00000 n 
+0000125603 00000 n 
+0000125721 00000 n 
+0000125841 00000 n 
+0000125965 00000 n 
+0000126075 00000 n 
+0000126184 00000 n 
+0000126295 00000 n 
+0000126407 00000 n 
+0000126522 00000 n 
+0000126629 00000 n 
+trailer
+<<
+/Size 173
+/Root 3 0 R
+/Info 2 0 R
+>>
+startxref
+127153
+%%EOF
