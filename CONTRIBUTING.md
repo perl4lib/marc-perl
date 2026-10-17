@@ -72,6 +72,19 @@ Continuous integration runs every distribution's tests on each pull request.
   Those are release-time activities handled by the maintainers when a release
   is cut, and doing them in a pull request adds friction.
 
+## Backwards compatibility
+
+Backwards compatibility matters a great deal: these modules are used by many
+applications that we cannot see. If a change would alter existing behaviour,
+such as making something that used to succeed fail, please put the new
+behaviour behind a feature flag whose default value preserves the current
+behaviour. Users can then opt in, and the default can be revisited in a later
+release.
+
+The parsing levels are an example. `$MARC::File::XML::PARSING_LEVEL` defaults
+to `strict`, which is how `MARC::File::XML::decode()` has always behaved, and
+`default` opts in to the more forgiving handling of malformed records.
+
 ## License
 
 MARC/Perl is released under the same terms as Perl itself. By contributing you
