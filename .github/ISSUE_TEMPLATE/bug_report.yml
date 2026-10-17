@@ -1,0 +1,43 @@
+name: Bug report
+description: Something doesn't work as documented
+labels: [bug]
+body:
+  - type: dropdown
+    id: distribution
+    attributes:
+      label: Distribution
+      description: Which distribution is affected?
+      options:
+        - marc-record
+        - marc-lint
+        - marc-xml
+        - marc-charset
+        - marc-mij
+        - marc-marcmaker
+        - Not sure / several
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The distribution version, or the commit if you are using the repository.
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: A short script and a small sample record (MARC, MARCXML, ...) that shows the problem.
+      render: perl
+  - type: input
+    id: environment
+    attributes:
+      label: Perl version and operating system
+      description: For XML issues, the libxml2 / XML::LibXML versions are also helpful.
