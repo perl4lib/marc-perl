@@ -839,12 +839,10 @@ An excellent place to look for information, and get quick help, is from
 the perl4lib mailing list.  See L<http://perl4lib.perl.org> for more
 information about this list, and other helpful MARC information.
 
-The MARC::Record development team uses the RT bug tracking system at
-L<http://rt.cpan.org>.  If your email is about a bug or suggestion,
-please report it through the RT system.  This is a huge help for the
-team, and you'll be notified of progress as things get fixed or updated.
-If you prefer not to use the website, you can send your bug to C<<
-<bug-MARC-Record@rt.cpan.org> >>
+The MARC::Record development team tracks bugs and suggestions as GitHub
+issues at L<https://github.com/perl4lib/marc-perl/issues>.  If your email is about a bug or
+suggestion, please report it there.  This is a huge help for the team, and
+you'll be notified of progress as things get fixed or updated.
 
 =head1 IDEAS
 
