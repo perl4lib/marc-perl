@@ -16,58 +16,54 @@ href="http://loc.gov/marc/">MARC</a> format. The <b>MA</b>chine
 <b>R</b>eadable <b>C</b>ataloging format was designed by the Library of Congress
 in the late 1960s in order to allow libraries to convert their card catalogs
 into a digital format. The MARC format was standardized as <a
-href="http://www.niso.org/apps/group_public/download.php/6677/Information%20Interchange%20Format.pdf">ANSI/NISO Z39.2</a> 
-in 1971 and is now being used by libraries around the world to provide 
+href="https://www.niso.org/publications/ansiniso-z392-1994-r2016">ANSI/NISO Z39.2</a>
+in 1971 and <a href="https://www.iso.org/standard/41319.html">ISO 2709</a> in 1973
+and is now being used by libraries around the world to provide
 computerized access to their collections.</p>
 
 <p>It is common for corporate, public and academic libraries to purchase
 Integrated Library Systems to organize and manage their collections. However, it
 is often advantageous for libraries to be able to create or massage pre-existing
 MARC data on the way into or out-of such systems. This is the niche that
-MARC/Perl was designed to fill. If you can think of any other niches (i.e. Open 
+MARC/Perl was designed to fill. If you can think of any other niches (i.e. Open
 Source Software for libraries) please let us know!
 
 <p>Development of this software library began with MARC.pm in the summer of
 1999.  After much experimentation, enhancement and discussion the MARC::Record
 framework was adopted which provides a more scalable approach to processing
-MARC data with Perl. While you can still download and get the documentation 
+MARC data with Perl. While you can still download and get the documentation
 for MARC.pm, it is recommended that new users download MARC::Record.
-Future development of the MARC namespace on CPAN will fit into 
-the framework provided by MARC::Record. If you have ideas for new modules 
-please join the <a href="http://sourceforge.net/projects/marcpm/">
-development team</a>, or consider posting to the <a
-href="http://perl4lib.perl.org/">perl4lib</a> list.</p>  
+Future development of the MARC namespace on CPAN will fit into
+the framework provided by MARC::Record. If you have ideas for new modules
+please raise an <a href="https://github.com/perl4lib/marc-perl/issues">issue</a>
+or consider posting to the <a
+href="https://perl4lib.perl.org/">perl4lib</a> list.</p>
 
-<p>If you have any feature requests, or find any bugs (gasp) please report 
-them via <a href="mailto:bug-MARC-Record@rt.cpan.org">RT</a>, the CPAN 
-request tracking system.</p>
+<p>If you have any feature requests or find any bugs, please report
+them by opening an <a href="https://github.com/perl4lib/marc-perl/issues">issue</a>
 
 <h1>Downloads</h1>
 <p>
 
-The latest stable version of the MARC::Record package is available from 
-<a href="http://www.cpan.org/modules/by-module/MARC/">Comprehensive 
-Perl Archive Network (CPAN)</a>. Experimental versions can often be found in 
-the <a href="http://sourceforge.net/project/showfiles.php?group_id=1254">
-download area</a> here at SourceForge. Although older versions of MARC.pm are 
-available for download, we recommend you use the MARC::Record package since 
-future development will use it as a foundation.
+The latest stable version of the MARC::Record package is available from the
+<a href="https://metacpan.org/">Comprehensive Perl Archive Network (CPAN)</a>.
+
+Although older versions of MARC.pm are available for download, we recommend you
+use the MARC::Record package since future development will use it as a foundation.
 
 <h1>Documentation</h1>
 
 <ul>
 
-<li>MARC::Record::Tutorial : 
-<a href="tutorial.pdf">pdf</a>
-</li>
+<li>MARC::Record::Tutorial : <a href="tutorial.pdf">pdf</a> </li>
 
-<li>MARC::Record : <a href="http://search.cpan.org/perldoc?MARC::Record">html</a></li>
+<li>MARC::Record : <a href="https://metacpan.org/pod/MARC::Record">html</a></li>
 
-<li>MARC::Lint : <a href="http://search.cpan.org/perldoc?MARC::Lint">html</a> </li>
+<li>MARC::Lint : <a href="https://metacpan.org/pod/MARC::Lint">html</a> </li>
 
-<li>MARC::File::XML : <a href="http://search.cpan.org/perldoc?MARC::File::XML">html</a></li>
+<li>MARC::File::XML : <a href="https://metacpan.org/pod/MARC::File::XML">html</a></li>
 
-<li>MARC::Charset : <a href="http://search.cpan.org/perldoc?MARC::Charset">html</a></li>
+<li>MARC::Charset : <a href="https://metacpan.org/pod/MARC::Charset">html</a></li>
 
 </ul>
 
@@ -77,13 +73,13 @@ future development will use it as a foundation.
 
 <li>Adat Chaverim Library: used MARC.pm to create a web-searchable online catalog using freely available USMARC records from the Library of Congress.</li>
 
-<li><a href="http://www.aip.org/">American Institute of Physics</a>: have 
+<li><a href="http://www.aip.org/">American Institute of Physics</a>: have
 used MARC.pm to validate bibliographic data uploaded via the web.</li>
 
 <li><a href="http://www.press.uchicago.edu/cdc.html">Chicago Digital Distribution Center</a>
 : uses MARC::Record, in conjunction with Net::Z3950, to retrieve and harvest
-USMARC records.  The MARC metadata serve as the basis for the online catalog 
-of titles in the <a href="http://www.bibliovault.org/">BiblioVault</a>, 
+USMARC records.  The MARC metadata serve as the basis for the online catalog
+of titles in the <a href="http://www.bibliovault.org/">BiblioVault</a>,
 a digital book repository, for CDDC client presses.</li>
 
 <li>cufts2marc:
@@ -105,19 +101,19 @@ catalog.</li>
 Learning Resource Center at the ISB used MARC::Record to massage their MARC data
 when moving to a new ILS.</li>
 
-<li><a href="http://www.ilo.org">International Labour Office</a>: have used MARC::Record to translate English language subject headings into French and Spanish; and also to create a current awareness service for their library.</li> 
+<li><a href="http://www.ilo.org">International Labour Office</a>: have used MARC::Record to translate English language subject headings into French and Spanish; and also to create a current awareness service for their library.</li>
 
 <li>jake2marc: The Jointly Administered Knowledge Environment (<a href="http://en.wikipedia.org/wiki/Jointly_Administered_Knowledge_Environment">jake</a>) was an open source project that (among other things) used MARC.pm to provide a 'save-as-MARC' mechanism for serial titles available in over 190 databases. Jake created the USMARC data out of publicly available metadata for the electronic/print serials.</li>
 
 <li><a href="http://www.koha-community.org">Koha</a>: An open source library system
-made in New Zealand by the Horowhenua Library Trust and Katipo Communications 
-Ltd. Koha implements a full catalogue, OPAC, circulation, and acquisition 
+made in New Zealand by the Horowhenua Library Trust and Katipo Communications
+Ltd. Koha implements a full catalogue, OPAC, circulation, and acquisition
 system...and it uses MARC::Record.</a></li>
 
 <li><a href="http://blog.lboro.ac.uk/lorls/">Loughborough
 University Library Reading List System</a>: uses MARC.pm, along with Net::Z3950,
-and MySQL to create a book list management system. This system is <a href="http://blog.lboro.ac.uk/lorls/downloads">available</a> 
-under the GNU General Public License.</li> 
+and MySQL to create a book list management system. This system is <a href="http://blog.lboro.ac.uk/lorls/downloads">available</a>
+under the GNU General Public License.</li>
 
 <li><a href="http://www.library.jhu.edu/">Milton S. Eisenhower Library (Johns Hopkins University)</a>: used MARC.pm to remove 049 fields from MARC records.</li>
 
@@ -125,22 +121,22 @@ under the GNU General Public License.</li>
 
 <li><a href="http://www.library.nuigalway.ie/">National University of Ireland, Galway</a>: have used MARC.pm as an error checking tool as they migrate from Dynix to Aleph.</li>
 
-<li><a href="http://search.cpan.org/author/MIRK/Net-Z3950-0.34/Z3950.pm">Net::Z3950</a>: Net::Z3950 is a CPAN module for creating clients and servers that query and return metadata records using the Z39.50 protocol. It is actually a Perl wrapper around the <a href="http://www.indexdata.dk/yaz/">yaz</a> C library. Net::Z3950 uses MARC.pm to render raw MARC data, and has plans to move support over to MARC::Record.</li> 
+<li><a href="http://search.cpan.org/author/MIRK/Net-Z3950-0.34/Z3950.pm">Net::Z3950</a>: Net::Z3950 is a CPAN module for creating clients and servers that query and return metadata records using the Z39.50 protocol. It is actually a Perl wrapper around the <a href="http://www.indexdata.dk/yaz/">yaz</a> C library. Net::Z3950 uses MARC.pm to render raw MARC data, and has plans to move support over to MARC::Record.</li>
 
-<li><a href="http://www.library.nd.edu/">Notre Dame University Library</a>: 
-is using MARC::Record to extract data from their Ex Libris Aleph ILS in order 
-to populate a MySQL database that powers their web-based current awareness 
+<li><a href="http://www.library.nd.edu/">Notre Dame University Library</a>:
+is using MARC::Record to extract data from their Ex Libris Aleph ILS in order
+to populate a MySQL database that powers their web-based current awareness
 service.  </li>
 
-<li><a href="http://libweb.princeton.edu">Princeton University Library</a>: 
-has used MARC::Record and MARC::File::XML to convert exported MARCXML slim 
+<li><a href="http://libweb.princeton.edu">Princeton University Library</a>:
+has used MARC::Record and MARC::File::XML to convert exported MARCXML slim
 data from Ex Libris' SFX product into the MARC communication format.</li>
 
 <li><a href="http://refdb.sourceforge.net/">RefDB</a>: is a reference
 database and bibliography tool for SGML, XML, and LaTeX/BibTeX documents. It
 allows users to share databases over a network.</li>
 
-<li><a href="http://library.smc.edu/">Santa Monica College Library</a>: have used MARC.pm to manipulate netLibrary and EbscoHost bibliographic records prior to loading into their Sirsi database. Steve Hunt of SMC has also used MARC.pm to take MARC records from Baker & Taylor Title Source II and used them to create <a href="http://library.smc.edu/btorder">Sirsi format order records.</a></li> 
+<li><a href="http://library.smc.edu/">Santa Monica College Library</a>: have used MARC.pm to manipulate netLibrary and EbscoHost bibliographic records prior to loading into their Sirsi database. Steve Hunt of SMC has also used MARC.pm to take MARC records from Baker &amp; Taylor Title Source II and used them to create <a href="http://library.smc.edu/btorder">Sirsi format order records.</a></li>
 
 <li><a href="http://library.tamu.edu/">Texas A&M General Libraries</a>: are using MARC.pm  for database cleanup activities such as: 1) deleting 856 fields that do not provide useful links and constructing new 856 fields based on other data in the record; 2) deleting 856 $k subfields and moving the data into 852 $m.</li>
 
@@ -151,8 +147,8 @@ written up the project and made code available <a href="http://www.rice.edu/perl
 <li><a href="http://www.herts.ac.uk/lis/">University of Hertfordshire</a>: have
 used MARC.pm to create MARC records for batches of items such as local exam papers and ejournals.</li>
 
-<li><a href="http://www.uta.edu">University of Texas Library at Arlington</a>: 
-have used MARC.pm to customize netLibrary records prior to import into a 
+<li><a href="http://www.uta.edu">University of Texas Library at Arlington</a>:
+have used MARC.pm to customize netLibrary records prior to import into a
 Voyager online catalog.</li>
 
 <li><a href="http://www.vivalib.org/">Virtual Library of Virginia</a>: created over 8000 USMARC records from TEI encoded texts.</li>
@@ -163,17 +159,16 @@ Voyager online catalog.</li>
 
 <ul>
 
-<li>Queens Library Offers Services In Cyrillic: MARC::Record used to 
+<li>Queens Library Offers Services In Cyrillic: MARC::Record used to
 massage transliterated Russian back into Cyrillic.</li>
 
 <li>Models for
 multilingual subject access in online library catalogues: the ILO experience, Ron Davies, International Labour Organization.</li>
 
 <li><a href="http://library.smc.edu/btorder/">Automatic generation of Sirsi
-Unicorn order records</a>, Steve Hunt, Santa Monica College Library.</li> 
+Unicorn order records</a>, Steve Hunt, Santa Monica College Library.</li>
 
-<li>MARC.pm & Prebulk,  
-Michael Doran, University of Texas.</li>
+<li>MARC.pm &amp; Prebulk, Michael Doran, University of Texas.</li>
 
 <li><a href="writings/viva.html">Using MARC.pm with batches of MARC records: the
 VIVA experience</a>, Ed Summers.</li>
@@ -189,8 +184,8 @@ and Ed Summers.</li>
 
 <h1>Developers</h1>
 <p>Please feel free to suggest improvements to the MARC/Perl and/or join the
-development team by visiting MARC/Perl's SourceForge <a
-href="https://sourceforge.net/p/marcpm">development area</a>.
+development team by visiting MARC/Perl's <a
+href="https://github.com/perl4lib/marc-perl/">GitHub repository</a>.
 Here's a list of developers who have contributed to the MARC/Perl project.</p>
 
 <ul>
@@ -214,8 +209,6 @@ Here's a list of developers who have contributed to the MARC/Perl project.</p>
 </ul>
 
 <p>
-<hr>
-Web hosting graciously provided by: <a href="http://sourceforge.net"><img src="http://sourceforge.net/images/sflogo2-steel.png" border=0 align="middle"></a>
 
 </body>
 
