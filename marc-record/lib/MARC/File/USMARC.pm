@@ -13,7 +13,6 @@ use integer;
 use Carp qw( croak );
 
 use vars qw( $ERROR );
-use MARC::File::Encode qw( marc_to_utf8 );
 
 use MARC::File;
 use vars qw( @ISA ); @ISA = qw( MARC::File );
@@ -140,7 +139,7 @@ sub decode {
         or return $problem->( "Record length \"", substr( $text, 0, 5 ), "\" is not numeric $location" );
 
     my $reclen = $1;
-    my $realLength = bytes::length( $text );
+    my $realLength = length( $text );
     $problem->( "Invalid record length $location: Leader says $reclen " . 
         "bytes but it's actually $realLength" ) unless $reclen == $realLength;
 
@@ -149,8 +148,11 @@ sub decode {
 
     $marc->leader( substr( $text, 0, LEADER_LEN ) );
 
+    # determine the record's encoding for later use
+    my $encoding = $marc->encoding();
+
     # bytes 12 - 16 of leader give offset to the body of the record
-    my $data_start = 0 + bytes::substr( $text, 12, 5 );
+    my $data_start = 0 + substr( $text, 12, 5 );
 
     # immediately after the leader comes the directory (no separator)
     my $dir = substr( $text, LEADER_LEN, $data_start - LEADER_LEN - 1 );  # -1 to allow for \x1e at end of directory
@@ -182,15 +184,16 @@ sub decode {
         ($offset + $len <= $reclen)
             or $problem->( "Directory entry $location runs off the end of the record tag $tagno" );
 
-        my $tagdata = bytes::substr( $text, $data_start+$offset, $len ); 
-
-        # if utf8 the we encode the string as utf8
-        if ( $marc->encoding() eq 'UTF-8' ) {
-            $tagdata = marc_to_utf8( $tagdata );
-        }
+        my $tagdata = substr( $text, $data_start+$offset, $len );
 
         $problem->( "Invalid length in directory for tag $tagno $location" )
-            unless ( $len == bytes::length($tagdata) );
+            unless ( $len == length($tagdata) );
+
+        # if the MARC record claims to be UTF-8, convert
+        # from octets to characters
+        if ( $encoding eq 'UTF-8' ) {
+            utf8::decode( $tagdata );
+        }
 
         if ( substr($tagdata, -1, 1) eq END_OF_FIELD ) {
             # get rid of the end-of-tag character
@@ -314,7 +317,9 @@ sub _build_tag_directory {
                 push( @fields, $str );
 
                 # Create directory entry
+                use bytes;
                 my $len = bytes::length( $str );
+                no bytes;
 
                 my $direntry = sprintf( "%03s%04d%05d", $field->tag, $len, $dataend );
                 push( @directory, $direntry );

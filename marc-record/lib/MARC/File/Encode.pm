@@ -2,7 +2,17 @@ package MARC::File::Encode;
 
 =head1 NAME 
 
-MARC::File::Encode - Encode wrapper for MARC::Record
+MARC::File::Encode - (DEPRECATED) Encode wrapper for MARC::Record
+
+=head1 DEPRECATED
+
+This module, which only existed to support an implementation detail
+of L<MARC::File::USMARC>, is deprecated and should not be used.
+
+If you were using its marc_to_utf() function, which despite the
+name has nothing to do with converting from a MARC character
+encoding to UTF-8, it can be replaced with utf8::decode()
+or Encode::decode('UTF-8', ...).
 
 =head1 DESCRIPTION
 
