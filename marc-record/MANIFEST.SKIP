@@ -1,7 +1,5 @@
 ### stuff particular to MARC::Record
 ^\.gitignore$
-^bin/makesfdocs$
-^bin/testall$
 ^MARC-Record-
 ^MANIFEST.SKIP$
 
