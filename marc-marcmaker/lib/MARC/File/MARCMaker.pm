@@ -8,6 +8,8 @@ MARC::File::MARCMaker -- Work with MARCMaker/MARCBreaker records.
 
 =cut
 
+use v5.8.8;
+
 use strict;
 use integer;
 

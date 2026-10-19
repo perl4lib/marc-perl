@@ -1,7 +1,10 @@
 package MARC::File::XML;
 
+use v5.8.8;
+
 use warnings;
 use strict;
+
 use vars qw( $VERSION %_load_args );
 use base qw( MARC::File );
 use MARC::Record;

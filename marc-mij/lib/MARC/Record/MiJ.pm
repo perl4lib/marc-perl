@@ -1,7 +1,9 @@
 package MARC::Record::MiJ;
+
+use v5.8.8;
+
 use ex::monkeypatched;
 use JSON;
-use 5.006;
 use strict;
 use warnings FATAL => 'all';
 
