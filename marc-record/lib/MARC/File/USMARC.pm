@@ -329,6 +329,7 @@ sub _build_tag_directory {
                 # Create directory entry
                 use bytes; # for sake of next length call
                 my $len = length( $str );
+                no bytes;  # keep it contained
 
                 my $direntry = sprintf( "%03s%04d%05d", $field->tag, $len, $dataend );
                 push( @directory, $direntry );

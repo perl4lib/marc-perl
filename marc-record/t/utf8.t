@@ -8,7 +8,10 @@ use MARC::Batch;
 use MARC::File::USMARC;
 use Encode;
 use File::Spec;
-use utf8;
+
+# you might be tempted to add 'use utf8;' here in order to
+# use UTF-8 string literals, but that breaks some tests under
+# Perl 5.8.8 and (sometimes) Perl 5.10
 
 ## we are going to create a MARC record with a utf8 character in
 ## it (a Hebrew Aleph), write it to disk, and then attempt to
@@ -96,7 +99,7 @@ my $r1 = MARC::Record->new;
 $r1->leader( '00000nam a2200000 a 4500' );
 $r1->append_fields( MARC::Field->new( '245', '1', '0', a => "Caf\x{e9} \x{4e2d}\x{6587}" ) );
 my $title1 = $r1->title();
-is( $title1, 'Café 中文', 'Can create record using non-ASCII Unicode characters and get back correct title' );
+is( $title1, "Caf\x{e9} \x{4e2d}\x{6587}", 'Can create record using non-ASCII Unicode characters and get back correct title' );
 
 my $marc1 = $r1->as_usmarc;
 my $r2 = MARC::File::USMARC::decode( $marc1 );
