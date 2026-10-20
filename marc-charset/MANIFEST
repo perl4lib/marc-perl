@@ -31,6 +31,7 @@ t/hebrew1.marc
 t/hebrew2.marc
 t/hebrew3.marc
 t/hebrew4.marc
+t/ignore_errors.t
 t/iii.t
 t/load.t
 t/marc8_to_utf8.t
