@@ -8,8 +8,8 @@ fixes, tests and patches are all welcome.
 Please open an issue at <https://github.com/perl4lib/marc-perl/issues> and
 say which distribution it concerns (for example `marc-record` or `marc-xml`).
 A short script or a small sample record that reproduces the problem helps a
-great deal. Questions about using the modules are better asked on the
-[perl4lib mailing list](https://perl4lib.perl.org/).
+great deal. Questions about using the modules are welcome as issues too; the
+[project website](https://perl4lib.github.io/marc-perl/) has more background.
 
 Please do not report security problems in public issues; see
 [SECURITY.md](SECURITY.md).
