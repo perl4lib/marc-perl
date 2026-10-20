@@ -9,6 +9,7 @@ use ExtUtils::MakeMaker;
     META_MERGE    => {
         'meta-spec' => { version => 2 },
         resources   => {
+            homepage   => 'https://github.com/perl4lib/marc-perl',
             repository => {
                 type => 'git',
                 url  => 'https://github.com/perl4lib/marc-perl.git',
@@ -20,8 +21,14 @@ use ExtUtils::MakeMaker;
         },
     },
     LICENSE       => 'perl',
+    MIN_PERL_VERSION => '5.008008',
+    CONFIGURE_REQUIRES => {
+        'ExtUtils::MakeMaker' => '6.64',
+    },
+    TEST_REQUIRES => {
+        'Test::More' => 0,
+    },
     PREREQ_PM     => {
-                        'Test::More' => 0,
                         'MARC::Record' => 0,
                      },
     EXE_FILES     => [ qw( bin/mkr2mrc bin/mrc2mkr ) ],
