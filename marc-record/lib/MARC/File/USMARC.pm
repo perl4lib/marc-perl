@@ -123,6 +123,13 @@ sub decode {
     }
     my $filter_func = shift;
 
+    if ( utf8::is_utf8($text) ) {
+        # if we're given a UTF-8 string, encode it so that
+        # later steps in the parsing calculate lengths and
+        # offsets based on bytes, not characters
+        utf8::encode($text);
+    }
+
     my $level = $PARSING_LEVEL;
     croak( "Unknown parsing level '$level' (expected one of: " . join( ', ', sort keys %_parsing_levels ) . ')' )
         unless defined $level && $_parsing_levels{$level};
@@ -194,7 +201,8 @@ sub decode {
         # if the MARC record claims to be UTF-8, convert
         # from octets to characters
         if ( $encoding eq 'UTF-8' ) {
-            utf8::decode( $tagdata );
+            $problem->( "Could not mark string as UTF-8 for $tagno $location; invalid characters")
+                unless utf8::decode( $tagdata );
         }
 
         if ( substr($tagdata, -1, 1) eq END_OF_FIELD ) {
@@ -319,9 +327,8 @@ sub _build_tag_directory {
                 push( @fields, $str );
 
                 # Create directory entry
-                use bytes;
-                my $len = bytes::length( $str );
-                no bytes;
+                use bytes; # for sake of next length call
+                my $len = length( $str );
 
                 my $direntry = sprintf( "%03s%04d%05d", $field->tag, $len, $dataend );
                 push( @directory, $direntry );
