@@ -822,10 +822,6 @@ L<MARC::Lint>
 
 =over 4
 
-=item * perl4lib (L<http://perl4lib.perl.org/>)
-
-A mailing list devoted to the use of Perl in libraries.
-
 =item * Library Of Congress MARC pages (L<http://www.loc.gov/marc/>)
 
 The definitive source for all things MARC.
@@ -873,14 +869,10 @@ Please feel free to email me at C<< <mrylander@gmail.com> >>.  I'm glad
 to help as best I can, and I'm always interested in bugs, suggestions
 and patches.
 
-An excellent place to look for information, and get quick help, is from
-the perl4lib mailing list.  See L<http://perl4lib.perl.org> for more
-information about this list, and other helpful MARC information.
-
 The MARC::Record development team tracks bugs and suggestions as GitHub
-issues at L<https://github.com/perl4lib/marc-perl/issues>.  If your email is about a bug or
-suggestion, please report it there.  This is a huge help for the team, and
-you'll be notified of progress as things get fixed or updated.
+issues at L<https://github.com/perl4lib/marc-perl/issues>.  This is a huge
+help for the team, and you'll be notified of progress as things get fixed
+or updated.
 
 =head1 IDEAS
 

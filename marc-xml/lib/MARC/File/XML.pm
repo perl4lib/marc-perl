@@ -86,8 +86,7 @@ were used with the MARC.pm framework. MARC-XML now uses MARC::Record
 exclusively.
 
 If you have any questions or would like to contribute to this module please
-sign on to the perl4lib list. More information about perl4lib is available
-at L<http://perl4lib.perl.org>.
+visit the project's GitHub repository at L<https://github.com/perl4lib/marc-perl>.
 
 =head1 METHODS
 

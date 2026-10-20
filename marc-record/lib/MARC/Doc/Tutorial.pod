@@ -32,8 +32,8 @@ The document you are reading is distributed with the MARC::Record package,
 however in case you are reading it somewhere else, you can find the latest
 version at CPAN: http://www.cpan.org/modules/by-module/MARC/. You'll notice
 that some sections aren't filled in yet, which is a result of this document
-being a work in progress. If you have ideas for new sections please make a
-suggestion to perl4lib: https://perl4lib.perl.org/.
+being a work in progress. If you have ideas for new sections please submit
+an issue on GitHub: https://github.com/perl4lib/marc-perl/issues.
 
 =head2 History of MARC on CPAN
 
@@ -112,10 +112,8 @@ A subclass of MARC::File for working with data encoded in the USMARC format.
 
 It's already been mentioned but it's worth mentioning again:
 MARC::Doc::Tutorial is a work in progress, and you are encouraged to submit
-any suggestions for additional recipes via the perl4lib mailing list at
-https://perl4lib.perl.org/. Also, patches and issue reports are welcome
-at https://github.com/perl4lib/marc-perl.
-
+any suggestions for additional recipes, patches, and other issues
+reports at https://github.com/perl4lib/marc-perl.
 
 
 =head1 READING
@@ -1051,8 +1049,8 @@ functionality found in the C<check_856> method.
 Notice also that we don't have to call C<check_856()> directly. The call to
 C<check_record()> automatically looks for any C<check_XXX> methods that it can
 call to verify the record. Pretty neat stuff. If you've added validation
-checks that you think could be of use to the general public, please share them
-on the perl4lib mailing list, or become a developer and add them to the source!
+checks that you think could be of use to the general public, patches and
+pull requests are welcome!
 
 =head1 SWOLLEN APPENDICES
 
