@@ -29,9 +29,8 @@ released CPAN distribution with its own `Makefile.PL` (or `Build.PL`),
 
 ## Getting help
 
-* Questions and discussion: the
-  [perl4lib mailing list](https://perl4lib.perl.org/).
-* Bug reports and feature requests:
+* Project website: <https://perl4lib.github.io/marc-perl/>.
+* Questions, bug reports and feature requests:
   [GitHub issues](https://github.com/perl4lib/marc-perl/issues).
   Please say which distribution the report is about.
 

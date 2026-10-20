@@ -38,8 +38,8 @@ This module requires these other modules and libraries:
 
 Please report bugs and request features through GitHub issues at
 L<https://github.com/perl4lib/marc-perl/issues>, saying which distribution
-they concern. Questions about using the modules are welcome on the perl4lib
-mailing list, L<https://perl4lib.perl.org/>.
+they concern. Questions about using the modules are welcome there too. The
+project website is L<https://perl4lib.github.io/marc-perl/>.
 
 Contributions are very welcome; see
 L<CONTRIBUTING.md|https://github.com/perl4lib/marc-perl/blob/master/CONTRIBUTING.md>
