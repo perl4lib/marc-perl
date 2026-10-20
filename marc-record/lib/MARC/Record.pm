@@ -6,6 +6,8 @@ MARC::Record - Perl extension for handling MARC records
 
 =cut
 
+use v5.8.8;
+
 use strict;
 use warnings;
 use integer;

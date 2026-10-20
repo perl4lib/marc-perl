@@ -6,6 +6,8 @@ MARC::File::USMARC - USMARC-specific file handling
 
 =cut
 
+use v5.8.8;
+
 use strict;
 use warnings;
 use integer;

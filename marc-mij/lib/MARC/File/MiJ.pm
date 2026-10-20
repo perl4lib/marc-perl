@@ -1,6 +1,7 @@
 package MARC::File::MiJ;
 
-use 5.006;
+use v5.8.8;
+
 use strict;
 use warnings FATAL => 'all';
 
