@@ -351,10 +351,44 @@ sub insert_fields_after {
 Will insert fields in strictly numerical order. So a 008 will be filed
 after a 001 field. See C<insert_grouped_field()> for an additional ordering.
 
+A new field is filed I<before> any existing field with the same tag, so
+fields with the same tag end up in the reverse of the order in which they
+were inserted:
+
+    $record->insert_fields_ordered( $first_100, $second_100 );
+    # 100 fields are now: $second_100, $first_100
+
+That is long-standing behaviour that other code relies on, so it is kept.
+You probably want C<insert_fields_ordered_stable()> instead, which keeps
+same-tag fields in the order they were inserted.
+
 =cut
 
 sub insert_fields_ordered {
     my ( $self, @new ) = @_;
+    return $self->_insert_fields_ordered( 0, @new );
+}
+
+=head2 insert_fields_ordered_stable( @new_fields )
+
+Like C<insert_fields_ordered()>, will insert fields in strictly numerical
+order, but a new field is filed I<after> any existing fields with the same
+tag, so fields with the same tag keep the order in which they were inserted:
+
+    $record->insert_fields_ordered_stable( $first_100, $second_100 );
+    # 100 fields are now: $first_100, $second_100
+
+This is probably what you want to use in new code.
+
+=cut
+
+sub insert_fields_ordered_stable {
+    my ( $self, @new ) = @_;
+    return $self->_insert_fields_ordered( 1, @new );
+}
+
+sub _insert_fields_ordered {
+    my ( $self, $stable, @new ) = @_;
 
     _all_parms_are_fields(@new)
         or croak('All arguments must be MARC::Field objects');
@@ -364,7 +398,9 @@ sub insert_fields_ordered {
 
         ## find location before which it should be inserted
         EXISTING_FIELD: foreach my $field ( @{ $self->{_fields} } ) {
-            if ( $field->tag() >= $newField->tag() ) {
+            if ( $stable
+                ? $field->tag() > $newField->tag()
+                : $field->tag() >= $newField->tag() ) {
                 $self->insert_fields_before( $field, $newField );
                 next NEW_FIELD;
             }
