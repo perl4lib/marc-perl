@@ -3,6 +3,7 @@ bin/print_table
 build_db.PL
 Changes
 etc/additional-iii-characters.xml
+etc/cccii.xml
 etc/codetables.xml
 lib/MARC/Charset.pm
 lib/MARC/Charset/Code.pm
@@ -33,6 +34,7 @@ t/hebrew3.marc
 t/hebrew4.marc
 t/ignore_errors.t
 t/iii.t
+t/japanese.t
 t/load.t
 t/marc8_to_utf8.t
 t/no_escape.t
