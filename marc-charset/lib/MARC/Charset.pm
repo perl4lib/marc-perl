@@ -386,7 +386,13 @@ sub utf8_to_marc8
         if (! $code)
         {
             warn("no mapping found at position $i in $utf8"); 
-            reset_charsets() and return unless $ignore_errors;
+            if (!$ignore_errors)
+            {
+                reset_charsets();
+                return;
+            }
+            # drop the character we can't map and carry on
+            next;
         }
 
         # if it's a combining character move it around
