@@ -1,4 +1,4 @@
-use 5.006;
+use 5.8.8;
 use strict;
 use warnings FATAL => 'all';
 use Module::Build;
@@ -12,6 +12,7 @@ my $builder = Module::Build->new(
     meta_merge          => {
         'meta-spec' => { version => 2 },
         resources   => {
+            homepage   => 'https://github.com/perl4lib/marc-perl',
             repository => {
                 type => 'git',
                 url  => 'https://github.com/perl4lib/marc-perl.git',
@@ -29,6 +30,7 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
     },
     requires => {
+        'perl'              => '5.008008',
         'ex::monkeypatched' => 0,
         'JSON'              => 0,
         'MARC::File'        => 0,

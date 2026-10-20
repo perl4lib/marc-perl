@@ -273,12 +273,8 @@ Bill Dueber, C<< <dueberb at umich.edu> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-MARC-File-MiJ at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=MARC-File-MiJ>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-
-
+Please report any bugs or feature requests through GitHub issues at
+L<https://github.com/perl4lib/marc-perl/issues>.
 
 =head1 SUPPORT
 
@@ -286,26 +282,17 @@ You can find documentation for this module with the perldoc command.
 
     perldoc MARC::Record::MiJ
 
-
 You can also look for information at:
 
 =over 4
 
-=item * RT: CPAN's request tracker (report bugs here)
+=item * GitHub issues (report bugs here)
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=MARC-File-MiJ>
+L<https://github.com/perl4lib/marc-perl/issues>
 
-=item * AnnoCPAN: Annotated CPAN documentation
+=item * MetaCPAN
 
-L<http://annocpan.org/dist/MARC-File-MiJ>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/MARC-File-MiJ>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/MARC-File-MiJ/>
+L<https://metacpan.org/dist/MARC-File-MiJ>
 
 =back
 

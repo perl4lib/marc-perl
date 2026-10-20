@@ -52,7 +52,7 @@ To install this module type the following:
 
 =head1 DEPENDENCIES
 
-MARC::Record now requires a perl version >= 5.8.2 for processing unicode
+MARC::Record now requires a perl version >= 5.8.8 for processing unicode
 correctly.
 
 =head1 SUPPORT AND CONTRIBUTING
