@@ -22,7 +22,20 @@ our $parser;
 
 # How tolerant decode() is of malformed data; see "PARSING LEVELS".
 our $PARSING_LEVEL = 'strict';
-my %_parsing_levels = map { $_ => 1 } qw( strict default );
+# How tolerant record() is of data it cannot serialize cleanly; see
+# "OUTPUT LEVELS".
+our $OUTPUT_LEVEL = 'strict';
+my %_levels = map { $_ => 1 } qw( strict default );
+
+sub _level {
+    my ( $what, $level ) = @_;
+    croak( "Unknown $what level '" . ( defined $level ? $level : 'undef' ) . "' (expected one of: " . join( ', ', sort keys %_levels ) . ')' )
+        unless defined $level && $_levels{$level};
+    return $level;
+}
+
+sub _parsing_level { return _level( 'parsing', $PARSING_LEVEL ) }
+sub _output_level  { return _level( 'output',  $OUTPUT_LEVEL ) }
 
 sub import {
     my $class = shift;
@@ -316,6 +329,10 @@ sub record {
 
     $format ||= $_load_args{RecordFormat};
 
+    # At the 'default' level characters with no UTF-8 mapping are dropped
+    # one by one; otherwise leave MARC::Charset to apply its own setting.
+    my $ignore_errors = _output_level() eq 'default' ? 1 : undef;
+
     my $_transcode = 0;
     my $ldr = $record->leader;
     my $original_encoding = substr($ldr,9,1);
@@ -350,7 +367,7 @@ HEADER
         if ( $field->is_control_field() ) { 
             my $data = $field->data;
             push( @xml, qq(  <controlfield tag="$tag">) .
-                    escape( ($_transcode ? marc8_to_utf8($data) : $data) ). qq(</controlfield>) );
+                    escape( ($_transcode ? marc8_to_utf8($data, $ignore_errors) : $data) ). qq(</controlfield>) );
         } else {
             my ($i1) = escape( $field->indicator( 1 ) );
             my ($i2) = escape( $field->indicator( 2 ) );
@@ -358,7 +375,7 @@ HEADER
             foreach my $subfield ( $field->subfields() ) { 
                 my ( $code, $data ) = ( escape( $$subfield[0] ), $$subfield[1] );
                 push( @xml, qq(    <subfield code="$code">).
-                        escape( ($_transcode ? marc8_to_utf8($data) : $data) ).qq(</subfield>) );
+                        escape( ($_transcode ? marc8_to_utf8($data, $ignore_errors) : $data) ).qq(</subfield>) );
             }
             push( @xml, "  </datafield>" );
         }
@@ -442,9 +459,12 @@ sub decode {
     my $text;
     my $location = '';
 
-    my $level = $PARSING_LEVEL;
-    croak( "Unknown parsing level '$level' (expected one of: " . join( ', ', sort keys %_parsing_levels ) . ')' )
-        unless defined $level && $_parsing_levels{$level};
+    my $level = _parsing_level();
+
+    # At the 'default' output level characters with no MARC-8 mapping are
+    # dropped one by one; otherwise leave MARC::Charset to apply its own
+    # setting.
+    my $ignore_errors = _output_level() eq 'default' ? 1 : undef;
 
     if ( ref($self) =~ /^MARC::File/ ) {
         $location = 'in record '.$self->{recnum};
@@ -489,7 +509,7 @@ sub decode {
             my @sfs = ();
             foreach my $sfelt ($elt->getChildrenByLocalName('subfield')) {
                 push @sfs, $sfelt->getAttribute('code'),
-                           $transcode_to_marc8 ? utf8_to_marc8($sfelt->textContent()) : $sfelt->textContent();
+                           $transcode_to_marc8 ? utf8_to_marc8($sfelt->textContent(), $ignore_errors) : $sfelt->textContent();
             }
 
             my $tag = $elt->getAttribute('tag');
@@ -623,6 +643,39 @@ L<MARC::File::USMARC> treats the equivalent problems in binary records.
 =back
 
 Any other value makes C<decode()> die.
+
+=head1 OUTPUT LEVELS
+
+How tolerant C<record()> and C<decode()> are of characters that cannot be
+converted between UTF-8 and MARC-8 is controlled by the package variable
+C<$MARC::File::XML::OUTPUT_LEVEL>. It is separate from C<$PARSING_LEVEL>,
+which is about the structure of the XML:
+
+    local $MARC::File::XML::OUTPUT_LEVEL = 'default';
+
+=over 4
+
+=item strict
+
+The default. When C<record()> converts a MARC-8 record to UTF-8, a field
+containing a character with no UTF-8 mapping comes out empty, and
+L<MARC::Charset> warns about the character. This is the behaviour of
+C<< MARC::Charset->ignore_errors(0) >>, unless your code has set that globally.
+Likewise, when C<decode()> converts UTF-8 to MARC-8, a subfield containing a
+character with no MARC-8 mapping is left without a value.
+
+=item default
+
+When C<record()> converts a MARC-8 record to UTF-8, or C<decode()> converts
+UTF-8 to MARC-8, only the characters that cannot be mapped are dropped
+(L<MARC::Charset> still warns about each one) and the rest of the field is
+kept. This is the same as C<yaz-marcdump -f marc8 -t utf8>. The setting
+applies to that call only; it does not change
+C<< MARC::Charset->ignore_errors() >>.
+
+=back
+
+Any other value makes C<record()> and C<decode()> die.
 
 =head1 TODO
 

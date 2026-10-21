@@ -33,3 +33,5 @@ t/parser.t
 t/record.dat
 t/subfield0.t
 t/subfield0.xml
+t/unmapped-characters-decode.t
+t/unmapped-characters.t
