@@ -865,10 +865,6 @@ Imagine something like this:
 
 =head1 BUGS, WISHES AND CORRESPONDENCE
 
-Please feel free to email me at C<< <mrylander@gmail.com> >>.  I'm glad
-to help as best I can, and I'm always interested in bugs, suggestions
-and patches.
-
 The MARC::Record development team tracks bugs and suggestions as GitHub
 issues at L<https://github.com/perl4lib/marc-perl/issues>.  This is a huge
 help for the team, and you'll be notified of progress as things get fixed
