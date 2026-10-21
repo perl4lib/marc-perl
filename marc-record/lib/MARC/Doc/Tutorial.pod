@@ -112,8 +112,8 @@ A subclass of MARC::File for working with data encoded in the USMARC format.
 
 It's already been mentioned but it's worth mentioning again:
 MARC::Doc::Tutorial is a work in progress, and you are encouraged to submit
-any suggestions for additional recipes, patches, and other issues
-reports at https://github.com/perl4lib/marc-perl.
+any suggestions for additional recipes, along with patches and issue reports,
+at https://github.com/perl4lib/marc-perl.
 
 
 =head1 READING
