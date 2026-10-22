@@ -23,7 +23,7 @@ is( $MARC::File::XML::OUTPUT_LEVEL, 'strict', "the output level is 'strict' unle
     local $MARC::File::XML::OUTPUT_LEVEL = 'strict';
     @warnings = ();
     my $record = eval { MARC::Record->new_from_xml( $xml, 'MARC-8' ) };
-    ok( !$record, 'strict: a field with an unmappable character is not kept intact' );
+    ok( !$record, 'strict: a field with an unmappable character prevents entire record from being parsed' );
     ok( scalar( grep { /no mapping found/ } @warnings ), 'strict: MARC::Charset warns' );
 }
 
