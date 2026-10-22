@@ -394,6 +394,8 @@ my %ESCAPES = (
     '&'     => '&amp;',
     '<'     => '&lt;',
     '>'     => '&gt;',
+    q(')    => '&apos;',
+    q(")    => '&quot;',
 );
 my $_base_escape_regex = join( '|', map { "\Q$_\E" } keys %ESCAPES );
 my $ESCAPE_REGEX = qr/$_base_escape_regex/;
