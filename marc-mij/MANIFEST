@@ -8,6 +8,7 @@ README.pod
 t/00-load.t
 t/boilerplate.t
 t/camel.usmarc
+t/input-validation.t
 t/pod.t
 t/test.mrc
 t/test.ndj
