@@ -2,6 +2,7 @@ bin/compile_table
 bin/print_table
 build_db.PL
 Changes
+CONTRIBUTING.md
 etc/additional-iii-characters.xml
 etc/cccii.xml
 etc/codetables.xml
@@ -14,6 +15,7 @@ LICENSE
 Makefile.PL
 MANIFEST			This list of files
 README.pod
+SECURITY.md
 t/cjk.t
 t/cjk1.marc
 t/cjk2.marc

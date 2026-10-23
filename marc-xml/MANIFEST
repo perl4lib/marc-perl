@@ -2,11 +2,13 @@ bin/entity-escape-xml
 bin/marc2xml
 bin/xml2marc
 Changes
+CONTRIBUTING.md
 lib/MARC/File/XML.pm
 LICENSE
 Makefile.PL
 MANIFEST
 README.pod
+SECURITY.md
 t/batch-ns.t
 t/batch-ns.xml
 t/batch.t

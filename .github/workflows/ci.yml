@@ -13,6 +13,30 @@ permissions:
   contents: read
 
 jobs:
+  community-files:
+    # CONTRIBUTING.md and SECURITY.md live at the repository root, where
+    # GitHub looks for them, and are copied into each distribution so the
+    # CPAN tarballs carry them too. The root files are the source of truth;
+    # edit those, then copy them into every marc-*/ directory.
+    name: Per-distribution community files match the root copies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for drift from the root files
+        run: |
+          status=0
+          for dist in marc-*/; do
+            [ -f "$dist/MANIFEST" ] || continue
+            for f in CONTRIBUTING.md SECURITY.md; do
+              if ! diff -u "$f" "$dist$f"; then
+                echo "::error file=$dist$f::differs from root $f; copy the root file over it"
+                status=1
+              fi
+            done
+          done
+          exit $status
+
   test:
     name: ${{ matrix.distribution.name }} (perl ${{ matrix.perl }})
     runs-on: ubuntu-latest
