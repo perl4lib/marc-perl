@@ -193,6 +193,9 @@ notation of wildcarding (i.e. subject tags are "6.."). The field
 specifier is implemented as a regular expression that is automatically
 anchored to both the beginning and end of the tag, so any regular
 expression that covers the full length of the tag is a valid specifier.
+The anchoring applies to the specifier as a whole, including one that contains
+an alternation, so C<'245|650'> matches either of those two tags, while
+C<'24|65'> matches neither because neither alternative is a whole tag.
 
 This method does not deduplicate the set of returned fields when
 it is called in list context, so the following will include the
