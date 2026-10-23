@@ -16,6 +16,7 @@ use vars qw( $ERROR );
 
 use MARC::Field;
 use Carp qw(croak carp);
+use Scalar::Util qw(refaddr);
 
 =head1 VERSION
 
@@ -197,11 +198,29 @@ The anchoring applies to the specifier as a whole, including one that contains
 an alternation, so C<'245|650'> matches either of those two tags, while
 C<'24|65'> matches neither because neither alternative is a whole tag.
 
-This method does not deduplicate the set of returned fields when
-it is called in list context, so the following will include the
-same MARC::Field object for the record's 245 field twice:
+When more than one specifier is given, the results are ordered by specifier:
+first the fields that match the first specifier, in the order they appear in
+the record, then the fields that match the second specifier, and so on.  The
+specifiers therefore work as a list of priorities, and this order is part of
+the interface that you can rely on.  In scalar context the result is the first
+field of the first specifier that matches anything, even if a field matching a
+later specifier comes earlier in the record.  For example, this prefers a 345
+field to a 020 field, whichever of them is first in the record:
+
+  my $field = $marc->field('345', '020');
+
+If you want the fields in the order they appear in the record instead, use
+C<fields()> and filter the result yourself.
+
+A field that matches more than one specifier is returned only once, in the
+position of the first specifier that matches it.  The following returns the
+record's 245 field once, not twice:
 
   my @fields = $marc->field('245', '24.');
+
+Two fields are the same only if they are the same MARC::Field object.  Distinct
+fields with identical contents are all returned.  A single specifier is not
+affected by this, and returns every matching field in the record.
 
 =cut
 
@@ -212,6 +231,7 @@ sub field {
     my @specs = @_;
 
     my @list = ();
+    my %seen;   # fields already returned for an earlier specifier
     for my $tag ( @specs ) {
         my $regex = $field_regex{ $tag };
 
@@ -221,13 +241,17 @@ sub field {
             $field_regex{ $tag } = $regex;
         } # not defined
 
+        my @found;
         for my $maybe ( $self->fields ) {
             if ( $maybe->tag =~ $regex ) {
                 return $maybe unless wantarray;
 
-                push( @list, $maybe );
+                push( @found, $maybe );
             } # if
         } # for $maybe
+
+        push( @list, grep { !$seen{ refaddr($_) } } @found );
+        $seen{ refaddr($_) } = 1 for @found;
     } # for $tag
 
     return unless wantarray;
