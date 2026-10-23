@@ -502,6 +502,10 @@ sub delete_field {
 This is a wrapper around C<MARC::File::USMARC::encode()> for compatibility with
 older versions of MARC::Record.
 
+Serialising also recalculates the record length and base address and stores
+them in the record's leader (see C<leader()>), so the leader of the record
+changes as a side effect.
+
 =cut
 
 sub as_usmarc {
@@ -534,6 +538,12 @@ sub as_formatted {
 
 Returns the leader for the record.  Sets the leader if I<text> is defined.
 No error checking is done on the validity of the leader.
+
+The record length (the first five characters) and the base address of data
+(characters 12 to 16) are not kept up to date as the record is changed.
+They are recalculated only when the record is serialised with
+C<as_usmarc()>, which also writes them back into the record's leader, so
+they can be relied on only straight after serialising.
 
 =cut
 
@@ -650,8 +660,6 @@ sub clone {
             $clone->append_fields( $field->clone );
         }
     }
-
-    # XXX FIX THIS $clone->update_leader();
 
     return $clone;
 }
