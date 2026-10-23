@@ -3,15 +3,15 @@ use warnings;
 use Test::More tests => 19;
 use XML::LibXML;
 
-# test escaping of < > and & for XML
+# test escaping of ' " < > and & for XML
 
 use_ok( 'MARC::File::XML' );
 
 is( MARC::File::XML::escape( 'foo&bar&baz' ), 'foo&amp;bar&amp;baz', '&' );
 is( MARC::File::XML::escape( 'foo>bar>baz' ), 'foo&gt;bar&gt;baz', '>' );
 is( MARC::File::XML::escape( 'foo<bar<baz' ), 'foo&lt;bar&lt;baz', '<' );
-is( MARC::File::XML::escape( 'foo"baz' ), 'foo&quot;baz', '<' );
-is( MARC::File::XML::escape( 'foo' . q(') . 'baz' ), 'foo&apos;baz', '<' );
+is( MARC::File::XML::escape( 'foo"baz' ), 'foo&quot;baz', '"' );
+is( MARC::File::XML::escape( 'foo' . q(') . 'baz' ), 'foo&apos;baz', "'" );
 
 use_ok( 'MARC::Record' );
 use_ok( 'MARC::Field' );
