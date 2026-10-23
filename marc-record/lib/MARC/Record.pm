@@ -274,6 +274,13 @@ sub append_fields {
     return scalar @_;
 }
 
+# for when you know that all parms are MARC::Field objects
+sub _unsafe_append_fields {
+    my $self = shift;
+
+    push(@{ $self->{_fields} }, @_);
+}
+
 =head2 insert_fields_before( $before_field, @new_fields )
 
 Inserts the field specified by C<$new_field> before the field C<$before_field>.
@@ -521,12 +528,10 @@ Returns a pretty string for printing in a MARC dump.
 sub as_formatted {
     my $self = shift;
 
-    my @lines = ( "LDR " . ($self->{_leader} || "") );
-    for my $field ( @{$self->{_fields}} ) {
-            push( @lines, $field->as_formatted() );
-    }
-
-    return join( "\n", @lines );
+    return join( "\n",
+        "LDR " . ($self->{_leader} || ""),
+        map { $_->as_formatted() } @{$self->{_fields}}
+    );
 } # as_formatted
 
 
@@ -574,7 +579,7 @@ when you manually set the encoding.
 sub encoding {
     my ($self,$arg) = @_;
     # we basically report from and modify the leader directly
-    my $leader = $self->leader();
+    my $leader = $self->{_leader};
 
     # when setting
     if ( defined($arg) ) {

@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use integer;
 use Carp;
+use List::Util qw/pairs/;
 
 use constant SUBFIELD_INDICATOR => "\x1F";
 use constant END_OF_FIELD       => "\x1E";
@@ -71,7 +72,6 @@ Or if you want to add a control field (< 010) that does not have indicators.
 
 sub new {
     my $class = shift;
-    $class = $class;
 
     ## MARC spec indicates that tags can have alphabetical
     ## characters in them! If they do appear we assume that
@@ -108,12 +108,44 @@ sub new {
             or croak( "Field $tagno must have at least one subfield" );
 
         # Normally, we go thru add_subfields(), but internally we can cheat
-        $self->{_subfields} = [@_];
+        $self->{_subfields} = [ pairs @_ ];
     }
 
     return $self;
 } # new()
 
+sub _unsafe_new_control_field {
+    my $class = shift;
+
+    my $self = bless {
+        _tag => shift,
+        _warnings => [],
+        _is_control_field => 1,
+    }, $class;
+    $self->{_data} = shift;
+
+    return $self;
+} # new()
+
+# NOTE: this expects the subfield list as an array
+# of arrayrefs, not just an array like ->new() does
+sub _unsafe_new_variable_field {
+    my $class = shift;
+
+    my $self = bless {
+        _tag => shift,
+        _warnings => [],
+        _is_control_field => 0,
+    }, $class;
+
+    $self->{_ind1} = shift;
+    $self->{_ind2} = shift;
+
+    # Normally, we go thru add_subfields(), but internally we can cheat
+    $self->{_subfields} = [ @_ ];
+
+    return $self;
+} # new()
 
 =head2 tag()
 
@@ -155,7 +187,7 @@ sub indicator {
     my $self = shift;
     my $indno = shift;
 
-    if ($self->is_control_field) {
+    if ($self->{_is_control_field}) {
         $self->_warn( "Control fields (generally, those with tags below 010) do not have indicators" );
         return;
     }
@@ -187,7 +219,7 @@ sub set_indicator {
     croak('Indicator number must be 1 or 2')
       unless defined $indno && $indno =~ /^[12]$/;
     croak('Cannot set indicator for control field')
-      if $self->is_control_field;
+      if $self->{_is_control_field};
     croak('Indicator value is invalid') unless $self->is_valid_indicator($indval);
 
     $self->{"_ind$indno"} = $indval;
@@ -306,17 +338,9 @@ sub subfield {
     my $code_wanted = shift;
 
     croak( "Control fields (generally, just tags below 010) do not have subfields, use data()" )
-        if $self->is_control_field;
+        if $self->{_is_control_field};
 
-    my @data = @{$self->{_subfields}};
-    my @found;
-    while ( defined( my $code = shift @data ) ) {
-        if ( $code eq $code_wanted ) {
-            push( @found, shift @data );
-        } else {
-            shift @data;
-        }
-    }
+    my @found = map { $_->[1] } grep { $_->[0] eq $code_wanted } @{ $self->{_subfields} };
     if ( wantarray() ) { return @found; }
     return( $found[0] );
 }
@@ -338,17 +362,12 @@ For example, this might be the subfields from a 245 field:
 sub subfields {
     my $self = shift;
 
-    if ($self->is_control_field) {
+    if ($self->{_is_control_field}) {
         $self->_warn( "Control fields (generally, just tags below 010)  do not have subfields" );
         return;
     }
 
-    my @list;
-    my @data = @{$self->{_subfields}};
-    while ( defined( my $code = shift @data ) ) {
-        push( @list, [$code, shift @data] );
-    }
-    return @list;
+    return map { [ $_->[0] => $_->[1] ] } @{ $self->{_subfields} }; # doing it this way to return a clone
 }
 
 =head2 data()
@@ -361,7 +380,7 @@ sub data {
     my $self = shift;
 
     croak( "data() is only for control fields (generally, just tags below 010) , use subfield()" )
-        unless $self->is_control_field;
+        unless $self->{_is_control_field};
 
     $self->{_data} = $_[0] if @_;
 
@@ -382,9 +401,9 @@ sub add_subfields {
     my $self = shift;
 
     croak( "Subfields are only for data fields (generally, just tags >= 010)" )
-        if $self->is_control_field;
+        if $self->{_is_control_field};
 
-    push( @{$self->{_subfields}}, @_ );
+    push( @{$self->{_subfields}}, map { [ $_->key => $_->value ] } pairs @_);
     return @_/2;
 }
 
@@ -450,15 +469,14 @@ sub delete_subfield {
    croak 'must supply subfield code(s) and/or subfield position(s) and/or match patterns to delete_subfield'
       unless $match or (@$codes > 0) or (@$positions > 0);
 
-    my @current_subfields = @{$self->{_subfields}};
     my @new_subfields = ();
     my $removed = 0;
     my $subfield_num = $[ - 1; # users $[ preferences control indexing 
 
-    while (@current_subfields > 0) {
+    foreach my $sf (@{ $self->{_subfields} }) {
         $subfield_num += 1;
-        my $subfield_code = shift @current_subfields;
-        my $subfield_value = shift @current_subfields;
+        my $subfield_code = $sf->[0];
+        my $subfield_value = $sf->[1];
         if ((@$codes==0 or 
             grep {
                 (ref($_) eq 'Regexp' && $subfield_code =~ $_) ||
@@ -469,7 +487,7 @@ sub delete_subfield {
             $removed += 1;
             next;
         }
-        push( @new_subfields, $subfield_code, $subfield_value);
+        push( @new_subfields, [ $subfield_code, $subfield_value ]);
     }
     $self->{_subfields} = \@new_subfields;
     return $removed;
@@ -522,7 +540,7 @@ sub update {
     my $self = shift;
 
     ## tags 000 - 009 don't have indicators or subfields
-    if ( $self->is_control_field ) {
+    if ( $self->{_is_control_field} ) {
         $self->{_data} = shift;
         return(1);
     }
@@ -546,18 +564,18 @@ sub update {
         else {
             my $found = 0;
             ## update existing subfield
-            for ( my $i=0; $i<@data; $i+=2 ) {
-                if ($data[$i] eq $arg) {
-                    $data[$i+1] = $val;
+            foreach my $sf (@{ $self->{_subfields} }) {
+                if ($sf->[0] eq $arg) {
+                    $sf->[1] = $val;
                     $found = 1;
                     $changes++;
                     last;
                 }
-            } # for
+            }
 
             ## append new subfield
             if ( !$found ) {
-                push( @data, $arg, $val );
+                push( @{ $self->{_subfields} }, [ $arg, $val ] );
                 $changes++;
             }
         }
@@ -565,7 +583,6 @@ sub update {
     } # while
 
     ## synchronize our subfields
-    $self->{_subfields} = \@data;
     return($changes);
 
 }
@@ -628,22 +645,15 @@ sub as_string {
     my $delimiter = shift;
     $delimiter = " " unless defined $delimiter;
 
-    if ( $self->is_control_field ) {
+    if ( $self->{_is_control_field} ) {
         return $self->{_data};
     }
 
-    my @subs;
-
-    my $subs = $self->{_subfields};
-    my $nfields = @$subs / 2;
-    for my $i ( 1..$nfields ) {
-        my $offset = ($i-1)*2;
-        my $code = $subs->[$offset];
-        my $text = $subs->[$offset+1];
-        push( @subs, $text ) if !defined($subfields) || $code =~ /^[$subfields]$/;
-    } # for
-
-    return join( $delimiter, @subs );
+    return join( $delimiter, 
+        map { $_->[1] }
+        grep { !defined($subfields) || $_->[0] =~ /^[$subfields]$/ }
+        @{ $self->{_subfields} }
+    );
 }
 
 
@@ -658,16 +668,13 @@ sub as_formatted {
 
     my @lines;
 
-    if ( $self->is_control_field ) {
+    if ( $self->{_is_control_field} ) {
         push( @lines, sprintf( "%03s     %s", $self->{_tag}, $self->{_data} ) );
     } else {
         my $hanger = sprintf( "%03s %1.1s%1.1s", $self->{_tag}, $self->{_ind1}, $self->{_ind2} );
 
-        my $subs = $self->{_subfields};
-        my $nfields = @$subs / 2;
-        my $offset = 0;
-        for my $i ( 1..$nfields ) {
-            push( @lines, sprintf( "%-6.6s _%1.1s%s", $hanger, $subs->[$offset++], $subs->[$offset++] ) );
+        for my $sf (@{ $self->{_subfields} }) {
+            push( @lines, sprintf( "%-6.6s _%1.1s%s", $hanger, $sf->[0], $sf->[1] ) );
             $hanger = "";
         } # for
     }
@@ -687,20 +694,14 @@ sub as_usmarc {
     my $self = shift;
 
     # Control fields are pretty easy
-    if ( $self->is_control_field ) {
-        return $self->data . END_OF_FIELD;
+    if ( $self->{_is_control_field} ) {
+        return $self->{_data} . END_OF_FIELD;
     } else {
-        my @subs;
-        my @subdata = @{$self->{_subfields}};
-        while ( @subdata ) {
-            push( @subs, join( "", SUBFIELD_INDICATOR, shift @subdata, shift @subdata ) );
-        } # while
-
         return
             join( "",
-                $self->indicator(1),
-                $self->indicator(2),
-                @subs,
+                $self->{_ind1},
+                $self->{_ind2},
+                ( map { SUBFIELD_INDICATOR . $_->[0] . $_->[1] } @{ $self->{_subfields} } ),
                 END_OF_FIELD, );
     }
 }

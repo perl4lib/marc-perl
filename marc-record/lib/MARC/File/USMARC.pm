@@ -178,17 +178,21 @@ sub decode {
     # go through all the fields
     my $nfields = length($dir)/DIRECTORY_ENTRY_LEN;
     for ( my $n = 0; $n < $nfields; $n++ ) {
-        my ( $tagno, $len, $offset ) = unpack( "A3 A4 A5", substr($dir, $n*DIRECTORY_ENTRY_LEN, DIRECTORY_ENTRY_LEN) );
+        my $direntry = substr($dir, $n*DIRECTORY_ENTRY_LEN, DIRECTORY_ENTRY_LEN);
+        my ( $tagno, $len, $offset ) = unpack( "A3 A4 A5", $direntry );
 
-        # Check directory validity
-        ($tagno =~ /^[0-9A-Za-z]{3}$/)
-            or $problem->( "Invalid tag in directory $location: \"$tagno\"" );
+        # Check directory validity. We check the overall entry first so
+        # that valid ones require only one regexp match rather than three.
+        if ($direntry !~ /^[0-9A-Za-z]{3}\d{9}$/) {
+            ($tagno =~ /^[0-9A-Za-z]{3}$/)
+                or $problem->( "Invalid tag in directory $location: \"$tagno\"" );
 
-        ($len =~ /^\d{4}$/)
-            or $problem->( "Invalid length in directory $location tag $tagno: \"$len\"" );
+            ($len =~ /^\d{4}$/)
+                or $problem->( "Invalid length in directory $location tag $tagno: \"$len\"" );
 
-        ($offset =~ /^\d{5}$/)
-            or $problem->( "Invalid offset in directory $location tag $tagno: \"$offset\"" );
+            ($offset =~ /^\d{5}$/)
+                or $problem->( "Invalid offset in directory $location tag $tagno: \"$offset\"" );
+        }
 
         ($offset + $len <= $reclen)
             or $problem->( "Directory entry $location runs off the end of the record tag $tagno" );
@@ -219,8 +223,8 @@ sub decode {
             next unless $filter_func->( $tagno, $tagdata );
         }
 
-        if ( MARC::Field->is_controlfield_tag($tagno) ) {
-            $marc->append_fields( MARC::Field->new( $tagno, $tagdata ) );
+        if ( ( $tagno =~ /^\d{3}$/ && ($tagno < 10) ) || exists $MARC::Field::extra_control_fields_tags{$tagno} ) {
+            $marc->_unsafe_append_fields( MARC::Field->_unsafe_new_control_field( $tagno, $tagdata ) );
         } else {
             my @subfields = split( SUBFIELD_INDICATOR, $tagdata );
             my $indicators = shift @subfields;
@@ -234,11 +238,20 @@ sub decode {
                 $ind2 = substr( $indicators,1, 1 );
             }
 
+            unless ($ind1 =~ /^[0-9A-Za-z ]$/) {
+                $marc->_warn( "Invalid indicator \"$ind1\" forced to blank" );
+                $ind1 = ' ';
+            }
+            unless ($ind2 =~ /^[0-9A-Za-z ]$/) {
+                $marc->_warn( "Invalid indicator \"$ind2\" forced to blank" );
+                $ind2 = ' ';
+            }
+
             # Split the subfield data into subfield name and data pairs
             my @subfield_data;
             for ( @subfields ) {
                 if ( length > 0 ) {
-                    push( @subfield_data, substr($_,0,1),substr($_,1) );
+                    push( @subfield_data, [ substr($_,0,1), substr($_,1) ] );
                 } else {
                     $problem->( "Entirely empty subfield found in tag $tagno" );
                 }
@@ -249,11 +262,7 @@ sub decode {
                 next;
             }
 
-            my $field = MARC::Field->new($tagno, $ind1, $ind2, @subfield_data );
-            if ( $field->warnings() ) {
-                $problem->( $field->warnings() );
-            }
-            $marc->append_fields( $field );
+            $marc->_unsafe_append_fields( MARC::Field->_unsafe_new_variable_field($tagno, $ind1, $ind2, @subfield_data ) );
         }
     } # looping through all the fields
 
