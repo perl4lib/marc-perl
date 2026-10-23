@@ -3,6 +3,11 @@
 Thank you for your interest in improving MARC/Perl! Bug reports, documentation
 fixes, tests and patches are all welcome.
 
+This file lives at the root of the
+[marc-perl repository](https://github.com/perl4lib/marc-perl) and is also
+shipped with each distribution, so some of it describes the repository as a
+whole rather than the single distribution you may be reading it in.
+
 ## Reporting bugs and requesting features
 
 Please open an issue at <https://github.com/perl4lib/marc-perl/issues> and
@@ -16,9 +21,9 @@ Please do not report security problems in public issues; see
 
 ## Repository layout
 
-This is a monorepo of separately released CPAN distributions, each with its
-own `Makefile.PL` (or `Build.PL` for `marc-mij`), `lib/`, `t/`, `MANIFEST`,
-`Changes` and `README.pod`:
+The repository is a monorepo of separately released CPAN distributions, each
+with its own `Makefile.PL` (or `Build.PL` for `marc-mij`), `lib/`, `t/`,
+`MANIFEST`, `Changes` and `README.pod`:
 
 `marc-record`, `marc-lint`, `marc-xml`, `marc-charset`, `marc-mij`,
 `marc-marcmaker` (and `marc-www`, the legacy project website).
@@ -28,9 +33,9 @@ depends on `marc-charset`.
 
 ## Running the tests
 
-Run the tests from inside the distribution you are changing. Sibling
-distributions are not on `@INC` automatically, so point `prove` at them with
-`-I` when a distribution depends on one:
+In a checkout of the repository, run the tests from inside the distribution
+you are changing. Sibling distributions are not on `@INC` automatically, so
+point `prove` at them with `-I` when a distribution depends on one:
 
 ```sh
 cd marc-record     && prove -l t/

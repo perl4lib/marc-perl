@@ -2,9 +2,10 @@
 
 ## Supported versions
 
-Security fixes are made to the latest release of each distribution in this
-repository (`MARC-Record`, `MARC-Lint`, `MARC-File-XML`, `MARC-File-MiJ`,
-`MARC-File-MARCMaker` and `MARC-Charset`).
+Security fixes are made to the latest release of each distribution in the
+[marc-perl repository](https://github.com/perl4lib/marc-perl) (`MARC-Record`,
+`MARC-Lint`, `MARC-File-XML`, `MARC-File-MiJ`, `MARC-File-MARCMaker` and
+`MARC-Charset`).
 
 ## Reporting a vulnerability
 
