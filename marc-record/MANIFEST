@@ -51,6 +51,7 @@ t/delete-field.t
 t/delete-subfield.t
 t/dosEOF.t
 t/extra_controlfields.t
+t/field-spec.t
 t/file-filter.t
 t/file-header.t
 t/filler.t
