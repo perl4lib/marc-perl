@@ -27,8 +27,8 @@ use constant END_OF_RECORD          => "\x1D";
 use constant DIRECTORY_ENTRY_LEN    => 12;
 
 # How tolerant decode() is of malformed data; see "PARSING LEVELS".
-our $PARSING_LEVEL = 'default';
-my %_parsing_levels = map { $_ => 1 } qw( strict default );
+our $PARSING_LEVEL = 'lenient';
+my %_parsing_levels = map { $_ => 1 } qw( strict lenient );
 
 =head1 SYNOPSIS
 
@@ -137,7 +137,7 @@ sub decode {
     # ok this the empty shell we will fill
     my $marc = MARC::Record->new();
 
-    # At the 'default' level a problem is recorded as a warning on the
+    # At the 'lenient' level a problem is recorded as a warning on the
     # record; at 'strict' it is fatal.
     my $problem = $level eq 'strict'
         ? sub { croak( join( '', @_ ) ) }
@@ -264,13 +264,15 @@ sub decode {
 =head1 PARSING LEVELS
 
 How tolerant C<decode()> is of malformed data is controlled by the package
-variable C<$MARC::File::USMARC::PARSING_LEVEL>:
+variable C<$MARC::File::USMARC::PARSING_LEVEL>. Its default is C<lenient>:
 
     local $MARC::File::USMARC::PARSING_LEVEL = 'strict';
 
+The levels are:
+
 =over 4
 
-=item default
+=item lenient
 
 The default. Common errors, such as invalid indicators or empty fields, are
 fixed or ignored, and a warning is added to the record's C<warnings()> list.
@@ -283,6 +285,9 @@ die instead.
 =back
 
 Any other value makes C<decode()> die.
+
+The other readers that have levels, such as L<MARC::File::XML>, use these same
+two names with the same meaning, though not necessarily the same default.
 
 =head2 _build_tag_directory()
 

@@ -4,7 +4,7 @@ use Test::More tests => 5;
 use MARC::Record;
 use MARC::File::XML;
 
-$MARC::File::XML::PARSING_LEVEL = 'default';
+$MARC::File::XML::PARSING_LEVEL = 'lenient';
 
 open my $IN, '<', 't/missing-indicators.xml';
 my $xml = join('', <$IN>);

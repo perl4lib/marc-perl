@@ -40,18 +40,18 @@ is( $MARC::File::XML::OUTPUT_LEVEL, 'strict', "the output level is 'strict' unle
 }
 
 {
-    local $MARC::File::XML::OUTPUT_LEVEL = 'default';
+    local $MARC::File::XML::OUTPUT_LEVEL = 'lenient';
     @warnings = ();
     my $xml = $record->as_xml_record();
     my $note = subfields_in( $xml, '520' )->[0];
     utf8::decode($note);
-    is( $note, 'Before quoted after', 'default: only the unmappable characters are dropped' );
-    ok( scalar( grep { /no mapping found/ } @warnings ), 'default: MARC::Charset still warns' );
+    is( $note, 'Before quoted after', 'lenient: only the unmappable characters are dropped' );
+    ok( scalar( grep { /no mapping found/ } @warnings ), 'lenient: MARC::Charset still warns' );
 }
 
 # The lenient level applies to this call only and does not touch the
 # process-wide setting.
-is( MARC::Charset->ignore_errors(), 0, 'default: MARC::Charset->ignore_errors() is left alone' );
+is( MARC::Charset->ignore_errors(), 0, 'lenient: MARC::Charset->ignore_errors() is left alone' );
 
 {
     local $MARC::File::XML::OUTPUT_LEVEL = 'strict';
@@ -65,7 +65,7 @@ is( MARC::Charset->ignore_errors(), 0, 'default: MARC::Charset->ignore_errors() 
 
 # The parsing level only concerns input and does not affect record().
 {
-    local $MARC::File::XML::PARSING_LEVEL = 'default';
+    local $MARC::File::XML::PARSING_LEVEL = 'lenient';
     @warnings = ();
     my $xml = $record->as_xml_record();
     is_deeply( subfields_in( $xml, '520' ), [''], 'the parsing level does not affect record()' );
@@ -74,13 +74,13 @@ is( MARC::Charset->ignore_errors(), 0, 'default: MARC::Charset->ignore_errors() 
 is( $record->leader, '00000nam  2200000 a 4500', 'the record is left as it was' );
 
 {
-    local $MARC::File::XML::OUTPUT_LEVEL = 'lenient';
+    local $MARC::File::XML::OUTPUT_LEVEL = 'bogus';
     eval { $record->as_xml_record() };
-    like( $@, qr/Unknown output level 'lenient'/, 'an unknown output level dies' );
+    like( $@, qr/Unknown output level 'bogus' \(expected one of: lenient, strict\)/, 'an unknown output level dies' );
 }
 
 {
-    local $MARC::File::XML::PARSING_LEVEL = 'lenient';
+    local $MARC::File::XML::PARSING_LEVEL = 'bogus';
     eval { $record->as_xml_record() };
     is( $@, '', 'an unknown parsing level does not affect record()' );
 }

@@ -88,7 +88,7 @@ release.
 
 The parsing levels are an example. `$MARC::File::XML::PARSING_LEVEL` defaults
 to `strict`, which is how `MARC::File::XML::decode()` has always behaved, and
-`default` opts in to the more forgiving handling of malformed records.
+`lenient` opts in to the more forgiving handling of malformed records.
 
 ## License
 

@@ -13,16 +13,16 @@ $good->leader( '00000nam  22000007a 4500' );
 $good->append_fields( MARC::Field->new( '245', '1', '0', a => 'A title' ) );
 my $usmarc = $good->as_usmarc();
 
-is( $MARC::File::USMARC::PARSING_LEVEL, 'default', "the parsing level is 'default' unless asked otherwise" );
+is( $MARC::File::USMARC::PARSING_LEVEL, 'lenient', "the parsing level is 'lenient' unless asked otherwise" );
 
 # Corrupt the record terminator so decode() has something to warn about.
 my $bad = substr( $usmarc, 0, -1 ) . 'X';
 
 {
-    local $MARC::File::USMARC::PARSING_LEVEL = 'default';
+    local $MARC::File::USMARC::PARSING_LEVEL = 'lenient';
     my $r = eval { MARC::File::USMARC->decode( $bad ) };
-    ok( $r && !$@, 'default: a bad record terminator does not die' ) or diag( $@ );
-    ok( scalar( grep { /terminator/ } $r->warnings ), 'default: a warning is recorded' );
+    ok( $r && !$@, 'lenient: a bad record terminator does not die' ) or diag( $@ );
+    ok( scalar( grep { /terminator/ } $r->warnings ), 'lenient: a warning is recorded' );
 }
 
 {
@@ -35,7 +35,7 @@ my $bad = substr( $usmarc, 0, -1 ) . 'X';
 }
 
 {
-    local $MARC::File::USMARC::PARSING_LEVEL = 'lenient';
+    local $MARC::File::USMARC::PARSING_LEVEL = 'bogus';
     eval { MARC::File::USMARC->decode( $usmarc ) };
-    like( $@, qr/Unknown parsing level 'lenient'/, 'an unknown parsing level dies' );
+    like( $@, qr/Unknown parsing level 'bogus' \(expected one of: lenient, strict\)/, 'an unknown parsing level dies' );
 }
