@@ -1,11 +1,13 @@
 bin/mrc2mkr
 bin/mkr2mrc
 Changes
+CONTRIBUTING.md
 lib/MARC/File/MARCMaker.pm
 LICENSE
 Makefile.PL
 MANIFEST
 README.pod
+SECURITY.md
 t/00.load.t
 t/camel.mrk
 t/camel.usmarc

@@ -1,5 +1,6 @@
 bin/marcdump
 Changes
+CONTRIBUTING.md
 lib/MARC/Batch.pm
 lib/MARC/Doc/Tutorial.pod
 lib/MARC/Field.pm
@@ -12,6 +13,7 @@ LICENSE
 Makefile.PL
 MANIFEST
 README.pod
+SECURITY.md
 t/00.load.t
 t/10.camel.t
 t/11.astring.t
