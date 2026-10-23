@@ -55,6 +55,7 @@ t/file-filter.t
 t/file-header.t
 t/filler.t
 t/filler.usmarc
+t/leader-length.t
 t/lineendings-0a.lif
 t/lineendings-0d.lif
 t/lineendings-0d0a.lif

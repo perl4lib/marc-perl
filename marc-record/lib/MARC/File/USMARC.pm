@@ -284,23 +284,6 @@ die instead.
 
 Any other value makes C<decode()> die.
 
-=head2 update_leader()
-
-If any changes get made to the MARC record, the first 5 bytes of the
-leader (the length) will be invalid.  This function updates the
-leader with the correct length of the record as it would be if
-written out to a file.
-
-=cut
-
-sub update_leader {
-        my $self = shift;
-
-        my (undef,undef,$reclen,$baseaddress) = $self->_build_tag_directory();
-
-        $self->_set_leader_lengths( $reclen, $baseaddress );
-}
-
 =head2 _build_tag_directory()
 
 Function for internal use only: Builds the tag directory that gets

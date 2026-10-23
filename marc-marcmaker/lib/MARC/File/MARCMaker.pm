@@ -349,24 +349,6 @@ LINE: foreach my $line (@lines) {
 
 } #decode MARCMaker
 
-=head2 update_leader() #from USMARC
-
-This may be unnecessary code. Delete this section if that is the case.
-
-If any changes get made to the MARC record, the first 5 bytes of the
-leader (the length) will be invalid.  This function updates the
-leader with the correct length of the record as it would be if
-written out to a file.
-
-
-sub update_leader { #from USMARC
-        my $self = shift;
-
-        my (undef,undef,$reclen,$baseaddress) = $self->_build_tag_directory();
-
-        $self->_set_leader_lengths( $reclen, $baseaddress );
-} #updated_leader() from USMARC
-
 =head2 encode() #based on MARC::File::USMARC
 
 Returns a string of characters suitable for writing out to a MARCMaker file,
