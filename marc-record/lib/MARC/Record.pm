@@ -182,14 +182,23 @@ sub fields {
     return @{$self->{_fields}};
 }
 
-=head2 field( I<tagspec(s)> )
+=head2 field( @fieldspecs )
 
-Returns a list of tags that match the field specifier, or an empty
-list if nothing matched.  In scalar context, returns the first
-matching tag, or undef if nothing matched.
+Returns a list of MARC::Field objects that match at least one of the
+field specifiers, or an empty list if nothing matched.  In scalar
+context, returns the first matching field, or undef if nothing matched.
 
-The field specifier can be a simple number (i.e. "245"), or use the "."
-notation of wildcarding (i.e. subject tags are "6..").
+A field specifier can be a simple number (i.e. "245"), or use the "."
+notation of wildcarding (i.e. subject tags are "6.."). The field
+specifier is implemented as a regular expression that is automatically
+anchored to both the beginning and end of the tag, so any regular
+expression that covers the full length of the tag is a valid specifier.
+
+This method does not deduplicate the set of returned fields when
+it is called in list context, so the following will include the
+same MARC::Field object for the record's 245 field twice:
+
+  my @fields = $marc->field('245', '24.');
 
 =cut
 
