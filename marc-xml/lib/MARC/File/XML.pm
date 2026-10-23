@@ -25,7 +25,7 @@ our $PARSING_LEVEL = 'strict';
 # How tolerant record() is of data it cannot serialize cleanly; see
 # "OUTPUT LEVELS".
 our $OUTPUT_LEVEL = 'strict';
-my %_levels = map { $_ => 1 } qw( strict default );
+my %_levels = map { $_ => 1 } qw( strict lenient );
 
 sub _level {
     my ( $what, $level ) = @_;
@@ -329,9 +329,9 @@ sub record {
 
     $format ||= $_load_args{RecordFormat};
 
-    # At the 'default' level characters with no UTF-8 mapping are dropped
+    # At the 'lenient' level characters with no UTF-8 mapping are dropped
     # one by one; otherwise leave MARC::Charset to apply its own setting.
-    my $ignore_errors = _output_level() eq 'default' ? 1 : undef;
+    my $ignore_errors = _output_level() eq 'lenient' ? 1 : undef;
 
     my $_transcode = 0;
     my $ldr = $record->leader;
@@ -463,10 +463,10 @@ sub decode {
 
     my $level = _parsing_level();
 
-    # At the 'default' output level characters with no MARC-8 mapping are
+    # At the 'lenient' output level characters with no MARC-8 mapping are
     # dropped one by one; otherwise leave MARC::Charset to apply its own
     # setting.
-    my $ignore_errors = _output_level() eq 'default' ? 1 : undef;
+    my $ignore_errors = _output_level() eq 'lenient' ? 1 : undef;
 
     if ( ref($self) =~ /^MARC::File/ ) {
         $location = 'in record '.$self->{recnum};
@@ -521,7 +521,7 @@ sub decode {
 
             # At the 'strict' level these are left for MARC::Field->new()
             # to reject.
-            if ($level eq 'default') {
+            if ($level eq 'lenient') {
                 unless (@sfs) {
                     $rec->_warn("no subfield data found $location for tag $tag");
                     next;
@@ -623,9 +623,10 @@ sub _unimarc_encoding {
 =head1 PARSING LEVELS
 
 How tolerant C<decode()> is of malformed data is controlled by the package
-variable C<$MARC::File::XML::PARSING_LEVEL>:
+variable C<$MARC::File::XML::PARSING_LEVEL>. Its default is C<strict>. The
+levels have the same meaning as for L<MARC::File::USMARC>:
 
-    local $MARC::File::XML::PARSING_LEVEL = 'default';
+    local $MARC::File::XML::PARSING_LEVEL = 'lenient';
 
 =over 4
 
@@ -635,7 +636,7 @@ The default. A C<< <datafield> >> with no C<< <subfield> >> children, or with
 a missing C<ind1> or C<ind2> attribute, makes C<decode()> die, as it always
 has.
 
-=item default
+=item lenient
 
 Common errors are fixed or ignored, and a warning is added to the record's
 C<warnings()> list. A C<< <datafield> >> with no subfields is dropped, and a
@@ -650,10 +651,10 @@ Any other value makes C<decode()> die.
 
 How tolerant C<record()> and C<decode()> are of characters that cannot be
 converted between UTF-8 and MARC-8 is controlled by the package variable
-C<$MARC::File::XML::OUTPUT_LEVEL>. It is separate from C<$PARSING_LEVEL>,
-which is about the structure of the XML:
+C<$MARC::File::XML::OUTPUT_LEVEL>. Its default is C<strict>. It is separate
+from C<$PARSING_LEVEL>, which is about the structure of the XML:
 
-    local $MARC::File::XML::OUTPUT_LEVEL = 'default';
+    local $MARC::File::XML::OUTPUT_LEVEL = 'lenient';
 
 =over 4
 
@@ -666,7 +667,7 @@ C<< MARC::Charset->ignore_errors(0) >>, unless your code has set that globally.
 Likewise, when C<decode()> converts UTF-8 to MARC-8, a subfield containing a
 character with no MARC-8 mapping is left without a value.
 
-=item default
+=item lenient
 
 When C<record()> converts a MARC-8 record to UTF-8, or C<decode()> converts
 UTF-8 to MARC-8, only the characters that cannot be mapped are dropped

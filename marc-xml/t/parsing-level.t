@@ -23,15 +23,15 @@ for my $name (sort keys %bad) {
         like($@, qr/Field 500 must have/, "strict: $name dies");
     }
     {
-        local $MARC::File::XML::PARSING_LEVEL = 'default';
+        local $MARC::File::XML::PARSING_LEVEL = 'lenient';
         my $r = eval { MARC::Record->new_from_xml($xml, 'UTF-8') };
-        ok($r && !$@, "default: $name does not die") or diag($@);
-        ok($r && scalar(grep { /500/ } $r->warnings), "default: $name records a warning for tag 500");
+        ok($r && !$@, "lenient: $name does not die") or diag($@);
+        ok($r && scalar(grep { /500/ } $r->warnings), "lenient: $name records a warning for tag 500");
     }
 }
 
 {
-    local $MARC::File::XML::PARSING_LEVEL = 'lenient';
+    local $MARC::File::XML::PARSING_LEVEL = 'bogus';
     eval { MARC::Record->new_from_xml("$header</record>", 'UTF-8') };
-    like($@, qr/Unknown parsing level 'lenient'/, 'an unknown parsing level dies');
+    like($@, qr/Unknown parsing level 'bogus' \(expected one of: lenient, strict\)/, 'an unknown parsing level dies');
 }

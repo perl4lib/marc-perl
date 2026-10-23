@@ -28,12 +28,12 @@ is( $MARC::File::XML::OUTPUT_LEVEL, 'strict', "the output level is 'strict' unle
 }
 
 {
-    local $MARC::File::XML::OUTPUT_LEVEL = 'default';
+    local $MARC::File::XML::OUTPUT_LEVEL = 'lenient';
     @warnings = ();
     my $record = MARC::Record->new_from_xml( $xml, 'MARC-8' );
-    is( $record->subfield( '520', 'a' ), 'Before smile after', 'default: only the unmappable character is dropped' );
-    like( $record->subfield( '245', 'a' ), qr/^Caf/, 'default: a field with only mappable characters is converted' );
-    ok( scalar( grep { /no mapping found/ } @warnings ), 'default: MARC::Charset still warns' );
+    is( $record->subfield( '520', 'a' ), 'Before smile after', 'lenient: only the unmappable character is dropped' );
+    like( $record->subfield( '245', 'a' ), qr/^Caf/, 'lenient: a field with only mappable characters is converted' );
+    ok( scalar( grep { /no mapping found/ } @warnings ), 'lenient: MARC::Charset still warns' );
 }
 
-is( MARC::Charset->ignore_errors(), 0, 'default: MARC::Charset->ignore_errors() is left alone' );
+is( MARC::Charset->ignore_errors(), 0, 'lenient: MARC::Charset->ignore_errors() is left alone' );
