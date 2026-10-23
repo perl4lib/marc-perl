@@ -214,7 +214,7 @@ sub field {
 
         # Compile & stash it if necessary
         if ( not defined $regex ) {
-            $regex = qr/^$tag$/;
+            $regex = qr/^(?:$tag)$/;
             $field_regex{ $tag } = $regex;
         } # not defined
 
