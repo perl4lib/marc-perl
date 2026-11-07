@@ -181,8 +181,12 @@ sub decode {
         my ( $tagno, $len, $offset ) = unpack( "A3 A4 A5", substr($dir, $n*DIRECTORY_ENTRY_LEN, DIRECTORY_ENTRY_LEN) );
 
         # Check directory validity
-        ($tagno =~ /^[0-9A-Za-z]{3}$/)
-            or $problem->( "Invalid tag in directory $location: \"$tagno\"" );
+        if ( $tagno !~ /^[0-9A-Za-z]{3}$/ ) {
+            # $problem only returns at the lenient level. There is no
+            # usable field to build from a malformed tag, so skip it.
+            $problem->( "Invalid tag in directory $location: \"$tagno\"" );
+            next;
+        }
 
         ($len =~ /^\d{4}$/)
             or $problem->( "Invalid length in directory $location tag $tagno: \"$len\"" );
@@ -276,6 +280,9 @@ The levels are:
 
 The default. Common errors, such as invalid indicators or empty fields, are
 fixed or ignored, and a warning is added to the record's C<warnings()> list.
+A directory entry whose tag is not three alphanumeric characters is skipped
+(with a warning) so that the remaining fields, and any records that follow in
+the file, can still be read.
 
 =item strict
 
