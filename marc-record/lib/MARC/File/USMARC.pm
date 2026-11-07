@@ -238,7 +238,16 @@ sub decode {
             my @subfield_data;
             for ( @subfields ) {
                 if ( length > 0 ) {
-                    push( @subfield_data, substr($_,0,1),substr($_,1) );
+                    my $code = substr( $_, 0, 1 );
+                    # MARC::Field->new() croaks on an invalid code, so
+                    # check here to apply the parsing level instead. At the
+                    # lenient level the subfield is dropped.
+                    unless ( MARC::Field->is_valid_subfield_code($code) ) {
+                        my $shown = $code =~ /[\x20-\x7e]/ ? $code : sprintf( '\x{%X}', ord $code );
+                        $problem->( "Invalid subfield code \"$shown\" $location in tag $tagno" );
+                        next;
+                    }
+                    push( @subfield_data, $code, substr($_,1) );
                 } else {
                     $problem->( "Entirely empty subfield found in tag $tagno" );
                 }
@@ -276,6 +285,8 @@ The levels are:
 
 The default. Common errors, such as invalid indicators or empty fields, are
 fixed or ignored, and a warning is added to the record's C<warnings()> list.
+A subfield whose code is not valid (see L<MARC::Field/is_valid_subfield_code>)
+is dropped.
 
 =item strict
 
