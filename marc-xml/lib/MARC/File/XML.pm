@@ -510,7 +510,20 @@ sub decode {
         } elsif ($elt->localname eq 'datafield') {
             my @sfs = ();
             foreach my $sfelt ($elt->getChildrenByLocalName('subfield')) {
-                push @sfs, $sfelt->getAttribute('code'),
+                my $code = $sfelt->getAttribute('code');
+
+                # MARC::Field->new() croaks on an invalid code, which is
+                # what happens at the 'strict' level. At 'lenient' the
+                # subfield is dropped with a warning.
+                if ( $level eq 'lenient' && !MARC::Field->is_valid_subfield_code($code) ) {
+                    my $shown = !defined $code ? '(missing)'
+                              : $code =~ /\A[\x20-\x7e]*\z/ ? "\"$code\""
+                              : '"' . join( '', map { /[\x20-\x7e]/ ? $_ : sprintf( '\x{%X}', ord ) } split //, $code ) . '"';
+                    $rec->_warn("Invalid subfield code $shown $location in tag " . $elt->getAttribute('tag'));
+                    next;
+                }
+
+                push @sfs, $code,
                            $transcode_to_marc8 ? utf8_to_marc8($sfelt->textContent(), $ignore_errors) : $sfelt->textContent();
             }
 
@@ -640,7 +653,9 @@ has.
 
 Common errors are fixed or ignored, and a warning is added to the record's
 C<warnings()> list. A C<< <datafield> >> with no subfields is dropped, and a
-missing indicator is replaced with a blank. This is how
+missing indicator is replaced with a blank. A C<< <subfield> >> whose
+C<code> is not valid (see L<MARC::Field/is_valid_subfield_code>) is dropped.
+This is how
 L<MARC::File::USMARC> treats the equivalent problems in binary records.
 
 =back

@@ -28,6 +28,7 @@ t/external-entities.t
 t/invalid.xml
 t/missing-indicators.t
 t/parsing-level.t
+t/subfield-code.t
 t/missing-indicators.xml
 t/namespace.t
 t/namespace.xml
