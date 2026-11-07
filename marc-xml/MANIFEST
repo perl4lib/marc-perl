@@ -26,6 +26,7 @@ t/escape.mrc
 t/escape.t
 t/external-entities.t
 t/invalid.xml
+t/invalid-tag.t
 t/missing-indicators.t
 t/parsing-level.t
 t/missing-indicators.xml
