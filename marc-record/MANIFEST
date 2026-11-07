@@ -72,6 +72,8 @@ t/sample100.lif
 t/sample1eof.usmarc
 t/sample20.lif
 t/parsing-level.t
+t/subfield-code-decode.t
+t/subfield-code.t
 t/title_proper.t
 t/title_proper.usmarc
 t/utf8.t

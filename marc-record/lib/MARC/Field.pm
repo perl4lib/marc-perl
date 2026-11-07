@@ -67,6 +67,10 @@ Or if you want to add a control field (< 010) that does not have indicators.
 
   my $field = MARC::Field->new( '001', ' 14919759' );
 
+C<new()> croaks if the tag is not valid, if a data field has no subfields, or
+if a subfield code is not valid (see L</is_valid_subfield_code($code) -- is the given subfield code valid?>).
+An invalid indicator is replaced with a blank, with a warning.
+
 =cut
 
 sub new {
@@ -106,6 +110,8 @@ sub new {
 
         (@_ >= 2)
             or croak( "Field $tagno must have at least one subfield" );
+
+        $self->_check_subfield_codes(@_);
 
         # Normally, we go thru add_subfields(), but internally we can cheat
         $self->{_subfields} = [@_];
@@ -254,6 +260,42 @@ sub is_valid_indicator {
     return 0;
 }
 
+=head2 is_valid_subfield_code($code) -- is the given subfield code valid?
+
+Generally called as a class method (e.g., MARC::Field->is_valid_subfield_code('a'))
+
+A subfield code is a single digit, letter or punctuation character, as defined
+by the Library of Congress's MARC21slim schema: C<0>-C<9>, C<a>-C<z>, C<A>-C<Z>
+and the symbols C<!"#$%&'()*+,-./:;E<lt>=E<gt>?{}_^`~[]\>. Anything else, such
+as an empty code, a code of more than one character, or a control character
+like the subfield delimiter, is not valid.
+
+=cut
+
+sub is_valid_subfield_code {
+    my $self = shift;
+    my $code = shift;
+    return 1 if defined $code && $code =~ /\A[0-9A-Za-z!"#\$%&'()*+,\-.\/:;<=>?{}_^`~\[\]\\]\z/;
+    return 0;
+}
+
+# Croaks, naming the offending code, unless every code in a list of
+# code => value pairs is valid. Takes the whole list (codes at even
+# positions) so that callers can check before they change anything.
+sub _check_subfield_codes {
+    my $self = shift;
+    for ( my $i = 0 ; $i < @_ ; $i += 2 ) {
+        my $code = $_[$i];
+        next if $self->is_valid_subfield_code($code);
+        my $shown =
+          defined $code
+          ? join( '', map { /[\x20-\x7e]/ ? $_ : sprintf( '\x{%X}', ord ) } split //, $code )
+          : 'undef';
+        croak( "Subfield code \"$shown\" is not a valid subfield code" );
+    }
+    return 1;
+}
+
 =head2 is_controlfield_tag($tag) -- does the given tag denote a control field?
 
 Generally called as a class method (e.g., MARC::Field->is_controlfield_tag('001'))
@@ -374,7 +416,10 @@ Adds subfields to the end of the subfield list.
 
     $field->add_subfields( 'c' => '1985' );
 
-Returns the number of subfields added, or C<undef> if there was an error.
+Croaks, without adding anything, if any of the subfield codes is not valid
+(see L</is_valid_subfield_code($code) -- is the given subfield code valid?>).
+
+Returns the number of subfields added.
 
 =cut
 
@@ -383,6 +428,8 @@ sub add_subfields {
 
     croak( "Subfields are only for data fields (generally, just tags >= 010)" )
         if $self->is_control_field;
+
+    $self->_check_subfield_codes(@_);
 
     push( @{$self->{_subfields}}, @_ );
     return @_/2;
@@ -514,6 +561,9 @@ Note: when doing subfield updates be aware that C<update()> will only
 update the first occurrence. If you need to do anything more complicated
 you will probably need to create a new field and use C<replace_with()>.
 
+Croaks, without changing anything, if a subfield code is not valid (see
+L</is_valid_subfield_code($code) -- is the given subfield code valid?>).
+
 Returns the number of items modified.
 
 =cut
@@ -527,7 +577,18 @@ sub update {
         return(1);
     }
 
-    ## otherwise we need to update subfields and indicators
+    ## otherwise we need to update subfields and indicators. Check the
+    ## subfield codes first so that a bad one changes nothing.
+    {
+        my @args = @_;
+        my @codes;
+        while ( @args ) {
+            my ( $arg, undef ) = splice( @args, 0, 2 );
+            push @codes, $arg, undef unless defined $arg && $arg =~ /^ind[12]$/;
+        }
+        $self->_check_subfield_codes(@codes);
+    }
+
     my @data = @{$self->{_subfields}};
     my $changes = 0;
 
