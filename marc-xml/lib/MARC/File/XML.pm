@@ -505,6 +505,17 @@ sub decode {
 
     my @fields = ();
     foreach my $elt ($root->getChildrenByLocalName('*')) {
+        # At the 'lenient' level a field whose tag could never be valid is
+        # skipped with a warning. At 'strict' it is left for
+        # MARC::Field->new() to reject.
+        if ( $level eq 'lenient' && $elt->localname =~ /^(?:control|data)field$/ ) {
+            my $t = $elt->getAttribute('tag');
+            unless ( defined $t && $t =~ /^[0-9A-Za-z]{3}$/ ) {
+                $rec->_warn( 'Invalid tag ' . ( defined $t ? "\"$t\"" : '(missing)' ) . " $location" );
+                next;
+            }
+        }
+
         if ($elt->localname eq 'controlfield') {
             push @fields, MARC::Field->new($elt->getAttribute('tag'), $elt->textContent);
         } elsif ($elt->localname eq 'datafield') {
@@ -640,7 +651,9 @@ has.
 
 Common errors are fixed or ignored, and a warning is added to the record's
 C<warnings()> list. A C<< <datafield> >> with no subfields is dropped, and a
-missing indicator is replaced with a blank. This is how
+missing indicator is replaced with a blank. A C<< <controlfield> >> or
+C<< <datafield> >> whose C<tag> is missing or not three alphanumeric
+characters is skipped. This is how
 L<MARC::File::USMARC> treats the equivalent problems in binary records.
 
 =back
